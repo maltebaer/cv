@@ -26,46 +26,67 @@ export const me = {
 export const projects = [
   {
     name: "ELAN",
-    homepage: "https://elanberlin.com",
+    website: "https://elanberlin.com",
     github: "https://github.com/maltebaer/elan",
     description: "Portfolio website of a Berlin-based event agency.",
     technologies: ["React", "TypeScript", "Bootstrap"],
-    preview: "/elan.png",
+    preview: "assets/images/elan.png",
+    icon: "hero-office-building",
+    colorClasses: "bg-yellow-50 text-yellow-700"
   },
   {
     name: "Game of Life",
-    homepage: "https://maltebaer.github.io/game-of-life/",
+    website: "https://maltebaer.github.io/game-of-life/",
     github: "https://github.com/maltebaer/game-of-life",
     description:
-      "Arcade game using Conway's 'Game of Life' for creating a space inspired landscape. First JavaScript project and entrypoint into Web Development.",
+      "Arcade game using Conway's 'Game of Life'. First JavaScript project and entrypoint into Web Development.",
     technologies: ["JavaScript", "HTML", "CSS"],
-    preview: "/game-of-life.png",
+    preview: "assets/images/game-of-life.png",
+    icon: "hero-puzzle",
+    colorClasses: "bg-teal-50 text-teal-700"
   },
   {
     name: "Momo",
-    homepage: "https://momo.maltebaer.now.sh/",
+    website: "https://momo.maltebaer.now.sh/",
     github: "https://github.com/maltebaer/momo",
     description: "Welcome/announcement page for my son's birthday.",
     technologies: ["React", "TypeScript", "TailwindCSS"],
-    preview: "/momo.png",
+    preview: "assets/images/momo.png",
+    icon: "hero-cake",
+    colorClasses: "bg-purple-50 text-purple-700"
   },
   {
     name: "Blog",
-    homepage: "https://til.maltebaer.now.sh/",
+    website: "https://til.maltebaer.now.sh/",
     github: "https://github.com/maltebaer/til",
     description:
       "WIP: Collection of my learnings, ideas and AHA moments while coding.",
     technologies: ["Next", "TypeScript", "TailwindCSS"],
-    preview: "/blog.png",
+    preview: "assets/images/blog.png",
+    icon: "hero-newspaper",
+    colorClasses: "bg-blue-50 text-blue-700"
   },
   {
     name: "Xmas 2021",
-    homepage: "https://xmas-2021.maltebaer.vercel.app/",
+    website: "https://xmas-2021.maltebaer.vercel.app/",
     github: "https://github.com/maltebaer/xmas-2021",
     description:
-      "Greeting card for my friends and family",
+      "Greeting card for my friends and family.",
     technologies: ["HTML", "AlpineJS", "TailwindCSS"],
-    preview: "/xmas-2021.png",
+    preview: "assets/images/xmas-2021.png",
+    icon: "hero-gift",
+    colorClasses: "bg-rose-50 text-rose-700"
+  },
+  {
+    name: "Coming soon",
+    website: null,
+    github: null,
+    description:
+      "...",
+    technologies: [],
+    preview: "assets/images/xmas-2021.png",
+    icon: "hero-question-mark-circle",
+    colorClasses: "bg-gray-50 text-gray-700"
   },
 ]
 
