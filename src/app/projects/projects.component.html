@@ -1,8 +1,8 @@
 <section>
     <div
-        class="rounded-lg bg-gray-200 overflow-hidden shadow divide-y divide-gray-200 sm:divide-y-0 sm:grid sm:grid-cols-2 sm:gap-px">
+        class="overflow-hidden bg-gray-200 divide-y divide-gray-200 rounded-lg shadow sm:divide-y-0 sm:grid sm:grid-cols-2 sm:gap-px">
         <app-project *ngFor="let project of projects; index as i" [project]="project"
-            class="relative group bg-white p-6" [ngClass]="{
+            class="relative p-6 bg-white group" [ngClass]="{
             'rounded-tl-lg rounded-tr-lg sm:rounded-tr-none': i === 0,
             'sm:rounded-tr-lg': i === 1,
             'sm:rounded-bl-lg': i === projects.length - 2,

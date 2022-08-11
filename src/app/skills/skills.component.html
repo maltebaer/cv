@@ -1,0 +1,18 @@
+<section aria-labelledby="work-experience-title">
+    <div class="overflow-hidden bg-white rounded-lg shadow">
+        <div class="p-6">
+            <h2 class="hidden text-base font-medium text-gray-900" id="work-experience-title">Skills
+            </h2>
+            <div class="flow-root">
+                <ul role="list" class="flex flex-wrap gap-2">
+                    <li *ngFor="let skill of me.skills, index as i">
+                        <span
+                            class="inline-flex items-center px-2.5 py-0.5 rounded-md text-sm font-medium {{textColors[i % textColors.length]}} {{backgroundColors[i % backgroundColors.length]}}">
+                            {{skill}}
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>

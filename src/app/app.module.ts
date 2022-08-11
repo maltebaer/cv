@@ -7,13 +7,21 @@ import { AppComponent } from './app.component';
 import { MeComponent } from './me/me.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { ProjectComponent } from './project/project.component';
+import { WorkExperienceComponent } from './work-experience/work-experience.component';
+import { ItemComponent } from './item/item.component';
+import { EducationComponent } from './education/education.component';
+import { SkillsComponent } from './skills/skills.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MeComponent,
     ProjectsComponent,
-    ProjectComponent
+    ProjectComponent,
+    WorkExperienceComponent,
+    ItemComponent,
+    EducationComponent,
+    SkillsComponent
   ],
   imports: [
     BrowserModule,

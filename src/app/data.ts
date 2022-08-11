@@ -6,21 +6,7 @@ export const me = {
   mail: "maltebaer@posteo.de",
   gitHubUrl: "https://github.com/maltebaer/",
   linkedInUrl: "https://linkedin.com/in/maltebaer/",
-  skills: ["HTML", "CSS", "JavaScript", "TypeScript", "PHP", "Unit Testing", "TailwindCSS", "React", "Laravel", "TALL"],
-  languages: [
-    {
-      language: "German",
-      level: 5,
-    },
-    {
-      language: "English",
-      level: 4,
-    },
-    {
-      language: "French",
-      level: 2,
-    },
-  ],
+  skills: ["HTML", "CSS", "JavaScript", "TypeScript", "PHP", "Testing", "Tailwind", "React", "Laravel", "TALL"],
 }
 
 export const projects = [
@@ -32,7 +18,7 @@ export const projects = [
     technologies: ["React", "TypeScript", "Bootstrap"],
     preview: "assets/images/elan.png",
     icon: "hero-office-building",
-    colorClasses: "bg-yellow-50 text-yellow-700"
+    colorClasses: "bg-yellow-100 text-yellow-800"
   },
   {
     name: "Game of Life",
@@ -43,7 +29,7 @@ export const projects = [
     technologies: ["JavaScript", "HTML", "CSS"],
     preview: "assets/images/game-of-life.png",
     icon: "hero-puzzle",
-    colorClasses: "bg-teal-50 text-teal-700"
+    colorClasses: "bg-green-100 text-green-800"
   },
   {
     name: "Momo",
@@ -53,7 +39,7 @@ export const projects = [
     technologies: ["React", "TypeScript", "TailwindCSS"],
     preview: "assets/images/momo.png",
     icon: "hero-cake",
-    colorClasses: "bg-purple-50 text-purple-700"
+    colorClasses: "bg-purple-100 text-purple-800"
   },
   {
     name: "Blog",
@@ -64,10 +50,10 @@ export const projects = [
     technologies: ["Next", "TypeScript", "TailwindCSS"],
     preview: "assets/images/blog.png",
     icon: "hero-newspaper",
-    colorClasses: "bg-blue-50 text-blue-700"
+    colorClasses: "bg-blue-100 text-blue-800"
   },
   {
-    name: "Xmas 2021",
+    name: "XMAS 2021",
     website: "https://xmas-2021.maltebaer.vercel.app/",
     github: "https://github.com/maltebaer/xmas-2021",
     description:
@@ -75,7 +61,7 @@ export const projects = [
     technologies: ["HTML", "AlpineJS", "TailwindCSS"],
     preview: "assets/images/xmas-2021.png",
     icon: "hero-gift",
-    colorClasses: "bg-rose-50 text-rose-700"
+    colorClasses: "bg-pink-100 text-pink-800"
   },
   {
     name: "Coming soon",
@@ -93,8 +79,8 @@ export const projects = [
 export const experience = [
   {
     role: "Full Stack Developer",
-    company: "BIOMES",
-    homepage: "https://biomes.world/",
+    location: "BIOMES",
+    website: "https://biomes.world/",
     description:
       "Developing a dashboard for our customers to view their analysis results and our interal LIMS. Supporting marketing in setting up a CRM.",
     start: new Date(2021, 8),
@@ -102,8 +88,8 @@ export const experience = [
   },
   {
     role: "Software Developer",
-    company: "LUM GmbH",
-    homepage: "https://lum-gmbh.com/",
+    location: "LUM GmbH",
+    website: "https://lum-gmbh.com/",
     description:
       "Realised software for recording, managing and analysing measurements with focus on displaying complex visualisations and creating a scientific UX.",
     start: new Date(2019, 7),
@@ -111,16 +97,16 @@ export const experience = [
   },
   {
     role: "Frontend Developer",
-    company: "INTEGR8",
-    homepage: "https://www.integr8.com/",
+    location: "INTEGR8",
+    website: "https://www.integr8.com/",
     description: "Setup up a small, in-house reporting app.",
     start: new Date(2019, 2),
     end: new Date(2019, 6),
   },
   {
     role: "IT & Administration (Working Student)",
-    company: "INTEGR8",
-    homepage: "https://www.integr8.com/",
+    location: "INTEGR8",
+    website: "https://www.integr8.com/",
     description:
       "Established the IT infrastructure, supporting the agency growing from 15 employees to 50+ employees. Created the on- and offboarding process, helping new employees collaborating with the team.",
     start: new Date(2017, 4),
@@ -130,28 +116,25 @@ export const experience = [
 
 export const education = [
   {
-    degree: "Web Development Bootcamp",
-    field: "Full Stack",
+    role: "Web Development Bootcamp, Full Stack",
     location: "Ironhack Berlin",
-    homepage: "https://www.ironhack.com/en/berlin",
+    website: "https://www.ironhack.com/en/berlin",
     description:
       "Intensive 9-week courses in Web Development including: MERN Stack, JavaScript, HTML and CSS.",
     start: new Date(2019, 0),
     end: new Date(2019, 2),
   },
   {
-    degree: "Master of Science",
-    field: "Engineering",
+    role: "Master of Science, Engineering",
     location: "TU Berlin",
-    homepage: "https://www.tu.berlin/",
+    website: "https://www.tu.berlin/",
     start: new Date(2016, 3),
     end: undefined,
   },
   {
-    degree: "Bachelor of Science",
-    field: "Physics",
+    role: "Bachelor of Science, Physics",
     location: "TU Berlin",
-    homepage: "https://www.tu.berlin/",
+    website: "https://www.tu.berlin/",
     description:
       "Thesis: 'Calculation of phase diagrams for active fluids' at the Department of Theoretical Physics.",
     start: new Date(2012, 3),
