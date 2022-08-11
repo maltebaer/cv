@@ -12,14 +12,14 @@ export class SkillsComponent implements OnInit {
   textColors = [
     'text-yellow-800',
     'text-green-800',
-    'text-blue-800',
+    'text-sky-800',
     'text-purple-800',
     'text-pink-800',
   ];
   backgroundColors = [
     'bg-yellow-100',
     'bg-green-100',
-    'bg-blue-100',
+    'bg-sky-100',
     'bg-purple-100',
     'bg-pink-100',
   ];

@@ -50,7 +50,7 @@ export const projects = [
     technologies: ["Next", "TypeScript", "TailwindCSS"],
     preview: "assets/images/blog.png",
     icon: "hero-newspaper",
-    colorClasses: "bg-blue-100 text-blue-800"
+    colorClasses: "bg-sky-100 text-sky-800"
   },
   {
     name: "XMAS 2021",
