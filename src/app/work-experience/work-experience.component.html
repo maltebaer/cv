@@ -1,0 +1,15 @@
+<section aria-labelledby="work-experience-title">
+    <div class="overflow-hidden bg-white rounded-lg shadow">
+        <div class="p-6">
+            <h2 class="text-base font-medium text-gray-900" id="work-experience-title">Work experience
+            </h2>
+            <div class="flow-root mt-6">
+                <ul role="list" class="-my-5 divide-y divide-gray-200">
+                    <li class="py-5" *ngFor="let job of experience">
+                        <app-item [item]="job"></app-item>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>

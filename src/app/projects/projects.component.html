@@ -1,0 +1,8 @@
+<section>
+    <div
+        class="overflow-hidden bg-gray-200 divide-y divide-gray-200 rounded-lg shadow sm:divide-y-0 sm:grid sm:grid-cols-2 sm:gap-px">
+        <app-project *ngFor="let project of projects; index as i" [project]="project" [index]="i"
+            [projectsLength]="projects.length">
+        </app-project>
+    </div>
+</section>

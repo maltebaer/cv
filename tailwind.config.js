@@ -1,36 +1,22 @@
-const colors = require("tailwindcss/colors");
+/** @type {import('tailwindcss').Config} */
+const colors = require('tailwindcss/colors')
 
 module.exports = {
-  purge: [],
-  darkMode: false, // or 'media' or 'class'
+  content: [
+    "./src/**/*.{html,ts}",
+  ],
   theme: {
-    colors: {
-      transparent: "transparent",
-      current: "currentColor",
-      black: colors.gray[800],
-      white: colors.gray[50],
-      gray: colors.blueGray,
-      indigo: colors.indigo,
-      blue: colors.cyan,
-      yellow: colors.amber,
-    },
     extend: {
-      animation: {
-        wiggle: "wiggle 1s ease-in-out infinite",
-      },
-      keyframes: {
-        wiggle: {
-          "0%, 100%": {transform: "rotate(-6deg)"},
-
-          "50%": {transform: "rotate(6deg)"},
-        },
+      colors: {
+        sky: colors.sky,
+        teal: colors.teal,
+        cyan: colors.cyan,
+        rose: colors.rose,
       },
     },
   },
-  variants: {
-    extend: {
-      animation: ["hover"],
-    },
-  },
-  plugins: [],
-};
+  plugins: [
+    require('@tailwindcss/forms'),
+    require('@tailwindcss/line-clamp'),
+  ],
+}
