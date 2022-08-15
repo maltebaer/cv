@@ -7,6 +7,8 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ProjectComponent implements OnInit {
   @Input() project: any;
+  @Input() index: any;
+  @Input() projectsLength: any;
 
   constructor() { }
 

@@ -1,5 +1,9 @@
-<!-- TODO: fix mobile -->
-<div class="flex flex-col h-full">
+<div class="relative flex flex-col h-full p-6 bg-white border-b sm:border-b-0 group" [ngClass]="{
+            'rounded-tl-lg rounded-tr-lg sm:rounded-tr-none': index === 0,
+            'sm:rounded-tr-lg': index === 1,
+            'sm:rounded-bl-lg': index === projectsLength - 2,
+            'rounded-bl-lg rounded-br-lg sm:rounded-bl-none': index === projectsLength - 1
+        }">
     <span class="absolute text-gray-300 top-6 right-6 group-hover:text-gray-500">
         <a *ngIf="project.website" href="{{project.website}}" target="_blank" class="flex">
             <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">

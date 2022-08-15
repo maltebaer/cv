@@ -1,7 +1,7 @@
 export const me = {
   name: "Malte Bär",
   imgUrl: "/malte.jpg",
-  profession: "Software Developer",
+  profession: "Web Developer",
   location: "Potsdam, Germany",
   mail: "maltebaer@posteo.de",
   gitHubUrl: "https://github.com/maltebaer/",
@@ -87,7 +87,7 @@ export const experience = [
     end: undefined,
   },
   {
-    role: "Software Developer",
+    role: "Frontend Developer",
     location: "LUM GmbH",
     website: "https://lum-gmbh.com/",
     description:
@@ -129,7 +129,7 @@ export const education = [
     location: "TU Berlin",
     website: "https://www.tu.berlin/",
     start: new Date(2016, 3),
-    end: undefined,
+    end: new Date(2018, 11),
   },
   {
     role: "Bachelor of Science, Physics",
