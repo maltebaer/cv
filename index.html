@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html
+    lang="de"
+    class="h-full"
+>
+    <head>
+        <meta charset="utf-8" />
+        <title>cv</title>
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1"
+        />
+        <meta name="theme-color" content="#000" />
+
+        <link
+            rel="stylesheet"
+            href="./src/tailwind.css"
+        />
+    </head>
+
+    <body class="h-full grid place-items-center bg-gray-100">
+        <h1
+            class="text-teal-500"
+            x-data="{ open: false }"
+        >
+            hello
+            <button x-on:click="open = !open">👋🏽</button>
+            <span x-show="open">world</span>
+        </h1>
+
+        <script
+            type="module"
+            src="./src/index.js"
+        ></script>
+    </body>
+</html>
