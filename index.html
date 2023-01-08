@@ -92,7 +92,7 @@
                 skills: []
               }"
                 x-init="
-                fetch('./src/data/skills.json')
+                fetch('/data/skills.json')
                   .then(res => res.json())
                   .then(res => skills = res.skills)
               "
@@ -115,7 +115,7 @@
                     projects: []
                   }"
                 x-init="
-                    fetch('./src/data/projects.json')
+                    fetch('/data/projects.json')
                       .then(res => res.json())
                       .then(res => projects = res.projects)
                   "
