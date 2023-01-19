@@ -89,13 +89,13 @@
             <ul
                 role="list"
                 x-data="{
-                skills: []
-              }"
+                    skills: []
+                }"
                 x-init="
-                fetch('/data/skills.json')
-                  .then(res => res.json())
-                  .then(res => skills = res.skills)
-              "
+                    fetch('/data/skills.json')
+                    .then(res => res.json())
+                    .then(res => skills = res.skills)
+                "
             >
                 <template x-for="skill in skills">
                     <li
@@ -113,12 +113,12 @@
                 role="list"
                 x-data="{
                     projects: []
-                  }"
+                }"
                 x-init="
                     fetch('/data/projects.json')
-                      .then(res => res.json())
-                      .then(res => projects = res.projects)
-                  "
+                        .then(res => res.json())
+                        .then(res => projects = res.projects)
+                "
             >
                 <template
                     x-for="project in projects"
@@ -156,11 +156,14 @@
     </main>
 
     <footer>
-        <p>heavily inspired by <a
+        <p>
+            heavily inspired by
+            <a
                 href="https://buildexcellentwebsit.es/"
                 target="_blank"
                 rel="noopener noreferrer"
-            >buildexcellentwebsit.es</a></p>
+            >buildexcellentwebsit.es</a>
+        </p>
     </footer>
 
     <script
