@@ -1,175 +1,180 @@
 <!DOCTYPE html>
-<html
-    lang="de"
-    class="h-full"
->
+<html lang="de">
+    <head>
+        <meta charset="utf-8" />
+        <title>cv</title>
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1"
+        />
+        <meta
+            name="theme-color"
+            content="#000"
+        />
 
-<head>
-    <meta charset="utf-8" />
-    <title>cv</title>
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1"
-    />
-    <meta
-        name="theme-color"
-        content="#000"
-    />
+        <link
+            rel="stylesheet"
+            href="./src/css/global.css"
+        />
+    </head>
 
-    <link
-        rel="stylesheet"
-        href="./src/tailwind.css"
-    />
-</head>
+    <body>
+        <aside>
+            <fieldset>
+                <legend>how are you feeling today?</legend>
 
-<body class="h-full bg-gray-100">
-    <aside>
-        <fieldset>
-            <legend>how are you feeling today?</legend>
+                <input
+                    type="radio"
+                    id="modern"
+                    name="theme"
+                    value="modern"
+                />
+                <label for="modern">modern</label><br />
 
-            <input
-                type="radio"
-                id="modern"
-                name="theme"
-                value="modern"
-            />
-            <label for="modern">modern</label><br />
+                <input
+                    type="radio"
+                    id="glassy"
+                    name="theme"
+                    value="glassy"
+                />
+                <label for="glassy">glassy</label><br />
 
-            <input
-                type="radio"
-                id="glassy"
-                name="theme"
-                value="glassy"
-            />
-            <label for="glassy">glassy</label><br />
+                <input
+                    type="radio"
+                    id="playfull"
+                    name="theme"
+                    value="playfull"
+                />
+                <label for="playfull">playfull</label>
+            </fieldset>
+        </aside>
 
-            <input
-                type="radio"
-                id="playfull"
-                name="theme"
-                value="playfull"
-            />
-            <label for="playfull">playfull</label>
-        </fieldset>
-    </aside>
+        <main>
+            <article>
+                <h1 id="name">malte bär</h1>
+                <span>web developer</span>
+                <p>
+                    Sint labore velit Lorem consectetur qui Lorem aute eiusmod
+                    dolor occaecat. Fugiat ullamco quis ea laborum exercitation
+                    culpa officia. Esse sunt magna sit do incididunt ex sit
+                    excepteur consectetur ut. Excepteur fugiat esse ad ex.
+                </p>
+                <ul role="list">
+                    <li>potsdam, germany</li>
+                    <li>
+                        <a href="mailto:maltebaer@posteo.de"
+                            >maltebaer@posteo.de</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="https://github.com/maltebaer/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >github</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="https://linkedin.com/in/maltebaer/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >linkedin</a
+                        >
+                    </li>
+                </ul>
+            </article>
 
-    <main>
-        <article>
-            <h1>malte bär</h1>
-            <span>web developer</span>
-            <p>
-                Sint labore velit Lorem consectetur qui Lorem aute eiusmod
-                dolor occaecat. Fugiat ullamco quis ea laborum exercitation
-                culpa officia. Esse sunt magna sit do incididunt ex sit
-                excepteur consectetur ut. Excepteur fugiat esse ad ex.
-            </p>
-            <ul role="list">
-                <li>potsdam, germany</li>
-                <li>
-                    <a href="mailto:maltebaer@posteo.de">maltebaer@posteo.de</a>
-                </li>
-                <li>
-                    <a
-                        href="https://github.com/maltebaer/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >github</a>
-                </li>
-                <li>
-                    <a
-                        href="https://linkedin.com/in/maltebaer/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >linkedin</a>
-                </li>
-            </ul>
-        </article>
-
-        <article>
-            <ul
-                role="list"
-                x-data="{
+            <article>
+                <ul
+                    role="list"
+                    x-data="{
                     skills: []
                 }"
-                x-init="
+                    x-init="
                     fetch('/data/skills.json')
                     .then(res => res.json())
                     .then(res => skills = res.skills)
                 "
-            >
-                <template x-for="skill in skills">
-                    <li
-                        x-text="skill"
-                        :key="skill"
-                    ></li>
-                </template>
-            </ul>
-        </article>
+                >
+                    <template x-for="skill in skills">
+                        <li
+                            x-text="skill"
+                            :key="skill"
+                        ></li>
+                    </template>
+                </ul>
+            </article>
 
-        <article>
-            <h2>projects</h2>
+            <article>
+                <h2>projects</h2>
 
-            <ul
-                role="list"
-                x-data="{
+                <ul
+                    role="list"
+                    x-data="{
                     projects: []
                 }"
-                x-init="
+                    x-init="
                     fetch('/data/projects.json')
                         .then(res => res.json())
                         .then(res => projects = res.projects)
                 "
-            >
-                <template
-                    x-for="project in projects"
-                    :key="project.title"
                 >
-                    <li>
-                        <aside>
-                            <h3>
-                                <a
-                                    :href="project.url"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    x-text="project.title"
-                                ></a>
-                            </h3>
-                            <p x-text="project.description"></p>
-                            <a
-                                :href="project.sourceCodeUrl"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >source code</a>
-                            <ul role="list">
-                                <template x-for="technology in project.technologies">
-                                    <li
-                                        x-text="technology"
-                                        :key="technology"
-                                    ></li>
-                                </template>
-                            </ul>
-                        </aside>
-                    </li>
-                </template>
-            </ul>
-        </article>
-    </main>
+                    <template
+                        x-for="project in projects"
+                        :key="project.title"
+                    >
+                        <li>
+                            <aside>
+                                <h3>
+                                    <a
+                                        :href="project.url"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        x-text="project.title"
+                                    ></a>
+                                </h3>
+                                <p x-text="project.description"></p>
+                                <p>
+                                    <a
+                                        :href="project.sourceCodeUrl"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        >source code</a
+                                    >
+                                </p>
+                                <ul role="list">
+                                    <template
+                                        x-for="technology in project.technologies"
+                                    >
+                                        <li
+                                            x-text="technology"
+                                            :key="technology"
+                                        ></li>
+                                    </template>
+                                </ul>
+                            </aside>
+                        </li>
+                    </template>
+                </ul>
+            </article>
+        </main>
 
-    <footer>
-        <p>
-            heavily inspired by
-            <a
-                href="https://buildexcellentwebsit.es/"
-                target="_blank"
-                rel="noopener noreferrer"
-            >buildexcellentwebsit.es</a>
-        </p>
-    </footer>
+        <footer>
+            <p>
+                heavily inspired by
+                <a
+                    href="https://buildexcellentwebsit.es/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >buildexcellentwebsit.es</a
+                >
+            </p>
+        </footer>
 
-    <script
-        type="module"
-        src="./src/index.js"
-    ></script>
-</body>
-
+        <script
+            type="module"
+            src="./src/index.js"
+        ></script>
+    </body>
 </html>
