@@ -46,8 +46,10 @@ h3 {
 }
 
 /* more generic elements */
-[role="list"] {
+ul,
+ol {
     padding: 0;
+    list-style: none;
 }
 
 /* base interactive elements */

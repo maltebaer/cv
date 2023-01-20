@@ -14,153 +14,236 @@
 
         <link
             rel="stylesheet"
+            href="./src/css/custom-properties.css"
+        />
+        <link
+            id="reset-stylesheet"
+            rel="stylesheet"
+            href="./src/css/global/reset.css"
+        />
+        <link
+            id="global-stylesheet"
+            rel="stylesheet"
             href="./src/css/global.css"
         />
+        <link
+            id="compositions-stylesheet"
+            rel="stylesheet"
+            href="./src/css/compositions.css"
+        />
+        <link
+            id="utilities-stylesheet"
+            rel="stylesheet"
+            href="./src/css/utilities.css"
+        />
+        <link
+            id="blocks-stylesheet"
+            rel="stylesheet"
+            href="./src/css/blocks.css"
+        />
+        <script
+            type="module"
+            src="./src/index.js"
+        ></script>
     </head>
 
     <body>
-        <aside>
-            <fieldset>
-                <legend>how are you feeling today?</legend>
-
-                <input
-                    type="radio"
-                    id="modern"
-                    name="theme"
-                    value="modern"
-                />
-                <label for="modern">modern</label><br />
-
-                <input
-                    type="radio"
-                    id="glassy"
-                    name="theme"
-                    value="glassy"
-                />
-                <label for="glassy">glassy</label><br />
-
-                <input
-                    type="radio"
-                    id="playfull"
-                    name="theme"
-                    value="playfull"
-                />
-                <label for="playfull">playfull</label>
-            </fieldset>
-        </aside>
-
-        <main>
-            <article>
-                <h1 id="name">malte bär</h1>
-                <span>web developer</span>
-                <p>
-                    Sint labore velit Lorem consectetur qui Lorem aute eiusmod
-                    dolor occaecat. Fugiat ullamco quis ea laborum exercitation
-                    culpa officia. Esse sunt magna sit do incididunt ex sit
-                    excepteur consectetur ut. Excepteur fugiat esse ad ex.
-                </p>
-                <ul role="list">
-                    <li>potsdam, germany</li>
-                    <li>
-                        <a href="mailto:maltebaer@posteo.de"
-                            >maltebaer@posteo.de</a
-                        >
-                    </li>
-                    <li>
-                        <a
-                            href="https://github.com/maltebaer/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            >github</a
-                        >
-                    </li>
-                    <li>
-                        <a
-                            href="https://linkedin.com/in/maltebaer/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            >linkedin</a
-                        >
-                    </li>
+        <header>
+            <nav class="wrapper">
+                <ul>
+                    <li><a href="#interests">interests</a></li>
+                    <li><a href="#projects">projects</a></li>
                 </ul>
-            </article>
+            </nav>
+        </header>
 
-            <article>
-                <ul
-                    role="list"
+        <div class="sidebar region">
+            <aside class="wrapper">
+                <fieldset>
+                    <legend>how are you feeling today?</legend>
+                    <input
+                        type="radio"
+                        id="modern"
+                        value="modern"
+                    />
+                    <label for="modern">modern</label>
+                    <input
+                        type="radio"
+                        id="glassy"
+                        value="glassy"
+                    />
+                    <label for="glassy">glassy</label>
+                    <input
+                        type="radio"
+                        id="playfull"
+                        value="playfull"
+                    />
+                    <label for="playfull">playfull</label>
+                </fieldset>
+
+                <fieldset
                     x-data="{
-                    skills: []
+                    toggleStylesheet(id) {
+                        document.getElementById(id + '-stylesheet').toggleAttribute('disabled')
+                    }
                 }"
-                    x-init="
-                    fetch('/data/skills.json')
-                    .then(res => res.json())
-                    .then(res => skills = res.skills)
-                "
                 >
-                    <template x-for="skill in skills">
-                        <li
-                            x-text="skill"
-                            :key="skill"
-                        ></li>
-                    </template>
-                </ul>
-            </article>
+                    <legend>layers</legend>
 
-            <article>
-                <h2>projects</h2>
+                    <input
+                        type="checkbox"
+                        id="reset"
+                        checked
+                        x-on:click="toggleStylesheet('reset')"
+                    />
+                    <label for="reset">reset</label>
+                    <input
+                        type="checkbox"
+                        id="global"
+                        checked
+                        x-on:click="toggleStylesheet('global')"
+                    />
+                    <label for="global">global styles</label>
+                    <input
+                        type="checkbox"
+                        id="compositions"
+                        checked
+                        x-on:click="toggleStylesheet('compositions')"
+                    />
+                    <label for="compositions">composition</label>
+                    <input
+                        type="checkbox"
+                        id="utilities"
+                        checked
+                        x-on:click="toggleStylesheet('utilities')"
+                    />
+                    <label for="utilities">utility</label>
+                    <input
+                        type="checkbox"
+                        id="blocks"
+                        checked
+                        x-on:click="toggleStylesheet('blocks')"
+                    />
+                    <label for="blocks">block</label>
+                </fieldset>
+            </aside>
 
-                <ul
-                    role="list"
-                    x-data="{
+            <main>
+                <article class="wrapper">
+                    <header>
+                        <h1>malte bär</h1>
+                        <span>web developer</span>
+                    </header>
+                    <p>
+                        Sint labore velit Lorem consectetur qui Lorem aute
+                        eiusmod dolor occaecat. Fugiat ullamco quis ea laborum
+                        exercitation culpa officia. Esse sunt magna sit do
+                        incididunt ex sit excepteur consectetur ut. Excepteur
+                        fugiat esse ad ex.
+                    </p>
+                    <ul>
+                        <li>potsdam, germany</li>
+                        <li>
+                            <a href="mailto:maltebaer@posteo.de"
+                                >maltebaer@posteo.de</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="https://github.com/maltebaer/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >github</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="https://linkedin.com/in/maltebaer/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >linkedin</a
+                            >
+                        </li>
+                    </ul>
+                </article>
+                <article class="wrapper">
+                    <h2 id="interests">interests</h2>
+                    <ul
+                        x-data="{
+                        interests: []
+                    }"
+                        x-init="
+                        fetch('/data/interests.json')
+                        .then(res => res.json())
+                        .then(res => interests = res.interests)
+                    "
+                    >
+                        <template x-for="interest in interests">
+                            <li
+                                x-text="interest"
+                                :key="interest"
+                            ></li>
+                        </template>
+                    </ul>
+                </article>
+                <article class="wrapper">
+                    <h2 id="projects">projects</h2>
+                    <ul
+                        class="grid"
+                        data-layout="50-50"
+                        x-data="{
                     projects: []
                 }"
-                    x-init="
+                        x-init="
                     fetch('/data/projects.json')
                         .then(res => res.json())
                         .then(res => projects = res.projects)
                 "
-                >
-                    <template
-                        x-for="project in projects"
-                        :key="project.title"
                     >
-                        <li>
-                            <aside>
-                                <h3>
-                                    <a
-                                        :href="project.url"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        x-text="project.title"
-                                    ></a>
-                                </h3>
-                                <p x-text="project.description"></p>
-                                <p>
+                        <template
+                            x-for="project in projects"
+                            :key="project.title"
+                        >
+                            <li>
+                                <article>
+                                    <header>
+                                        <h3>
+                                            <a
+                                                :href="project.url"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                x-text="project.title"
+                                            ></a>
+                                        </h3>
+                                        <p x-text="project.description"></p>
+                                    </header>
                                     <a
                                         :href="project.sourceCodeUrl"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         >source code</a
                                     >
-                                </p>
-                                <ul role="list">
-                                    <template
-                                        x-for="technology in project.technologies"
-                                    >
-                                        <li
-                                            x-text="technology"
-                                            :key="technology"
-                                        ></li>
-                                    </template>
-                                </ul>
-                            </aside>
-                        </li>
-                    </template>
-                </ul>
-            </article>
-        </main>
+                                    <footer>
+                                        <ul>
+                                            <template
+                                                x-for="technology in project.technologies"
+                                            >
+                                                <li
+                                                    x-text="technology"
+                                                    :key="technology"
+                                                ></li>
+                                            </template>
+                                        </ul>
+                                    </footer>
+                                </article>
+                            </li>
+                        </template>
+                    </ul>
+                </article>
+            </main>
+        </div>
 
-        <footer>
+        <footer class="wrapper">
             <p>
                 heavily inspired by
                 <a
@@ -171,10 +254,5 @@
                 >
             </p>
         </footer>
-
-        <script
-            type="module"
-            src="./src/index.js"
-        ></script>
     </body>
 </html>
