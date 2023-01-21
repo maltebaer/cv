@@ -45,13 +45,6 @@ h3 {
     max-width: 20ch;
 }
 
-/* more generic elements */
-ul,
-ol {
-    padding: 0;
-    list-style: none;
-}
-
 /* base interactive elements */
 a {
     color: currentcolor;

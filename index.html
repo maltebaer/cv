@@ -57,8 +57,8 @@
             </nav>
         </header>
 
-        <div class="sidebar region">
-            <aside class="wrapper">
+        <div class="sidebar | region wrapper">
+            <aside class="flow">
                 <fieldset>
                     <legend>how are you feeling today?</legend>
                     <input
@@ -88,7 +88,7 @@
                     }
                 }"
                 >
-                    <legend>layers</legend>
+                    <legend>css layers</legend>
 
                     <input
                         type="checkbox"
@@ -128,11 +128,11 @@
                 </fieldset>
             </aside>
 
-            <main>
-                <article class="wrapper">
+            <main class="flow">
+                <article class="flow">
                     <header>
                         <h1>malte bär</h1>
-                        <span>web developer</span>
+                        <p>web developer</p>
                     </header>
                     <p>
                         Sint labore velit Lorem consectetur qui Lorem aute
@@ -166,7 +166,8 @@
                         </li>
                     </ul>
                 </article>
-                <article class="wrapper">
+
+                <article class="flow">
                     <h2 id="interests">interests</h2>
                     <ul
                         x-data="{
@@ -186,7 +187,8 @@
                         </template>
                     </ul>
                 </article>
-                <article class="wrapper">
+
+                <article class="flow">
                     <h2 id="projects">projects</h2>
                     <ul
                         class="grid"
@@ -205,8 +207,8 @@
                             :key="project.title"
                         >
                             <li>
-                                <article>
-                                    <header>
+                                <article class="flow">
+                                    <header class="flow">
                                         <h3>
                                             <a
                                                 :href="project.url"
@@ -217,12 +219,16 @@
                                         </h3>
                                         <p x-text="project.description"></p>
                                     </header>
-                                    <a
-                                        :href="project.sourceCodeUrl"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        >source code</a
-                                    >
+
+                                    <p>
+                                        <a
+                                            :href="project.sourceCodeUrl"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            >source code</a
+                                        >
+                                    </p>
+
                                     <footer>
                                         <ul>
                                             <template

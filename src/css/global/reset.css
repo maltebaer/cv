@@ -1,5 +1,5 @@
 /*
-    css reset by josh comeau
+    (slightly tweaked) css reset by josh comeau
     https://courses.joshwcomeau.com/css-for-js/treasure-trove/010-global-styles
 */
 
@@ -70,4 +70,13 @@ h4,
 h5,
 h6 {
     overflow-wrap: break-word;
+}
+
+/*
+    tweaks
+*/
+ul,
+ol {
+    padding: 0;
+    list-style: none;
 }
