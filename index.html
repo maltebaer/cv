@@ -27,17 +27,17 @@
             href="./src/css/global.css"
         />
         <link
-            id="compositions-stylesheet"
+            id="composition-stylesheet"
             rel="stylesheet"
             href="./src/css/compositions.css"
         />
         <link
-            id="utilities-stylesheet"
+            id="utility-stylesheet"
             rel="stylesheet"
             href="./src/css/utilities.css"
         />
         <link
-            id="blocks-stylesheet"
+            id="block-stylesheet"
             rel="stylesheet"
             href="./src/css/blocks.css"
         />
@@ -59,72 +59,109 @@
 
         <div class="sidebar | region wrapper">
             <aside class="flow">
-                <fieldset>
+                <fieldset
+                    x-data="{
+                        setTheme(theme) {
+                            const html = document.firstElementChild
+
+                            html.setAttribute('theme', theme)
+                        }
+                    }"
+                    x-on:change="setTheme($event.target.value)"
+                >
                     <legend>how are you feeling today?</legend>
-                    <input
-                        type="radio"
-                        id="modern"
-                        value="modern"
-                    />
-                    <label for="modern">modern</label>
-                    <input
-                        type="radio"
-                        id="glassy"
-                        value="glassy"
-                    />
-                    <label for="glassy">glassy</label>
-                    <input
-                        type="radio"
-                        id="playfull"
-                        value="playfull"
-                    />
-                    <label for="playfull">playfull</label>
+
+                    <div class="switcher">
+                        <label>
+                            <input
+                                type="radio"
+                                value="auto"
+                                name="theme"
+                                checked
+                            />
+                            <span>auto</span>
+                        </label>
+                        <label>
+                            <input
+                                type="radio"
+                                value="light"
+                                name="theme"
+                            />
+                            <span>light</span>
+                        </label>
+                        <label>
+                            <input
+                                type="radio"
+                                value="dark"
+                                name="theme"
+                            />
+                            <span>dark</span>
+                        </label>
+                        <label>
+                            <input
+                                type="radio"
+                                value="custom"
+                                name="theme"
+                            />
+                            <span>custom</span>
+                        </label>
+                    </div>
                 </fieldset>
 
                 <fieldset
                     x-data="{
-                    toggleStylesheet(id) {
-                        document.getElementById(id + '-stylesheet').toggleAttribute('disabled')
-                    }
-                }"
+                        toggleStylesheet(layer) {
+                            const stylesheet = document.getElementById(layer + '-stylesheet')
+
+                            stylesheet.toggleAttribute('disabled')
+                        }
+                    }"
+                    x-on:change="toggleStylesheet($event.target.value)"
                 >
                     <legend>css layers</legend>
 
-                    <input
-                        type="checkbox"
-                        id="reset"
-                        checked
-                        x-on:click="toggleStylesheet('reset')"
-                    />
-                    <label for="reset">reset</label>
-                    <input
-                        type="checkbox"
-                        id="global"
-                        checked
-                        x-on:click="toggleStylesheet('global')"
-                    />
-                    <label for="global">global styles</label>
-                    <input
-                        type="checkbox"
-                        id="compositions"
-                        checked
-                        x-on:click="toggleStylesheet('compositions')"
-                    />
-                    <label for="compositions">composition</label>
-                    <input
-                        type="checkbox"
-                        id="utilities"
-                        checked
-                        x-on:click="toggleStylesheet('utilities')"
-                    />
-                    <label for="utilities">utility</label>
-                    <input
-                        type="checkbox"
-                        id="blocks"
-                        checked
-                        x-on:click="toggleStylesheet('blocks')"
-                    />
-                    <label for="blocks">block</label>
+                    <div class="switcher">
+                        <label>
+                            <input
+                                type="checkbox"
+                                value="reset"
+                                checked
+                            />
+                            <span>reset</span>
+                        </label>
+                        <label>
+                            <input
+                                type="checkbox"
+                                value="global"
+                                checked
+                            />
+                            <span>global</span>
+                        </label>
+                        <label>
+                            <input
+                                type="checkbox"
+                                value="composition"
+                                checked
+                            />
+                            <span>composition</span>
+                        </label>
+                        <label>
+                            <input
+                                type="checkbox"
+                                value="utility"
+                                checked
+                            />
+                            <span>utility</span>
+                        </label>
+                        <label>
+                            <input
+                                type="checkbox"
+                                value="block"
+                                checked
+                            />
+                            <span>block</span>
+                        </label>
+                    </div>
                 </fieldset>
             </aside>
 

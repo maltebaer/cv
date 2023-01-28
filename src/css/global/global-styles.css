@@ -1,12 +1,13 @@
 /*
-  global styles
-
-  low-specificity, global styles that apply to the whole
-  project: https://cube.fyi/css.html
+    GLOBAL STYLES
+    low-specificity, global styles that apply to the whole
+    project: https://cube.fyi/css.html
 */
 body {
-    color: var(--color-dark);
-    background: var(--color-light);
+    padding-block: var(--space-s);
+    color: var(--text-1);
+    accent-color: var(--brand);
+    background: var(--background);
     font-size: var(--size-step-1);
     font-family: var(--font-base);
     letter-spacing: var(--tracking);
@@ -16,6 +17,7 @@ body {
 h1,
 h2,
 h3 {
+    color: var(--brand);
     line-height: 1;
     letter-spacing: var(--tracking-s);
 }
@@ -69,6 +71,12 @@ main:focus {
 
 /* base selection styles that invert whatever colours are rendered */
 ::selection {
-    background: var(--color-dark);
-    color: var(--color-light);
+    background: var(--text-1);
+    color: hsl(var(--surface-1));
+}
+
+fieldset,
+article {
+    background: hsl(var(--surface-1) / 20%);
+    border-radius: var(--border-radius);
 }
