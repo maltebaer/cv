@@ -51,7 +51,7 @@
         <header>
             <nav class="wrapper">
                 <!-- block -->
-                <ul class="tmp | flex gap-s">
+                <ul class="tmp | flex gap-x-s gap-y-xs flex-wrap justify-end">
                     <li><a href="#interests">interests</a></li>
                     <li><a href="#projects">projects</a></li>
                     <li><a href="#experience">experience</a></li>
@@ -171,7 +171,7 @@
             </aside>
 
             <main class="flow">
-                <!-- block -->
+                <!-- intro -->
                 <article class="flow">
                     <header class="flow">
                         <h1>malte bär</h1>
@@ -213,8 +213,8 @@
                     </ul>
                 </article>
 
-                <!-- block -->
-                <article class="flow">
+                <!-- interests -->
+                <section class="flow">
                     <h2 id="interests">interests</h2>
 
                     <ul
@@ -234,10 +234,10 @@
                             ></li>
                         </template>
                     </ul>
-                </article>
+                </section>
 
-                <!-- block -->
-                <article class="flow">
+                <!-- projects -->
+                <section class="flow">
                     <h2 id="projects">projects</h2>
 
                     <ul
@@ -296,10 +296,10 @@
                             </li>
                         </template>
                     </ul>
-                </article>
+                </section>
 
-                <!-- block -->
-                <article class="flow">
+                <!-- experience -->
+                <section class="flow">
                     <h2 id="experience">experience</h2>
 
                     <ul
@@ -352,10 +352,10 @@
                             </li>
                         </template>
                     </ul>
-                </article>
+                </section>
 
-                <!-- block -->
-                <article class="flow">
+                <!-- education -->
+                <section class="flow">
                     <h2 id="education">education</h2>
 
                     <ul
@@ -408,20 +408,49 @@
                             </li>
                         </template>
                     </ul>
-                </article>
+                </section>
             </main>
         </div>
 
-        <footer class="wrapper">
+        <footer class="wrapper | tmp | flex flex-wrap justify-between gap-m">
             <p>
                 heavily inspired by
                 <a
-                    href="https://buildexcellentwebsit.es/"
+                    href="https://buildexcellentwebsit.es"
                     target="_blank"
                     rel="noopener noreferrer"
-                    >buildexcellentwebsit.es</a
-                >
+                    >buildexcellentwebsit.es
+                </a>
             </p>
+            <span class="tmp | flex gap-xs">
+                <p class="shrink-0">build with</p>
+                <ul class="tmp | flex flex-wrap gap-xs">
+                    <li>
+                        <a
+                            href="https://cube.fyi"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >cube css
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href="https://open-props.style"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >open props
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href="https://utopia.fyi"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >utopia
+                        </a>
+                    </li>
+                </ul>
+            </span>
         </footer>
     </body>
 </html>

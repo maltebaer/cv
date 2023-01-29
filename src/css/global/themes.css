@@ -7,6 +7,7 @@
 html {
     /* colors */
     --brand-light: var(--purple-6);
+    --accent-light: var(--indigo-5);
     --text-1-light: var(--purple-9);
     --text-2-light: var(--purple-7);
     --background-light: var(--purple-0);
@@ -15,10 +16,13 @@ html {
     --surface-3-light: var(--purple-2);
     --surface-4-light: var(--purple-3);
     /* ... */
-    --border-radius-light: 0;
+    --border-size-light: var(--border-size-3);
+    --border-radius-light: var(--radius-3);
+    --shadow-light: var(--shadow-1);
 
     /* colors */
-    --brand-dark: var(--pink-4);
+    --brand-dark: var(--pink-5);
+    --accent-dark: var(--pink-3);
     --text-1-dark: var(--gray-3);
     --text-2-dark: var(--gray-4);
     --background-dark: var(--gray-8);
@@ -27,10 +31,13 @@ html {
     --surface-3-dark: var(--gray-6);
     --surface-4-dark: var(--gray-5);
     /* ... */
-    --border-radius-dark: var(--radius-3);
+    --border-size-dark: 0;
+    --border-radius-dark: var(--radius-2);
+    --shadow-dark: var(--shadow-2);
 
     /* colors */
     --brand-custom: var(--violet-7);
+    --accent-custom: var(--purple-5);
     --text-1-custom: var(--cyan-9);
     --text-2-custom: var(--cyan-7);
     --background-custom: var(--gradient-18);
@@ -39,7 +46,9 @@ html {
     --surface-3-custom: var(--cyan-2);
     --surface-4-custom: var(--cyan-3);
     /* ... */
+    --border-size-custom: 0;
     --border-radius-custom: var(--radius-blob-2);
+    --shadow-custom: none;
 }
 
 :root {
@@ -47,6 +56,7 @@ html {
 
     /* set defaults */
     --brand: var(--brand-light);
+    --accent: var(--accent-light);
     --text-1: var(--text-1-light);
     --text-2: var(--text-2-light);
     --background: var(--background-light);
@@ -55,7 +65,9 @@ html {
     --surface-3: var(--surface-3-light);
     --surface-4: var(--surface-4-light);
 
+    --border-size: var(--border-size-light);
     --border-radius: var(--border-radius-light);
+    --shadow: var(--shadow-light);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -63,6 +75,7 @@ html {
         color-scheme: dark;
 
         --brand: var(--brand-dark);
+        --accent: var(--accent-dark);
         --text-1: var(--text-1-dark);
         --text-2: var(--text-2-dark);
         --background: var(--background-dark);
@@ -71,7 +84,9 @@ html {
         --surface-3: var(--surface-3-dark);
         --surface-4: var(--surface-4-dark);
 
+        --border-size: var(--border-size-dark);
         --border-radius: var(--border-radius-dark);
+        --shadow: var(--shadow-dark);
     }
 }
 
@@ -79,6 +94,7 @@ html {
     color-scheme: light;
 
     --brand: var(--brand-light);
+    --accent: var(--accent-light);
     --text-1: var(--text-1-light);
     --text-2: var(--text-2-light);
     --background: var(--background-light);
@@ -87,13 +103,16 @@ html {
     --surface-3: var(--surface-3-light);
     --surface-4: var(--surface-4-light);
 
+    --border-size: var(--border-size-light);
     --border-radius: var(--border-radius-light);
+    --shadow: var(--shadow-light);
 }
 
 [theme="dark"] {
-    color-scheme: light;
+    color-scheme: dark;
 
     --brand: var(--brand-dark);
+    --accent: var(--accent-dark);
     --text-1: var(--text-1-dark);
     --text-2: var(--text-2-dark);
     --background: var(--background-dark);
@@ -102,13 +121,16 @@ html {
     --surface-3: var(--surface-3-dark);
     --surface-4: var(--surface-4-dark);
 
+    --border-size: var(--border-size-dark);
     --border-radius: var(--border-radius-dark);
+    --shadow: var(--shadow-dark);
 }
 
 [theme="custom"] {
     color-scheme: light;
 
     --brand: var(--brand-custom);
+    --accent: var(--accent-custom);
     --text-1: var(--text-1-custom);
     --text-2: var(--text-2-custom);
     --background: var(--background-custom);
@@ -117,5 +139,7 @@ html {
     --surface-3: var(--surface-3-custom);
     --surface-4: var(--surface-4-custom);
 
+    --border-size: var(--border-size-custom);
     --border-radius: var(--border-radius-custom);
+    --shadow: var(--shadow-custom);
 }

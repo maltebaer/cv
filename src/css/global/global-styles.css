@@ -17,9 +17,17 @@ body {
 h1,
 h2,
 h3 {
-    color: var(--brand);
     line-height: 1;
     letter-spacing: var(--tracking-s);
+}
+
+h1,
+h2 {
+    color: var(--brand);
+}
+
+h3 {
+    color: var(--accent);
 }
 
 h1 {
@@ -63,7 +71,7 @@ a:hover {
 }
 
 :target {
-    scroll-margin-top: 2ex;
+    /* scroll-margin-top: 2ex; */
 }
 
 main:focus {
@@ -76,8 +84,23 @@ main:focus {
     color: hsl(var(--surface-1));
 }
 
+/* blocks? */
 fieldset,
+section,
 article {
-    background: hsl(var(--surface-1) / 20%);
     border-radius: var(--border-radius);
+}
+:where(html[theme="custom"]) :where(fieldset, section, article) {
+    background: hsl(var(--surface-1) / 20%);
+}
+
+section {
+    background: var(--surface-2);
+    padding: var(--space-m);
+    border: var(--border-size) solid var(--accent);
+    box-shadow: var(--shadow);
+}
+:where(html[theme="custom"]) section {
+    padding: 0;
+    background: hsl(var(--surface-1) / 20%);
 }
