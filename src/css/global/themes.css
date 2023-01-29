@@ -49,6 +49,21 @@ html {
     --border-size-custom: 0;
     --border-radius-custom: var(--radius-blob-2);
     --shadow-custom: none;
+
+    /* colors */
+    --brand-bauhaus: var(--red-8);
+    --accent-bauhaus: var(--yellow-4);
+    --text-1-bauhaus: var(--stone-10);
+    --text-2-bauhaus: var(--stone-9);
+    --background-bauhaus: var(--stone-3);
+    --surface-1-bauhaus: var(--stone-3-hsl);
+    --surface-2-bauhaus: var(--stone-3);
+    --surface-3-bauhaus: var(--stone-5);
+    --surface-4-bauhaus: var(--stone-6);
+    /* ... */
+    --border-size-bauhaus: var(--border-size-3);
+    --border-radius-bauhaus: 0;
+    --shadow-bauhaus: none;
 }
 
 :root {
@@ -142,4 +157,22 @@ html {
     --border-size: var(--border-size-custom);
     --border-radius: var(--border-radius-custom);
     --shadow: var(--shadow-custom);
+}
+
+[theme="bauhaus"] {
+    color-scheme: light;
+
+    --brand: var(--brand-bauhaus);
+    --accent: var(--accent-bauhaus);
+    --text-1: var(--text-1-bauhaus);
+    --text-2: var(--text-2-bauhaus);
+    --background: var(--background-bauhaus);
+    --surface-1: var(--surface-1-bauhaus);
+    --surface-2: var(--surface-2-bauhaus);
+    --surface-3: var(--surface-3-bauhaus);
+    --surface-4: var(--surface-4-bauhaus);
+
+    --border-size: var(--border-size-bauhaus);
+    --border-radius: var(--border-radius-bauhaus);
+    --shadow: var(--shadow-bauhaus);
 }

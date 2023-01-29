@@ -48,10 +48,10 @@
     </head>
 
     <body>
-        <header>
+        <header class="header">
             <nav class="wrapper">
                 <!-- block -->
-                <ul class="tmp | flex gap-x-s gap-y-xs flex-wrap justify-end">
+                <ul>
                     <li><a href="#interests">interests</a></li>
                     <li><a href="#projects">projects</a></li>
                     <li><a href="#experience">experience</a></li>
@@ -79,8 +79,8 @@
                         <label>
                             <input
                                 type="radio"
-                                value="auto"
                                 name="theme"
+                                value="auto"
                                 checked
                             />
                             <span>auto</span>
@@ -88,26 +88,34 @@
                         <label>
                             <input
                                 type="radio"
-                                value="light"
                                 name="theme"
+                                value="light"
                             />
                             <span>light</span>
                         </label>
                         <label>
                             <input
                                 type="radio"
-                                value="dark"
                                 name="theme"
+                                value="dark"
                             />
                             <span>dark</span>
                         </label>
                         <label>
                             <input
                                 type="radio"
-                                value="custom"
                                 name="theme"
+                                value="custom"
                             />
                             <span>custom</span>
+                        </label>
+                        <label>
+                            <input
+                                type="radio"
+                                name="theme"
+                                value="bauhaus"
+                            />
+                            <span>bauhaus</span>
                         </label>
                     </div>
                 </fieldset>
@@ -321,7 +329,7 @@
                             <li>
                                 <article class="flow">
                                     <header class="flow">
-                                        <h3 x-text="job.role"></h3>
+                                        <h3><span x-text="job.role"></span></h3>
 
                                         <p>
                                             <a
@@ -377,7 +385,9 @@
                             <li>
                                 <article class="flow">
                                     <header class="flow">
-                                        <h3 x-text="step.type"></h3>
+                                        <h3>
+                                            <span x-text="step.type"></span>
+                                        </h3>
 
                                         <p>
                                             <a

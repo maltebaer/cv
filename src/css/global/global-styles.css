@@ -29,6 +29,13 @@ h2 {
 h3 {
     color: var(--accent);
 }
+:where([theme="bauhaus"]) h3 {
+    width: min-content;
+}
+:where([theme="bauhaus"]) h3 > span {
+    background: var(--text-1);
+    color: hsl(var(--surface-1));
+}
 
 h1 {
     font-size: var(--size-step-5);
@@ -58,6 +65,14 @@ h3 {
 /* base interactive elements */
 a {
     color: currentcolor;
+}
+:where([theme="bauhaus"]) a {
+    text-decoration: none;
+    background: var(--accent);
+}
+:where([theme="bauhaus"]) h3 > a {
+    background: var(--text-1);
+    color: hsl(var(--surface-1));
 }
 
 a:hover {
@@ -97,7 +112,7 @@ article {
 section {
     background: var(--surface-2);
     padding: var(--space-m);
-    border: var(--border-size) solid var(--accent);
+    border: var(--border-size) solid var(--text-1);
     box-shadow: var(--shadow);
 }
 :where(html[theme="custom"]) section {
