@@ -54,6 +54,8 @@
                 <ul class="tmp | flex gap-s">
                     <li><a href="#interests">interests</a></li>
                     <li><a href="#projects">projects</a></li>
+                    <li><a href="#experience">experience</a></li>
+                    <li><a href="#education">education</a></li>
                 </ul>
             </nav>
         </header>
@@ -171,10 +173,12 @@
             <main class="flow">
                 <!-- block -->
                 <article class="flow">
-                    <header>
+                    <header class="flow">
                         <h1>malte bär</h1>
+
                         <p>web developer</p>
                     </header>
+
                     <p>
                         Sint labore velit Lorem consectetur qui Lorem aute
                         eiusmod dolor occaecat. Fugiat ullamco quis ea laborum
@@ -182,6 +186,7 @@
                         incididunt ex sit excepteur consectetur ut. Excepteur
                         fugiat esse ad ex.
                     </p>
+
                     <ul>
                         <li>potsdam, germany</li>
                         <li>
@@ -211,6 +216,7 @@
                 <!-- block -->
                 <article class="flow">
                     <h2 id="interests">interests</h2>
+
                     <ul
                         x-data="{
                         interests: []
@@ -233,17 +239,18 @@
                 <!-- block -->
                 <article class="flow">
                     <h2 id="projects">projects</h2>
+
                     <ul
                         class="grid"
                         data-layout="50-50"
                         x-data="{
-                    projects: []
-                }"
+                            projects: []
+                        }"
                         x-init="
-                    fetch('/data/projects.json')
-                        .then(res => res.json())
-                        .then(res => projects = res.projects)
-                "
+                            fetch('/data/projects.json')
+                                .then(res => res.json())
+                                .then(res => projects = res.projects)
+                        "
                     >
                         <template
                             x-for="project in projects"
@@ -254,23 +261,24 @@
                                     <header class="flow">
                                         <h3>
                                             <a
-                                                :href="project.url"
+                                                :href="project.website"
                                                 target="_blank"
                                                 rel="noopener noreferrer"
                                                 x-text="project.title"
                                             ></a>
                                         </h3>
-                                        <p x-text="project.description"></p>
+
+                                        <p>
+                                            <a
+                                                :href="project.sourceCodeUrl"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                >source code
+                                            </a>
+                                        </p>
                                     </header>
 
-                                    <p>
-                                        <a
-                                            :href="project.sourceCodeUrl"
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            >source code</a
-                                        >
-                                    </p>
+                                    <p x-text="project.description"></p>
 
                                     <footer>
                                         <ul>
@@ -283,6 +291,118 @@
                                                 ></li>
                                             </template>
                                         </ul>
+                                    </footer>
+                                </article>
+                            </li>
+                        </template>
+                    </ul>
+                </article>
+
+                <!-- block -->
+                <article class="flow">
+                    <h2 id="experience">experience</h2>
+
+                    <ul
+                        class="grid"
+                        data-layout="50-50"
+                        x-data="{
+                            experience: []
+                        }"
+                        x-init="
+                            fetch('/data/experience.json')
+                                .then(res => res.json())
+                                .then(res => experience = res.experience)
+                        "
+                    >
+                        <template
+                            x-for="job in experience"
+                            :key="job.start"
+                        >
+                            <li>
+                                <article class="flow">
+                                    <header class="flow">
+                                        <h3 x-text="job.role"></h3>
+
+                                        <p>
+                                            <a
+                                                :href="job.website"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                x-text="job.location"
+                                            ></a>
+                                        </p>
+                                    </header>
+
+                                    <p x-text="job.description"></p>
+
+                                    <footer>
+                                        <p>
+                                            <time
+                                                datetime="job.start"
+                                                x-text="new Date(job.start).toLocaleDateString()"
+                                            ></time>
+                                            -
+                                            <time
+                                                datetime="job.end"
+                                                x-text="job.end ? new Date(job.end).toLocaleDateString() : 'ongoing'"
+                                            ></time>
+                                        </p>
+                                    </footer>
+                                </article>
+                            </li>
+                        </template>
+                    </ul>
+                </article>
+
+                <!-- block -->
+                <article class="flow">
+                    <h2 id="education">education</h2>
+
+                    <ul
+                        class="grid"
+                        data-layout="50-50"
+                        x-data="{
+                            education: []
+                        }"
+                        x-init="
+                            fetch('/data/education.json')
+                                .then(res => res.json())
+                                .then(res => education = res.education)
+                        "
+                    >
+                        <template
+                            x-for="step in education"
+                            :key="step.start"
+                        >
+                            <li>
+                                <article class="flow">
+                                    <header class="flow">
+                                        <h3 x-text="step.type"></h3>
+
+                                        <p>
+                                            <a
+                                                :href="step.website"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                x-text="step.location"
+                                            ></a>
+                                        </p>
+                                    </header>
+
+                                    <p x-text="step.description"></p>
+
+                                    <footer>
+                                        <p>
+                                            <time
+                                                datetime="step.start"
+                                                x-text="new Date(step.start).toLocaleDateString()"
+                                            ></time>
+                                            -
+                                            <time
+                                                datetime="step.end"
+                                                x-text="new Date(step.end).toLocaleDateString()"
+                                            ></time>
+                                        </p>
                                     </footer>
                                 </article>
                             </li>
