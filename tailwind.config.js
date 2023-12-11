@@ -3,14 +3,14 @@ const plugin = require("tailwindcss/plugin");
 const postcss = require("postcss");
 const postcssJs = require("postcss-js");
 
-const clampGenerator = require("./src/css-utils/clamp-generator.js");
-const tokensToTailwind = require("./src/css-utils/tokens-to-tailwind.js");
+const clampGenerator = require("./src/assets/css-utils/clamp-generator.js");
+const tokensToTailwind = require("./src/assets/css-utils/tokens-to-tailwind.js");
 
 // raw design tokens
-const colorTokens = require("./src/design-tokens/colors.json");
-const fontTokens = require("./src/design-tokens/fonts.json");
-const spacingTokens = require("./src/design-tokens/spacing.json");
-const textSizeTokens = require("./src/design-tokens/text-sizes.json");
+const colorTokens = require("./src/assets/design-tokens/colors.json");
+const fontTokens = require("./src/assets/design-tokens/fonts.json");
+const spacingTokens = require("./src/assets/design-tokens/spacing.json");
+const textSizeTokens = require("./src/assets/design-tokens/text-sizes.json");
 
 // process design tokens
 const colors = tokensToTailwind(colorTokens.items);
