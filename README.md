@@ -2,10 +2,10 @@
 
 ## technology
 
--   native html
--   css with tailwind
--   js with alpine
--   building with vite
+- 11ty
+- native html
+- css with tailwind
+- js with alpine
 
 ## methodology
 
@@ -35,7 +35,3 @@
     2. any subsequent block classes
     3. standard utility classes
     4. design token utility classes
-
-## todos
-
--   [ ] store user settings

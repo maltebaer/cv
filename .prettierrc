@@ -1,5 +1,10 @@
 {
+    "printWidth": 90,
     "tabWidth": 4,
+    "singleQuote": true,
+    "bracketSpacing": false,
     "singleAttributePerLine": true,
-    "quoteProps": "consistent"
+    "quoteProps": "consistent",
+    "trailingComma": "none",
+    "arrowParens": "avoid"
 }

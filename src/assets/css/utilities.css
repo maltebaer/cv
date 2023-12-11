@@ -1,6 +1,2 @@
 @import "tailwindcss/utilities";
-
-@import "utilities/flow.css";
-@import "utilities/region.css";
-@import "utilities/wrapper.css";
-@import "utilities/x-cloak.css";
+@import-glob 'utilities/*.css';
