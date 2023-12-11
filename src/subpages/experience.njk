@@ -1,0 +1,40 @@
+---
+order: 4
+---
+
+<section class="flow">
+    <h2 id="experience">experience</h2>
+
+    <ul
+        class="grid"
+        data-layout="50-50"
+    >
+        {% for job in experience %}
+            <li>
+                <article class="flow">
+                    <header class="flow">
+                        <h3><span>{{ job.role }}</span></h3>
+
+                        <p>
+                            <a
+                                href="{{ job.website }}"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >{{ job.location }}</a>
+                        </p>
+                    </header>
+
+                    <p>{{ job.description }}</p>
+
+                    <footer>
+                        <p>
+                            <time datetime="{{ job.start }}">{{ job.start | getLocaleDateString }}</time>
+                            -
+                            <time datetime="{{ job.end }}">{{ job.end | getLocaleDateString }}</time>
+                        </p>
+                    </footer>
+                </article>
+            </li>
+        {% endfor %}
+    </ul>
+</section>

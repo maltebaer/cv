@@ -1,0 +1,26 @@
+[
+    {
+        "type": "web development bootcamp, full stack",
+        "location": "ironhack berlin",
+        "website": "https://www.ironhack.com/en/berlin",
+        "description": "intensive 9-week courses in web development including: mern stack, javascript, html and css.",
+        "start": "2018-12-31T23:00:00.000Z",
+        "end": "2019-02-28T23:00:00.000Z"
+    },
+    {
+        "type": "master of science, engineering",
+        "location": "tu berlin",
+        "description": "Labore consequat proident laborum voluptate est ea culpa duis in dolor id duis sunt irure duis.",
+        "website": "https://www.tu.berlin/",
+        "start": "2016-03-31T22:00:00.000Z",
+        "end": "2018-11-30T23:00:00.000Z"
+    },
+    {
+        "type": "bachelor of science, physics",
+        "location": "tu berlin",
+        "website": "https://www.tu.berlin/",
+        "description": "thesis: 'calculation of phase diagrams for active fluids' at the department of theoretical physics.",
+        "start": "2012-03-31T22:00:00.000Z",
+        "end": "2016-02-29T23:00:00.000Z"
+    }
+]

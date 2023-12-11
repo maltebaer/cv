@@ -1,0 +1,116 @@
+    <aside class="flow">
+        <!-- block -->
+        <fieldset
+            x-data="{
+                setTheme(theme) {
+                    const html = document.firstElementChild
+
+                    html.setAttribute('theme', theme)
+                }
+            }"
+            x-on:change="setTheme($event.target.value)"
+        >
+            <legend>theme</legend>
+
+            <div class="switcher">
+                <label>
+                    <input
+                        type="radio"
+                        name="theme"
+                        value="auto"
+                        checked
+                    />
+                    <span>auto</span>
+                </label>
+                <label>
+                    <input
+                        type="radio"
+                        name="theme"
+                        value="light"
+                    />
+                    <span>light</span>
+                </label>
+                <label>
+                    <input
+                        type="radio"
+                        name="theme"
+                        value="dark"
+                    />
+                    <span>dark</span>
+                </label>
+                <label>
+                    <input
+                        type="radio"
+                        name="theme"
+                        value="custom"
+                    />
+                    <span>custom</span>
+                </label>
+                <label>
+                    <input
+                        type="radio"
+                        name="theme"
+                        value="bauhaus"
+                    />
+                    <span>bauhaus</span>
+                </label>
+            </div>
+        </fieldset>
+
+        <!-- block -->
+        <fieldset
+            x-data="{
+                toggleStylesheet(layer) {
+                    const stylesheet = document.getElementById(layer + '-stylesheet')
+
+                    stylesheet.toggleAttribute('disabled')
+                }
+            }"
+            x-on:change="toggleStylesheet($event.target.value)"
+        >
+            <legend>css layers</legend>
+
+            <div class="switcher">
+                <label>
+                    <input
+                        type="checkbox"
+                        value="reset"
+                        checked
+                    />
+                    <span>reset</span>
+                </label>
+                <label>
+                    <input
+                        type="checkbox"
+                        value="global"
+                        checked
+                    />
+                    <span>global</span>
+                </label>
+                <label>
+                    <input
+                        type="checkbox"
+                        value="composition"
+                        checked
+                    />
+                    <span>composition</span>
+                </label>
+                <label>
+                    <input
+                        type="checkbox"
+                        value="utility"
+                        checked
+                    />
+                    <span>utility</span>
+                </label>
+                <label>
+                    <input
+                        type="checkbox"
+                        value="block"
+                        checked
+                    />
+                    <span>block</span>
+                </label>
+            </div>
+        </fieldset>
+</aside>

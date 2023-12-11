@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="utf-8" />
+        <title>cv</title>
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1"
+        />
+        <meta
+            name="theme-color"
+            content="#000"
+        />
+
+        <link
+            rel="stylesheet"
+            href="/assets/css/custom-properties.css"
+        />
+        <link
+            id="reset-stylesheet"
+            rel="stylesheet"
+            href="/assets/css/global/reset.css"
+        />
+        <link
+            id="global-stylesheet"
+            rel="stylesheet"
+            href="/assets/css/global.css"
+        />
+        <link
+            id="composition-stylesheet"
+            rel="stylesheet"
+            href="/assets/css/compositions.css"
+        />
+        <link
+            id="utility-stylesheet"
+            rel="stylesheet"
+            href="/assets/css/utilities.css"
+        />
+        <link
+            id="block-stylesheet"
+            rel="stylesheet"
+            href="/assets/css/blocks.css"
+        />
+        <script
+            defer
+            src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+        ></script>
+    </head>
+
+    <body>
+        {% include "partials/header.njk" %}
+
+        <div class="sidebar | region wrapper">
+            {% include "partials/controls.njk" %}
+
+
+            <main class="flow">
+                {%- for subpage in collections.subpage | sortByOrder -%}
+                    {{ subpage.content | safe }}
+                {%- endfor -%}
+            </main>
+        </div>
+
+        {% include "partials/footer.njk" %}
+    </body>
+</html>

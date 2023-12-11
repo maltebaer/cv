@@ -1,0 +1,47 @@
+---
+order: 3
+---
+
+<section class="flow">
+    <h2 id="projects">projects</h2>
+
+    <ul
+        class="grid"
+        data-layout="50-50"
+    >
+        {% for project in projects %}
+            <li>
+                <article class="flow">
+                    <header class="flow">
+                        <h3>
+                            <a
+                                href="{{ project.website }}"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >{{ project.title }}</a>
+                        </h3>
+
+                        <p>
+                            <a
+                                href="{{ project.sourceCodeUrl }}"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >source code
+                            </a>
+                        </p>
+                    </header>
+
+                    <p>{{ project.description }}</p>
+
+                    <footer>
+                        <ul>
+                            {% for technology in project.technologies %}
+                                <li>{{ technology }}</li>
+                            {% endfor %}
+                        </ul>
+                    </footer>
+                </article>
+            </li>
+        {% endfor %}
+    </ul>
+</section>

@@ -1,0 +1,42 @@
+---
+order: 5
+---
+
+<section class="flow">
+    <h2 id="education">education</h2>
+
+    <ul
+        class="grid"
+        data-layout="50-50"
+    >
+        {% for step in education %}
+            <li>
+                <article class="flow">
+                    <header class="flow">
+                        <h3>
+                            <span>{{ step.type }}</span>
+                        </h3>
+
+                        <p>
+                            <a
+                                href="{{ step.website }}"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >{{ step.location }}</a>
+                        </p>
+                    </header>
+
+                    <p>{{ step.description }}</p>
+
+                    <footer>
+                        <p>
+                            <time datetime="{{ step.start }}">{{ step.start | getLocaleDateString }}</time>
+                            -
+                            <time datetime="{{ step.end }}">{{ step.end | getLocaleDateString }}</time>
+                        </p>
+                    </footer>
+                </article>
+            </li>
+        {% endfor %}
+    </ul>
+</section>
