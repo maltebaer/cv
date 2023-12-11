@@ -19,7 +19,7 @@ const fontSize = tokensToTailwind(clampGenerator(textSizeTokens.items));
 const spacing = tokensToTailwind(clampGenerator(spacingTokens.items));
 
 module.exports = {
-    content: ["./index.html"],
+    content: ['./src/**/*.{html,md,njk}'],
     corePlugins: {
         preflight: false,
     },
