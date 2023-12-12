@@ -2,14 +2,15 @@
     display: flex;
     flex-wrap: wrap;
     gap: var(--switcher-space, var(--gutter));
-  }
+    align-content: start;
+}
 
-  .switcher > * {
+.switcher > * {
     flex-grow: 1;
-    flex-basis: calc(( var(--switcher-container-width, 30rem) - 100%) * 999);
-  }
+    flex-basis: calc((var(--switcher-container-width, 30rem) - 100%) * 999);
+}
 
-  .switcher > :nth-last-child(n+ 5),
-  .switcher > :nth-last-child(n+ 5) ~ * {
+.switcher > :nth-last-child(n + 5),
+.switcher > :nth-last-child(n + 5) ~ * {
     flex-basis: 100%;
-  }
+}

@@ -1,6 +1,6 @@
-    <aside class="stack">
-        <!-- block -->
-        <fieldset
+<aside class="switcher">
+    <!-- block -->
+    <fieldset
             x-data="{
                 setTheme(theme) {
                     const html = document.firstElementChild
@@ -10,55 +10,50 @@
             }"
             x-on:change="setTheme($event.target.value)"
         >
-            <legend>theme</legend>
+        <legend>theme</legend>
 
-            <div class="stack" style="--stack-space: var(--space-xs)">
-                <label>
-                    <input
+        <div class="stack" style="--stack-space: var(--space-xs)">
+            <label>
+                <input
                         type="radio"
                         name="theme"
                         value="auto"
-                        checked
-                    />
-                    <span>auto</span>
-                </label>
-                <label>
-                    <input
+                        checked/>
+                <span>auto</span>
+            </label>
+            <label>
+                <input
                         type="radio"
                         name="theme"
-                        value="light"
-                    />
-                    <span>light</span>
-                </label>
-                <label>
-                    <input
+                        value="light"/>
+                <span>light</span>
+            </label>
+            <label>
+                <input
                         type="radio"
                         name="theme"
-                        value="dark"
-                    />
-                    <span>dark</span>
-                </label>
-                <label>
-                    <input
+                        value="dark"/>
+                <span>dark</span>
+            </label>
+            <label>
+                <input
                         type="radio"
                         name="theme"
-                        value="custom"
-                    />
-                    <span>custom</span>
-                </label>
-                <label>
-                    <input
+                        value="custom"/>
+                <span>custom</span>
+            </label>
+            <label>
+                <input
                         type="radio"
                         name="theme"
-                        value="bauhaus"
-                    />
-                    <span>bauhaus</span>
-                </label>
-            </div>
-        </fieldset>
+                        value="bauhaus"/>
+                <span>bauhaus</span>
+            </label>
+        </div>
+    </fieldset>
 
-        <!-- block -->
-        <fieldset
+    <!-- block -->
+    <fieldset
             x-data="{
                 toggleStylesheet(layer) {
                     const stylesheet = document.getElementById(layer + '-stylesheet')
@@ -68,49 +63,44 @@
             }"
             x-on:change="toggleStylesheet($event.target.value)"
         >
-            <legend>css layers</legend>
+        <legend>css layers</legend>
 
-            <div class="stack" style="--stack-space: var(--space-xs)">
-                <label>
-                    <input
+        <div class="stack" style="--stack-space: var(--space-xs)">
+            <label>
+                <input
                         type="checkbox"
                         value="reset"
-                        checked
-                    />
-                    <span>reset</span>
-                </label>
-                <label>
-                    <input
+                        checked/>
+                <span>reset</span>
+            </label>
+            <label>
+                <input
                         type="checkbox"
                         value="global"
-                        checked
-                    />
-                    <span>global</span>
-                </label>
-                <label>
-                    <input
+                        checked/>
+                <span>global</span>
+            </label>
+            <label>
+                <input
                         type="checkbox"
                         value="composition"
-                        checked
-                    />
-                    <span>composition</span>
-                </label>
-                <label>
-                    <input
+                        checked/>
+                <span>composition</span>
+            </label>
+            <label>
+                <input
                         type="checkbox"
                         value="utility"
-                        checked
-                    />
-                    <span>utility</span>
-                </label>
-                <label>
-                    <input
+                        checked/>
+                <span>utility</span>
+            </label>
+            <label>
+                <input
                         type="checkbox"
                         value="block"
-                        checked
-                    />
-                    <span>block</span>
-                </label>
-            </div>
-        </fieldset>
+                        checked/>
+                <span>block</span>
+            </label>
+        </div>
+    </fieldset>
 </aside>

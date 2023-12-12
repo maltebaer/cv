@@ -2,15 +2,15 @@
     display: flex;
     flex-wrap: wrap;
     gap: var(--space-l-xl, var(--gutter));
-  }
+}
 
-  .with-sidebar > :first-child {
+.with-sidebar > :first-child {
     flex-basis: var(--sidebar-width, 15rem);
     flex-grow: 1;
-  }
+}
 
-  .with-sidebar > :last-child {
+.with-sidebar > :last-child {
     flex-basis: 0;
     flex-grow: 999;
-    min-inline-size: 50%;
-  }
+    min-inline-size: 65%;
+}
