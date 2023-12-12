@@ -103,7 +103,7 @@ main:focus {
 fieldset {
     border-radius: var(--border-radius);
 }
-:where(html[theme='custom']) fieldset {
+:where(html[theme='vibrant']) fieldset {
     border: 0.5px solid var(--text-1);
     background: hsl(var(--surface-1) / 20%);
 }

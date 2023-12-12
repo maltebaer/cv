@@ -11,7 +11,7 @@
     background: hsl(var(--surface-1) / 20%);
 }
 
-:where(html[theme='custom']) .card {
+:where(html[theme='vibrant']) .card {
     padding: 0;
     background: hsl(var(--surface-1) / 20%);
 }

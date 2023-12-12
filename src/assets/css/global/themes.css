@@ -36,19 +36,19 @@ html {
     --shadow-dark: var(--shadow-2);
 
     /* colors */
-    --brand-custom: var(--violet-7);
-    --accent-custom: var(--purple-5);
-    --text-1-custom: var(--cyan-9);
-    --text-2-custom: var(--cyan-7);
-    --background-custom: var(--gradient-18);
-    --surface-1-custom: var(--cyan-0-hsl);
-    --surface-2-custom: var(--cyan-1);
-    --surface-3-custom: var(--cyan-2);
-    --surface-4-custom: var(--cyan-3);
+    --brand-vibrant: var(--violet-7);
+    --accent-vibrant: var(--purple-5);
+    --text-1-vibrant: var(--cyan-9);
+    --text-2-vibrant: var(--cyan-7);
+    --background-vibrant: var(--gradient-18);
+    --surface-1-vibrant: var(--cyan-0-hsl);
+    --surface-2-vibrant: var(--cyan-1);
+    --surface-3-vibrant: var(--cyan-2);
+    --surface-4-vibrant: var(--cyan-3);
     /* ... */
-    --border-size-custom: 0;
-    --border-radius-custom: var(--radius-blob-2);
-    --shadow-custom: none;
+    --border-size-vibrant: 0;
+    --border-radius-vibrant: var(--radius-blob-2);
+    --shadow-vibrant: none;
 
     /* colors */
     --brand-bauhaus: var(--red-8);
@@ -105,7 +105,7 @@ html {
     }
 }
 
-[theme="light"] {
+[theme='light'] {
     color-scheme: light;
 
     --brand: var(--brand-light);
@@ -123,7 +123,7 @@ html {
     --shadow: var(--shadow-light);
 }
 
-[theme="dark"] {
+[theme='dark'] {
     color-scheme: dark;
 
     --brand: var(--brand-dark);
@@ -141,25 +141,25 @@ html {
     --shadow: var(--shadow-dark);
 }
 
-[theme="custom"] {
+[theme='vibrant'] {
     color-scheme: light;
 
-    --brand: var(--brand-custom);
-    --accent: var(--accent-custom);
-    --text-1: var(--text-1-custom);
-    --text-2: var(--text-2-custom);
-    --background: var(--background-custom);
-    --surface-1: var(--surface-1-custom);
-    --surface-2: var(--surface-2-custom);
-    --surface-3: var(--surface-3-custom);
-    --surface-4: var(--surface-4-custom);
+    --brand: var(--brand-vibrant);
+    --accent: var(--accent-vibrant);
+    --text-1: var(--text-1-vibrant);
+    --text-2: var(--text-2-vibrant);
+    --background: var(--background-vibrant);
+    --surface-1: var(--surface-1-vibrant);
+    --surface-2: var(--surface-2-vibrant);
+    --surface-3: var(--surface-3-vibrant);
+    --surface-4: var(--surface-4-vibrant);
 
-    --border-size: var(--border-size-custom);
-    --border-radius: var(--border-radius-custom);
-    --shadow: var(--shadow-custom);
+    --border-size: var(--border-size-vibrant);
+    --border-radius: var(--border-radius-vibrant);
+    --shadow: var(--shadow-vibrant);
 }
 
-[theme="bauhaus"] {
+[theme='bauhaus'] {
     color-scheme: light;
 
     --brand: var(--brand-bauhaus);
