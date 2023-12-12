@@ -29,10 +29,10 @@ h2 {
 h3 {
     color: var(--accent);
 }
-:where([theme="bauhaus"]) h3 {
+:where([theme='bauhaus']) h3 {
     width: min-content;
 }
-:where([theme="bauhaus"]) h3 > span {
+:where([theme='bauhaus']) h3 > span {
     background: var(--text-1);
     color: hsl(var(--surface-1));
 }
@@ -66,11 +66,11 @@ h3 {
 a {
     color: currentcolor;
 }
-:where([theme="bauhaus"]) a {
+:where([theme='bauhaus']) a {
     text-decoration: none;
     background: var(--accent);
 }
-:where([theme="bauhaus"]) h3 > a {
+:where([theme='bauhaus']) h3 > a {
     background: var(--text-1);
     color: hsl(var(--surface-1));
 }
@@ -100,22 +100,10 @@ main:focus {
 }
 
 /* blocks? */
-fieldset,
-section,
-article {
+fieldset {
     border-radius: var(--border-radius);
 }
-:where(html[theme="custom"]) :where(fieldset, section, article) {
-    background: hsl(var(--surface-1) / 20%);
-}
-
-section {
-    background: var(--surface-2);
-    padding: var(--space-m);
-    border: var(--border-size) solid var(--text-1);
-    box-shadow: var(--shadow);
-}
-:where(html[theme="custom"]) section {
-    padding: 0;
+:where(html[theme='custom']) fieldset {
+    border: 0.5px solid var(--text-1);
     background: hsl(var(--surface-1) / 20%);
 }

@@ -1,0 +1,17 @@
+.card {
+    background: var(--surface-2);
+    padding: var(--space-m);
+    border: var(--border-size) solid var(--text-1);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+.card article {
+    border-radius: var(--border-radius);
+    background: hsl(var(--surface-1) / 20%);
+}
+
+:where(html[theme='custom']) .card {
+    padding: 0;
+    background: hsl(var(--surface-1) / 20%);
+}
