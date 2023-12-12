@@ -35,3 +35,23 @@
     2. any subsequent block classes
     3. standard utility classes
     4. design token utility classes
+
+## notes
+
+### utopia size scales
+
+```css
+--space-{xs - 3xl}
+--space-{xs-s - 2xl-3xl}
+--size-step-{0 - 6}
+```
+
+### open props sizes
+
+```css
+--size-{000 - 15}
+--size-fluid-{1 - 10}
+--size-content-{1 - 3}
+--size-header-{1 - 3}
+--size-relative-{000 - 15}
+```

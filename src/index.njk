@@ -50,11 +50,10 @@
     <body>
         {% include "partials/header.njk" %}
 
-        <div class="sidebar | region wrapper">
+        <div class="with-sidebar | region wrapper">
             {% include "partials/controls.njk" %}
 
-
-            <main class="flow">
+            <main class="stack" style="--stack-space: var(--space-xl-2xl)">
                 {%- for subpage in collections.subpage | sortByOrder -%}
                     {{ subpage.content | safe }}
                 {%- endfor -%}
