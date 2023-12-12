@@ -1,15 +1,4 @@
-/*
-    HEADER
-*/
-
-.header > nav > ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: end;
-    gap: var(--space-xs) var(--space-s);
-}
-
-:where([theme="bauhaus"]) .header > nav > ul {
+:where([theme='bauhaus']) .header > nav > ul {
     writing-mode: vertical-lr;
     display: block;
     margin-block-start: auto;
