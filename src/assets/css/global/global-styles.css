@@ -8,7 +8,7 @@ body {
     color: var(--text-1);
     accent-color: var(--brand);
     background: var(--background);
-    font-size: var(--size-step-1);
+    font-size: var(--size-step-0);
     font-family: var(--font-base);
     letter-spacing: var(--tracking);
 }
@@ -38,15 +38,15 @@ h3 {
 }
 
 h1 {
-    font-size: var(--size-step-5);
-}
-
-h2 {
     font-size: var(--size-step-4);
 }
 
-h3 {
+h2 {
     font-size: var(--size-step-3);
+}
+
+h3 {
+    font-size: var(--size-step-2);
 }
 
 /* set line lengths */
@@ -86,7 +86,7 @@ a:hover {
 }
 
 :target {
-    /* scroll-margin-top: 2ex; */
+    scroll-margin-top: 2ex;
 }
 
 main:focus {
