@@ -62,6 +62,12 @@ h3 {
     max-width: 20ch;
 }
 
+ul,
+ol {
+    padding: 0;
+    list-style: none;
+}
+
 /* base interactive elements */
 a {
     color: currentcolor;
@@ -93,13 +99,16 @@ main:focus {
     outline: none;
 }
 
+button {
+    all: unset;
+}
+
 /* base selection styles that invert whatever colours are rendered */
 ::selection {
     background: var(--text-1);
     color: hsl(var(--surface-1));
 }
 
-/* blocks? */
 fieldset {
     border-radius: var(--border-radius);
 }

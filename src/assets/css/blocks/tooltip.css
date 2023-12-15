@@ -1,0 +1,11 @@
+.tooltip {
+    padding: 0.125rem;
+    border-radius: var(--border-radius);
+    border: var(--border-size-1) solid var(--text-1);
+    font-family: var(--font-serif);
+    inline-size: 1lh;
+    line-height: 1;
+
+    display: inline-grid;
+    place-content: center;
+}
