@@ -15,11 +15,11 @@
 
 html {
     /* colors */
-    --brand-light: var(--purple-6);
+    --brand-light: var(--purple-5);
     --accent-light: var(--indigo-5);
     --text-light: var(--purple-9);
     --background-light: var(--indigo-0);
-    --surface-light: var(--purple-1-hsl) / 30%;
+    --surface-light: var(--purple-5-hsl) / 10%;
     /* ... */
     --border-size-light: var(--border-size-2);
     --border-radius-light: var(--radius-3);

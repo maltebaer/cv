@@ -1,0 +1,9 @@
+.will-grow {
+    will-change: transform;
+    transition: transform 450ms;
+}
+
+.will-grow:hover {
+    transition: transform 125ms;
+    transform: scale(1.01);
+}
