@@ -6,6 +6,7 @@ const postcssImportExtGlob = require('postcss-import-ext-glob');
 const tailwindcss = require('tailwindcss');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
+const esbuild = require('esbuild');
 
 const sortByOrder = (values) => {
     let vals = [...values];     // this *seems* to prevent collection mutation...
@@ -38,6 +39,28 @@ module.exports = function (eleventyConfig) {
                 });
 
                 return output.css;
+            };
+        }
+    });
+
+    eleventyConfig.addTemplateFormats('js');
+    eleventyConfig.addExtension('js', {
+        outputFileExtension: 'js',
+        compile: async (content, path) => {
+            if (path !== './src/assets/scripts/app.js') {
+                return;
+            }
+
+            return async () => {
+                let output = await esbuild.build({
+                    target: 'es2020',
+                    entryPoints: [path],
+                    minify: true,
+                    bundle: true,
+                    write: false
+                });
+
+                return output.outputFiles[0].text;
             };
         }
     });
