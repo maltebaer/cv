@@ -71,6 +71,8 @@ ol {
 /* base interactive elements */
 a {
     color: currentcolor;
+    text-decoration-color: var(--accent);
+    text-underline-offset: 0.2ch;
 }
 :where([theme='bauhaus']) a {
     text-decoration: none;
@@ -106,7 +108,7 @@ button {
 /* base selection styles that invert whatever colours are rendered */
 ::selection {
     background: var(--text);
-    color: hsl(var(--surface));
+    color: var(--background);
 }
 
 fieldset {
