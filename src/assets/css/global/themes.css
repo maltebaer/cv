@@ -4,32 +4,33 @@
     - rest: open props
 */
 
+/*
+    --brand: h1, h2, accent-color
+    --accent: h3
+    --text: color, border-color
+    --background: background
+    --surface: .card background
+
+*/
+
 html {
     /* colors */
     --brand-light: var(--purple-6);
     --accent-light: var(--indigo-5);
-    --text-1-light: var(--purple-9);
-    --text-2-light: var(--purple-7);
-    --background-light: var(--purple-0);
-    --surface-1-light: var(--purple-0-hsl);
-    --surface-2-light: var(--purple-1);
-    --surface-3-light: var(--purple-2);
-    --surface-4-light: var(--purple-3);
+    --text-light: var(--purple-9);
+    --background-light: var(--indigo-0);
+    --surface-light: var(--purple-1-hsl) / 30%;
     /* ... */
-    --border-size-light: var(--border-size-3);
+    --border-size-light: var(--border-size-2);
     --border-radius-light: var(--radius-3);
     --shadow-light: var(--shadow-1);
 
     /* colors */
     --brand-dark: var(--pink-5);
     --accent-dark: var(--pink-3);
-    --text-1-dark: var(--gray-3);
-    --text-2-dark: var(--gray-4);
+    --text-dark: var(--gray-3);
     --background-dark: var(--gray-8);
-    --surface-1-dark: var(--gray-8-hsl);
-    --surface-2-dark: var(--gray-7);
-    --surface-3-dark: var(--gray-6);
-    --surface-4-dark: var(--gray-5);
+    --surface-dark: var(--gray-7-hsl);
     /* ... */
     --border-size-dark: 0;
     --border-radius-dark: var(--radius-2);
@@ -38,13 +39,9 @@ html {
     /* colors */
     --brand-vibrant: var(--violet-7);
     --accent-vibrant: var(--purple-5);
-    --text-1-vibrant: var(--cyan-9);
-    --text-2-vibrant: var(--cyan-7);
+    --text-vibrant: var(--cyan-9);
     --background-vibrant: var(--gradient-18);
-    --surface-1-vibrant: var(--cyan-0-hsl);
-    --surface-2-vibrant: var(--cyan-1);
-    --surface-3-vibrant: var(--cyan-2);
-    --surface-4-vibrant: var(--cyan-3);
+    --surface-vibrant: var(--cyan-0-hsl) / 20%;
     /* ... */
     --border-size-vibrant: 0;
     --border-radius-vibrant: var(--radius-blob-2);
@@ -53,13 +50,9 @@ html {
     /* colors */
     --brand-bauhaus: var(--red-8);
     --accent-bauhaus: var(--yellow-4);
-    --text-1-bauhaus: var(--stone-10);
-    --text-2-bauhaus: var(--stone-9);
+    --text-bauhaus: var(--stone-10);
     --background-bauhaus: var(--stone-3);
-    --surface-1-bauhaus: var(--stone-3-hsl);
-    --surface-2-bauhaus: var(--stone-3);
-    --surface-3-bauhaus: var(--stone-5);
-    --surface-4-bauhaus: var(--stone-6);
+    --surface-bauhaus: var(--stone-3-hsl);
     /* ... */
     --border-size-bauhaus: var(--border-size-3);
     --border-radius-bauhaus: 0;
@@ -72,13 +65,9 @@ html {
     /* set defaults */
     --brand: var(--brand-light);
     --accent: var(--accent-light);
-    --text-1: var(--text-1-light);
-    --text-2: var(--text-2-light);
+    --text: var(--text-light);
     --background: var(--background-light);
-    --surface-1: var(--surface-1-light);
-    --surface-2: var(--surface-2-light);
-    --surface-3: var(--surface-3-light);
-    --surface-4: var(--surface-4-light);
+    --surface: var(--surface-light);
 
     --border-size: var(--border-size-light);
     --border-radius: var(--border-radius-light);
@@ -91,13 +80,9 @@ html {
 
         --brand: var(--brand-dark);
         --accent: var(--accent-dark);
-        --text-1: var(--text-1-dark);
-        --text-2: var(--text-2-dark);
+        --text: var(--text-dark);
         --background: var(--background-dark);
-        --surface-1: var(--surface-1-dark);
-        --surface-2: var(--surface-2-dark);
-        --surface-3: var(--surface-3-dark);
-        --surface-4: var(--surface-4-dark);
+        --surface: var(--surface-dark);
 
         --border-size: var(--border-size-dark);
         --border-radius: var(--border-radius-dark);
@@ -110,13 +95,9 @@ html {
 
     --brand: var(--brand-light);
     --accent: var(--accent-light);
-    --text-1: var(--text-1-light);
-    --text-2: var(--text-2-light);
+    --text: var(--text-light);
     --background: var(--background-light);
-    --surface-1: var(--surface-1-light);
-    --surface-2: var(--surface-2-light);
-    --surface-3: var(--surface-3-light);
-    --surface-4: var(--surface-4-light);
+    --surface: var(--surface-light);
 
     --border-size: var(--border-size-light);
     --border-radius: var(--border-radius-light);
@@ -128,13 +109,9 @@ html {
 
     --brand: var(--brand-dark);
     --accent: var(--accent-dark);
-    --text-1: var(--text-1-dark);
-    --text-2: var(--text-2-dark);
+    --text: var(--text-dark);
     --background: var(--background-dark);
-    --surface-1: var(--surface-1-dark);
-    --surface-2: var(--surface-2-dark);
-    --surface-3: var(--surface-3-dark);
-    --surface-4: var(--surface-4-dark);
+    --surface: var(--surface-dark);
 
     --border-size: var(--border-size-dark);
     --border-radius: var(--border-radius-dark);
@@ -146,13 +123,9 @@ html {
 
     --brand: var(--brand-vibrant);
     --accent: var(--accent-vibrant);
-    --text-1: var(--text-1-vibrant);
-    --text-2: var(--text-2-vibrant);
+    --text: var(--text-vibrant);
     --background: var(--background-vibrant);
-    --surface-1: var(--surface-1-vibrant);
-    --surface-2: var(--surface-2-vibrant);
-    --surface-3: var(--surface-3-vibrant);
-    --surface-4: var(--surface-4-vibrant);
+    --surface: var(--surface-vibrant);
 
     --border-size: var(--border-size-vibrant);
     --border-radius: var(--border-radius-vibrant);
@@ -164,13 +137,9 @@ html {
 
     --brand: var(--brand-bauhaus);
     --accent: var(--accent-bauhaus);
-    --text-1: var(--text-1-bauhaus);
-    --text-2: var(--text-2-bauhaus);
+    --text: var(--text-bauhaus);
     --background: var(--background-bauhaus);
-    --surface-1: var(--surface-1-bauhaus);
-    --surface-2: var(--surface-2-bauhaus);
-    --surface-3: var(--surface-3-bauhaus);
-    --surface-4: var(--surface-4-bauhaus);
+    --surface: var(--surface-bauhaus);
 
     --border-size: var(--border-size-bauhaus);
     --border-radius: var(--border-radius-bauhaus);
