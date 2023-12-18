@@ -11,29 +11,16 @@
 
     <dl class="cluster" style="--cluster-space: var(--space-xs)">
         <dt>build with</dt>
-        <dd class="will-move">
-            <a
-                href="https://cube.fyi"
-                target="_blank"
-                rel="noopener noreferrer"
-                >cube css
-            </a>
-        </dd>
-        <dd class="will-move">
-            <a
-                href="https://open-props.style"
-                target="_blank"
-                rel="noopener noreferrer"
-                >open props
-            </a>
-        </dd>
-        <dd class="will-move">
-            <a
-                href="https://utopia.fyi"
-                target="_blank"
-                rel="noopener noreferrer"
-                >utopia
-            </a>
-        </dd>
+        {% for tool in tools %}
+            <dd>
+                <a
+                    class="will-move"
+                    href="{{ tool.href }}"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    {{ tool.title }}
+                </a>
+            </dd>
+        {% endfor %}
     </dl>
 </footer>

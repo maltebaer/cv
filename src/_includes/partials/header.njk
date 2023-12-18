@@ -1,19 +1,17 @@
 <header class="header">
     <nav>
-        <!-- block -->
         <ul class="cluster" style="--cluster-horizontal-alignment: end">
-            <li class="will-move">
-                <a href="#interests">interests</a>
-            </li>
-            <li class="will-move">
-                <a href="#projects">projects</a>
-            </li>
-            <li class="will-move">
-                <a href="#experience">experience</a>
-            </li>
-            <li class="will-move">
-                <a href="#education">education</a>
-            </li>
+            {% for subpage in collections.subpage | sortByOrder %}
+                {% if subpage.data.title !== 'intro' %}
+                    <li>
+                        <a
+                            class="will-move"
+                            href="#{{ subpage.data.title }}">
+                            {{ subpage.data.title }}
+                        </a>
+                    </li>
+                {% endif %}
+            {% endfor %}
         </ul>
     </nav>
 </header>

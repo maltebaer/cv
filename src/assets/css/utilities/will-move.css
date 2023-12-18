@@ -1,6 +1,7 @@
 .will-move {
     will-change: transform;
     transition: transform 450ms;
+    display: inline-block;
 }
 
 .will-move:hover {

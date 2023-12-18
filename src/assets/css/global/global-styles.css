@@ -84,6 +84,9 @@ fieldset {
 :target {
     scroll-margin-top: 2ex;
 }
+html {
+    scroll-behavior: smooth;
+}
 
 /* base selection styles that invert whatever colours are rendered */
 ::selection {
