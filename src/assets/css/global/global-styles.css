@@ -25,26 +25,16 @@ h1,
 h2 {
     color: var(--brand);
 }
-
 h3 {
     color: var(--accent);
-}
-:where([theme='bauhaus']) h3 {
-    width: min-content;
-}
-:where([theme='bauhaus']) h3 > span {
-    background: var(--text);
-    color: hsl(var(--surface));
 }
 
 h1 {
     font-size: var(--size-step-4);
 }
-
 h2 {
     font-size: var(--size-step-3);
 }
-
 h3 {
     font-size: var(--size-step-2);
 }
@@ -74,17 +64,16 @@ a {
     text-decoration-color: var(--accent);
     text-underline-offset: 0.2ch;
 }
-:where([theme='bauhaus']) a {
-    text-decoration: none;
-    background: var(--accent);
-}
-:where([theme='bauhaus']) h3 > a {
-    background: var(--text);
-    color: hsl(var(--surface));
-}
-
 a:hover {
     text-decoration: none;
+}
+
+button {
+    all: unset;
+}
+
+fieldset {
+    border-radius: var(--border-radius);
 }
 
 :focus {
@@ -92,29 +81,12 @@ a:hover {
     outline-offset: 0.3ch;
     border-radius: var(--border-radius);
 }
-
 :target {
     scroll-margin-top: 2ex;
-}
-
-main:focus {
-    outline: none;
-}
-
-button {
-    all: unset;
 }
 
 /* base selection styles that invert whatever colours are rendered */
 ::selection {
     background: var(--text);
     color: var(--background);
-}
-
-fieldset {
-    border-radius: var(--border-radius);
-}
-:where(html[theme='vibrant']) fieldset {
-    border: 0.5px solid var(--text);
-    background: hsl(var(--surface));
 }

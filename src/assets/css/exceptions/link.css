@@ -1,0 +1,8 @@
+:where([data-theme='bauhaus']) a {
+    text-decoration: none;
+    background: var(--accent);
+}
+:where([data-theme='bauhaus']) h3 > a {
+    background: var(--text);
+    color: hsl(var(--surface));
+}

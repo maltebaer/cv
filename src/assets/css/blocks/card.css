@@ -6,12 +6,3 @@
     border-radius: var(--border-radius);
     box-shadow: var(--shadow);
 }
-
-:where(html[theme='vibrant']) .card {
-    padding: 0;
-}
-
-:where(html[theme='vibrant']) .card article {
-    border-radius: var(--border-radius);
-    background: hsl(var(--surface));
-}

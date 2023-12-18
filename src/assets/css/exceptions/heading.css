@@ -1,0 +1,7 @@
+:where([data-theme='bauhaus']) h3 {
+    width: min-content;
+}
+:where([data-theme='bauhaus']) h3 > span {
+    background: var(--text);
+    color: hsl(var(--surface));
+}

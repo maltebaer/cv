@@ -1,0 +1,4 @@
+:where(html[data-theme='vibrant']) fieldset {
+    border: 0.5px solid var(--text);
+    background: hsl(var(--surface));
+}

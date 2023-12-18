@@ -1,15 +1,13 @@
 <aside class="switcher">
-    <!-- block -->
     <fieldset
-            x-data="{
-                setTheme(theme) {
-                    const html = document.firstElementChild
+        x-data="{
+            setTheme(theme) {
+                const html = document.firstElementChild
 
-                    html.setAttribute('theme', theme)
-                }
-            }"
-            x-on:change="setTheme($event.target.value)"
-        >
+                html.setAttribute('data-theme', theme)
+            }
+        }"
+        x-on:change="setTheme($event.target.value)">
         <legend>
             theme
             <button
@@ -36,56 +34,28 @@
         </legend>
 
         <div class="stack" style="--stack-space: var(--space-xs)">
-            <label>
-                <input
+            {% for theme in themes %}
+                <label>
+                    <input
                         type="radio"
                         name="theme"
-                        value="auto"
-                        checked/>
-                <span>auto</span>
-            </label>
-            <label>
-                <input
-                        type="radio"
-                        name="theme"
-                        value="light"/>
-                <span>light</span>
-            </label>
-            <label>
-                <input
-                        type="radio"
-                        name="theme"
-                        value="dark"/>
-                <span>dark</span>
-            </label>
-            <label>
-                <input
-                        type="radio"
-                        name="theme"
-                        value="vibrant"/>
-                <span>vibrant</span>
-            </label>
-            <label>
-                <input
-                        type="radio"
-                        name="theme"
-                        value="bauhaus"/>
-                <span>bauhaus</span>
-            </label>
+                        value="{{ theme }}"
+                        {% if theme === 'auto' %}checked{% endif %}/>
+                    <span>{{ theme }}</span>
+                </label>
+            {% endfor %}
         </div>
     </fieldset>
 
-    <!-- block -->
     <fieldset
-            x-data="{
-                toggleStylesheet(layer) {
-                    const stylesheet = document.getElementById(layer + '-stylesheet')
+        x-data="{
+            toggleStylesheet(layer) {
+                const stylesheet = document.getElementById(layer + '-stylesheet')
 
-                    stylesheet.toggleAttribute('disabled')
-                }
-            }"
-            x-on:change="toggleStylesheet($event.target.value)"
-        >
+                stylesheet.toggleAttribute('disabled')
+            }
+        }"
+        x-on:change="toggleStylesheet($event.target.value)">
         <legend>
             css layers
             <button
@@ -113,41 +83,15 @@
         </legend>
 
         <div class="stack" style="--stack-space: var(--space-xs)">
-            <label>
-                <input
+            {% for layer in cssLayers %}
+                <label>
+                    <input
                         type="checkbox"
-                        value="reset"
+                        value="{{ layer }}"
                         checked/>
-                <span>reset</span>
-            </label>
-            <label>
-                <input
-                        type="checkbox"
-                        value="global"
-                        checked/>
-                <span>global</span>
-            </label>
-            <label>
-                <input
-                        type="checkbox"
-                        value="composition"
-                        checked/>
-                <span>composition</span>
-            </label>
-            <label>
-                <input
-                        type="checkbox"
-                        value="utility"
-                        checked/>
-                <span>utility</span>
-            </label>
-            <label>
-                <input
-                        type="checkbox"
-                        value="block"
-                        checked/>
-                <span>block</span>
-            </label>
+                    <span>{{ layer }}</span>
+                </label>
+            {% endfor %}
         </div>
     </fieldset>
 </aside>

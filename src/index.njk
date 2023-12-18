@@ -35,13 +35,21 @@
             id="block-stylesheet"
             rel="stylesheet"
             href="/assets/css/blocks.css"/>
+        <link
+            id="exception-stylesheet"
+            rel="stylesheet"
+            href="/assets/css/exceptions.css"/>
 
         <script
             type="module"
             src="/assets/scripts/app.js"
             defer></script>
-        <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/dist/tippy.css"/>
-        <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/themes/material.css"/>
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/tippy.js@6/dist/tippy.css"/>
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/tippy.js@6/themes/material.css"/>
     </head>
 
     <body class="wrapper">
@@ -52,9 +60,9 @@
 
             <main class="stack" style="--stack-space: var(--space-xl-2xl)">
                 <article class="flow">
-                    {%- for subpage in collections.subpage | sortByOrder -%}
+                    {% for subpage in collections.subpage | sortByOrder %}
                         {{ subpage.content | safe }}
-                    {%- endfor -%}
+                    {% endfor %}
                 </article>
             </main>
         </div>

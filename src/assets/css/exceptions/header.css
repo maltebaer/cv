@@ -1,4 +1,4 @@
-:where([theme='bauhaus']) .header > nav > ul {
+:where([data-theme='bauhaus']) .header > nav > ul {
     writing-mode: vertical-lr;
     display: block;
     margin-block-start: auto;
