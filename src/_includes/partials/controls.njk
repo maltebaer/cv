@@ -1,97 +1,93 @@
-<aside class="switcher">
-    <fieldset
-        x-data="{
-            setTheme(theme) {
-                const html = document.firstElementChild
-
-                html.setAttribute('data-theme', theme)
-            }
-        }"
-        x-on:change="setTheme($event.target.value)">
-        <legend>
-            theme
-            <button
-                class="tooltip"
-                x-tooltip="{
-                    content: () => $refs.themeTemplate.innerHTML,
-                    interactive: true,
-                    allowHTML: true,
-                    appendTo: $root
-                }">
-                    i
-                    <span class="sr-only">More info</span>
-            </button>
-            <template x-ref="themeTemplate">
-                <div class="flow">
-                    <p>
-                        (almost) all style changes are based on a different set of design tokens applied via custom properties.
-                    </p>
-                    <p>
-                        design tokens are taken from  <a href="https://open-props.style" target="_blank" rel="noopener noreferrer">open props</a>.
-                    </p>
-                </div>
-            </template>
-        </legend>
-
-        <div class="stack" style="--stack-space: var(--space-xs)">
-            {% for theme in themes %}
-                <label>
-                    <input
-                        type="radio"
-                        name="theme"
-                        value="{{ theme }}"
-                        {% if theme === 'auto' %}checked{% endif %}/>
-                    <span>{{ theme }}</span>
-                </label>
-            {% endfor %}
-        </div>
-    </fieldset>
-
-    <fieldset
-        x-data="{
-            toggleStylesheet(layer) {
-                const stylesheet = document.getElementById(layer + '-stylesheet')
-
-                stylesheet.toggleAttribute('disabled')
-            }
-        }"
-        x-on:change="toggleStylesheet($event.target.value)">
-        <legend>
-            css layers
-            <button
-                class="tooltip"
-                x-tooltip="{
-                    content: () => $refs.cssLayersTemplate.innerHTML,
-                    interactive: true,
-                    allowHTML: true,
-                    appendTo: $root
-                }">
-                    i
-                     <span class="sr-only">More info</span>
-            </button>
-            <template x-ref="cssLayersTemplate">
-                <div class="flow">
-                    <p>
-                        css is applied following the <a href="https://cube.fyi" target="_blank" rel="noopener noreferrer">cube css</a> methodology.
-                    </p>
-
-                    <p>
-                        toggle the checkboxes to see the impact of the different layers.
-                    </p>
-                </div>
-            </template>
-        </legend>
-
-        <div class="stack" style="--stack-space: var(--space-xs)">
-            {% for layer in cssLayers %}
-                <label>
-                    <input
-                        type="checkbox"
-                        value="{{ layer }}"
-                        checked/>
-                    <span>{{ layer }}</span>
-                </label>
-            {% endfor %}
-        </div>
-    </fieldset>
+<aside>
+    <div class="switcher sticky top-s-m">
+        <fieldset
+            x-data="{
+                setTheme(theme) {
+                    const html = document.firstElementChild
+                    html.setAttribute('data-theme', theme)
+                }
+            }"
+            x-on:change="setTheme($event.target.value)">
+            <legend>
+                theme
+                <button
+                    class="tooltip"
+                    x-tooltip="{
+                        content: () => $refs.themeTemplate.innerHTML,
+                        interactive: true,
+                        allowHTML: true,
+                        appendTo: $root
+                    }">
+                        i
+                        <span class="sr-only">More info</span>
+                </button>
+                <template x-ref="themeTemplate">
+                    <div class="flow">
+                        <p>
+                            (almost) all style changes are based on a different set of design tokens applied via custom properties.
+                        </p>
+                        <p>
+                            design tokens are taken from  <a href="https://open-props.style" target="_blank" rel="noopener noreferrer">open props</a>.
+                        </p>
+                    </div>
+                </template>
+            </legend>
+            <div class="stack" style="--stack-space: var(--space-xs)">
+                {% for theme in themes %}
+                    <label>
+                        <input
+                            type="radio"
+                            name="theme"
+                            value="{{ theme }}"
+                            {% if theme === 'auto' %}checked{% endif %}/>
+                        <span>{{ theme }}</span>
+                    </label>
+                {% endfor %}
+            </div>
+        </fieldset>
+        <fieldset
+            x-data="{
+                toggleStylesheet(layer) {
+                    const stylesheet = document.getElementById(layer + '-stylesheet')
+                    stylesheet.toggleAttribute('disabled')
+                }
+            }"
+            x-on:change="toggleStylesheet($event.target.value)">
+            <legend>
+                css layers
+                <button
+                    class="tooltip"
+                    x-tooltip="{
+                        content: () => $refs.cssLayersTemplate.innerHTML,
+                        interactive: true,
+                        allowHTML: true,
+                        appendTo: $root
+                    }">
+                        i
+                         <span class="sr-only">More info</span>
+                </button>
+                <template x-ref="cssLayersTemplate">
+                    <div class="flow">
+                        <p>
+                            css is applied following the <a href="https://cube.fyi" target="_blank" rel="noopener noreferrer">cube css</a> methodology.
+                        </p>
+                        <p>
+                            toggle the checkboxes to see the impact of the different layers.
+                        </p>
+                    </div>
+                </template>
+            </legend>
+            <div class="stack" style="--stack-space: var(--space-xs)">
+                {% for layer in cssLayers %}
+                    <label>
+                        <input
+                            type="checkbox"
+                            value="{{ layer }}"
+                            checked/>
+                        <span>{{ layer }}</span>
+                    </label>
+                {% endfor %}
+            </div>
+        </fieldset>
+    </div>
 </aside>
