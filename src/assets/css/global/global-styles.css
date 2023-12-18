@@ -82,7 +82,7 @@ fieldset {
     border-radius: var(--border-radius);
 }
 :target {
-    scroll-margin-top: 2ex;
+    scroll-margin-top: var(--space-s-m);
 }
 html {
     scroll-behavior: smooth;
