@@ -2,7 +2,6 @@
     padding: 0.125rem;
     border-radius: var(--border-radius);
     border: var(--border-size-1) solid var(--text);
-    font-family: var(--font-serif);
     min-inline-size: 1lh;
     line-height: 1;
 
