@@ -5,37 +5,48 @@ title: education
 
 <h2 id="{{ title }}">{{ title }}</h2>
 
-<div class="card | flow">
-    <ul
-        class="grid"
-        data-layout="50-50"
-    >
+<div class="card">
+    <ul class="switcher" style="--switcher-gap: var(--space-l-xl)">
         {% for step in education %}
-            <li class="will-grow">
-                <article class="flow">
-                    <header class="flow">
-                        <h3>
-                            <span>{{ step.type }}</span>
-                        </h3>
+            <li class="will-grow max-w-none">
+                <article
+                    class="with-sidebar"
+                    style="
+                        --sidebar-gap: 0.5rem var(--space-l-xl);
+                        --sidebar-width: 16ch;
+                        --sidebar-content-min-width: 50%
+                    ">
+                    <aside>
+                        <footer>
+                            <p>
+                                <time datetime="{{ step.start }}">{{ step.start | getLocaleDateString }}</time>
+                                -
+                                <time datetime="{{ step.end }}">{{ step.end | getLocaleDateString }}</time>
+                            </p>
+                        </footer>
+                    </aside>
 
-                        <p>
-                            <a
-                                href="{{ step.website }}"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >{{ step.location }}</a>
-                        </p>
-                    </header>
-
-                    <p>{{ step.description }}</p>
-
-                    <footer>
-                        <p>
-                            <time datetime="{{ step.start }}">{{ step.start | getLocaleDateString }}</time>
-                            -
-                            <time datetime="{{ step.end }}">{{ step.end | getLocaleDateString }}</time>
-                        </p>
-                    </footer>
+                    <div class="flow">
+                        <header
+                                class="cluster"
+                                style="
+                                    --cluster-gap: 0.5rem var(--space-s);
+                                    --cluster-vertical-alignment: baseline;
+                                ">
+                            <h3>
+                                <span>{{ step.type }}</span>
+                            </h3>
+                            <p>
+                                at
+                                <a
+                                    href="{{ step.website }}"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >{{ step.location }}</a>
+                            </p>
+                        </header>
+                        <p>{{ step.description }}</p>
+                    </div>
                 </article>
             </li>
         {% endfor %}
