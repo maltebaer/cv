@@ -5,10 +5,8 @@ title: interests
 
 <h2 id="{{ title }}">{{ title }}</h2>
 
-<div class="card | flow">
-    <ul class="cluster">
-        {% for interest in interests %}
-            <li>{{ interest }}</li>
-        {% endfor %}
-    </ul>
-</div>
+<ul class="cluster">
+    {% for interest in interests %}
+        <li class="badge">{{ interest }}</li>
+    {% endfor %}
+</ul>

@@ -19,7 +19,7 @@ html {
     --font-body-light: 'Montserrat', sans-serif;
     /* colors */
     --brand-light: var(--purple-5);
-    --accent-light: var(--indigo-5);
+    --accent-light: var(--indigo-5-hsl);
     --text-light: var(--purple-9);
     --background-light: var(--indigo-0);
     --surface-light: var(--purple-5-hsl) / 10%;
@@ -33,7 +33,7 @@ html {
     --font-body-dark: 'Nunito Sans', sans-serif;
     /* colors */
     --brand-dark: var(--pink-5);
-    --accent-dark: var(--pink-3);
+    --accent-dark: var(--pink-3-hsl);
     --text-dark: var(--gray-3);
     --background-dark: var(--gray-8);
     --surface-dark: var(--gray-7-hsl);
@@ -47,7 +47,7 @@ html {
     --font-body-vibrant: 'Inter', sans-serif;
     /* colors */
     --brand-vibrant: var(--violet-7);
-    --accent-vibrant: var(--purple-5);
+    --accent-vibrant: var(--purple-5-hsl);
     --text-vibrant: var(--cyan-9);
     --background-vibrant: var(--gradient-18);
     --surface-vibrant: var(--cyan-0-hsl) / 20%;
@@ -61,7 +61,7 @@ html {
     --font-body-bauhaus: 'Outfit', sans-serif;
     /* colors */
     --brand-bauhaus: var(--red-8);
-    --accent-bauhaus: var(--yellow-4);
+    --accent-bauhaus: var(--yellow-4-hsl);
     --text-bauhaus: var(--stone-10);
     --background-bauhaus: var(--stone-3);
     --surface-bauhaus: var(--stone-3-hsl);

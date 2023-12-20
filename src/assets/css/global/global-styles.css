@@ -27,7 +27,7 @@ h2 {
     color: var(--brand);
 }
 h3 {
-    color: var(--accent);
+    color: hsl(var(--accent));
 }
 
 h1 {
@@ -62,7 +62,7 @@ ol {
 /* base interactive elements */
 a {
     color: currentcolor;
-    text-decoration-color: var(--accent);
+    text-decoration-color: hsl(var(--accent));
     text-underline-offset: 0.2ch;
 }
 a:hover {

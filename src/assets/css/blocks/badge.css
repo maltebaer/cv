@@ -1,0 +1,7 @@
+.badge {
+    padding-inline: var(--space-s);
+    color: hsl(var(--accent));
+    background: hsl(var(--accent) / 0.1);
+    border-radius: var(--border-radius);
+    border: var(--border-size) solid hsl(var(--accent));
+}
