@@ -5,36 +5,48 @@ title: experience
 
 <h2 id="{{ title }}">{{ title }}</h2>
 
-<div class="card | flow">
-    <ul
-        class="grid"
-        data-layout="50-50"
-    >
+<div class="card">
+    <ul class="stack">
         {% for job in experience %}
-            <li class="will-grow">
-                <article class="flow">
-                    <header class="flow">
-                        <h3>
-                            <span>{{ job.role }}</span></h3>
+            <li class="will-grow max-w-none">
+                <article
+                    class="with-sidebar"
+                    style="
+                        --sidebar-gap: 0.5rem var(--space-l-xl);
+                        --sidebar-width: 15ch;
+                        --sidebar-content-min-width: 50%
+                    ">
+                    <aside>
+                        <footer>
+                            <p>
+                                <time datetime="{{ job.start }}">{{ job.start | getLocaleDateString }}</time>
+                                -
+                                <time datetime="{{ job.end }}">{{ job.end | getLocaleDateString }}</time>
+                            </p>
+                        </footer>
+                    </aside>
 
-                        <p>
-                            <a
-                                href="{{ job.website }}"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >{{ job.location }}</a>
-                        </p>
-                    </header>
-
-                    <p>{{ job.description }}</p>
-
-                    <footer>
-                        <p>
-                            <time datetime="{{ job.start }}">{{ job.start | getLocaleDateString }}</time>
-                            -
-                            <time datetime="{{ job.end }}">{{ job.end | getLocaleDateString }}</time>
-                        </p>
-                    </footer>
+                    <div class="flow">
+                        <header
+                            class="cluster"
+                            style="
+                                --cluster-gap: 0.5rem var(--space-s);
+                                --cluster-vertical-alignment: baseline;
+                            ">
+                            <h3>
+                                <span>{{ job.role }}</span>
+                            </h3>
+                            <p>
+                                at
+                                <a
+                                    href="{{ job.website }}"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >{{ job.location }}</a>
+                            </p>
+                        </header>
+                        <p>{{ job.description }}</p>
+                    </div>
                 </article>
             </li>
         {% endfor %}
