@@ -3,3 +3,7 @@
     display: block;
     margin-block-start: auto;
 }
+
+:where([data-theme='bauhaus']) .header > nav > ul > li {
+    margin-block-start: var(--space-xs);
+}

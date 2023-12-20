@@ -1,0 +1,4 @@
+:where([data-theme='bauhaus']) .badge {
+    color: var(--background);
+    background: var(--text);
+}
