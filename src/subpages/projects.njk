@@ -13,7 +13,7 @@ title: projects
         <li class="will-grow">
             <article class="project-card | flow">
                 <figure class="flow">
-                    <img src="https://picsum.photos/id/{{ loop.index }}/300/200"/>
+                    <img src="{{ project.imgUrl }}" alt="screenshot of {{ project.title }} project"/>
                     <figcaption>
                         <h3>
                             <a
@@ -27,7 +27,7 @@ title: projects
                 </figure>
 
                 <div class="flow">
-                    <p>{{ project.description }}</p>
+                    <p>{{ project.description | safe }}</p>
 
                     <footer class="cluster">
                         <p>
