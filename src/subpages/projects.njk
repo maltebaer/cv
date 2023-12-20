@@ -5,15 +5,16 @@ title: projects
 
 <h2 id="{{ title }}">{{ title }}</h2>
 
-<div class="card | flow">
-    <ul
-        class="grid"
-        data-layout="50-50"
-    >
-        {% for project in projects %}
-            <li class="will-grow">
-                <article class="flow">
-                    <header class="flow">
+<ul
+    class="grid"
+    data-layout="50-50"
+>
+    {% for project in projects %}
+        <li class="will-grow">
+            <article class="project-card | flow">
+                <figure class="flow">
+                    <img src="https://picsum.photos/id/{{ loop.index }}/300/200"/>
+                    <figcaption>
                         <h3>
                             <a
                                 href="{{ project.website }}"
@@ -21,7 +22,13 @@ title: projects
                                 rel="noopener noreferrer"
                             >{{ project.title }}</a>
                         </h3>
+                    </figcaption>
+                </figure>
 
+                <div class="flow">
+                    <p>{{ project.description }}</p>
+
+                    <footer class="cluster">
                         <p>
                             <a
                                 href="{{ project.sourceCodeUrl }}"
@@ -30,19 +37,14 @@ title: projects
                                 >source code
                             </a>
                         </p>
-                    </header>
-
-                    <p>{{ project.description }}</p>
-
-                    <footer>
                         <ul class="cluster">
                             {% for technology in project.technologies %}
                                 <li>{{ technology }}</li>
                             {% endfor %}
                         </ul>
                     </footer>
-                </article>
-            </li>
-        {% endfor %}
-    </ul>
-</div>
+                </div>
+            </article>
+        </li>
+    {% endfor %}
+</ul>

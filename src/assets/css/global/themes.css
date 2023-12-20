@@ -22,11 +22,11 @@ html {
     --accent-light: var(--indigo-5-hsl);
     --text-light: var(--purple-9);
     --background-light: var(--indigo-0);
-    --surface-light: var(--purple-5-hsl) / 10%;
+    --surface-light: var(--purple-5-hsl) / 5%;
     /* other */
     --border-size-light: var(--border-size-2);
     --border-radius-light: var(--radius-3);
-    --shadow-light: var(--shadow-1);
+    --shadow-light: var(--shadow-2);
 
     /* fonts */
     --font-display-dark: 'Nunito', sans-serif;
