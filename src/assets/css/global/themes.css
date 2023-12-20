@@ -54,7 +54,7 @@ html {
     /* other */
     --border-size-vibrant: 0;
     --border-radius-vibrant: var(--radius-blob-2);
-    --shadow-vibrant: none;
+    --shadow-vibrant: var(--shadow-5);
 
     /* fonts */
     --font-display-bauhaus: 'Outfit', sans-serif;
