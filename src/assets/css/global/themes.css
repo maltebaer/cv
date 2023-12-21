@@ -18,11 +18,11 @@ html {
     --font-display-light: 'Montserrat', sans-serif;
     --font-body-light: 'Montserrat', sans-serif;
     /* colors */
-    --brand-light: var(--purple-5);
-    --accent-light: var(--indigo-5-hsl);
-    --text-light: var(--purple-9);
-    --background-light: var(--indigo-0);
-    --surface-light: var(--purple-5-hsl) / 5%;
+    --brand-light: var(--blue-9);
+    --accent-light: var(--indigo-8-hsl);
+    --text-light: var(--indigo-12);
+    --background-light: #fafdff;
+    --surface-light: var(--gray-1-hsl);
     /* other */
     --border-size-light: var(--border-size-2);
     --border-radius-light: var(--radius-3);
