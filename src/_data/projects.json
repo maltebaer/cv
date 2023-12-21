@@ -36,30 +36,6 @@
         ]
     },
     {
-        "title": "xmas 2021",
-        "website": "https://xmas-2021.maltebaer.vercel.app/",
-        "description": "little greeting card for my family and friends.",
-        "imgUrl": "/assets/images/xmas-2021.jpeg",
-        "sourceCodeUrl": "https://github.com/maltebaer/xmas-2021",
-        "technologies": [
-            "vite",
-            "tailwind",
-            "alpine.js"
-        ]
-    },
-    {
-        "title": "til",
-        "website": "https://til.maltebaer.now.sh/",
-        "description": "wip: collection of my learnings, ideas and aha moments while coding.",
-        "imgUrl": "/assets/images/til.jpeg",
-        "sourceCodeUrl": "https://github.com/maltebaer/til",
-        "technologies": [
-            "next",
-            "tailwind",
-            "typescript"
-        ]
-    },
-    {
         "title": "momo",
         "website": "https://momo.maltebaer.now.sh/",
         "description": "welcome page for my sons birthday.",

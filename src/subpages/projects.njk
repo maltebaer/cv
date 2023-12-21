@@ -14,7 +14,7 @@ title: projects
             <article class="project-card | flow">
                 <figure class="flow">
                     <img src="{{ project.imgUrl }}" alt="screenshot of {{ project.title }} project"/>
-                    <figcaption>
+                    <figcaption class="cluster" style="--cluster-vertical-alignment: baseline">
                         <h3>
                             <a
                                 class="will-move"
@@ -23,13 +23,6 @@ title: projects
                                 rel="noopener noreferrer"
                             >{{ project.title }}</a>
                         </h3>
-                    </figcaption>
-                </figure>
-
-                <div class="flow">
-                    <p>{{ project.description | safe }}</p>
-
-                    <footer class="cluster">
                         <p>
                             <a
                                 class="will-move"
@@ -39,9 +32,16 @@ title: projects
                                 >source code
                             </a>
                         </p>
+                    </figcaption>
+                </figure>
+
+                <div class="flow">
+                    <p>{{ project.description | safe }}</p>
+
+                    <footer>
                         <ul class="cluster">
                             {% for technology in project.technologies %}
-                                <li>{{ technology }}</li>
+                                <li class="badge">{{ technology }}</li>
                             {% endfor %}
                         </ul>
                     </footer>
