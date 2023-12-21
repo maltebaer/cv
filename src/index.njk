@@ -68,12 +68,12 @@
         <div class="with-sidebar | region">
             {% include "partials/controls.njk" %}
 
-            <main class="stack" style="--stack-space: var(--space-xl-2xl)">
-                <article class="flow">
-                    {% for subpage in collections.subpage | sortByOrder %}
+            <main class="stack" style="--stack-space: var(--space-3xl)">
+                {% for subpage in collections.subpage | sortByOrder %}
+                    <article class="flow">
                         {{ subpage.content | safe }}
-                    {% endfor %}
-                </article>
+                    </article>
+                {% endfor %}
             </main>
         </div>
 

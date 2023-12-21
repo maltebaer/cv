@@ -22,7 +22,7 @@ html {
     --accent-light: var(--indigo-8-hsl);
     --text-light: var(--indigo-12);
     --background-light: #fafdff;
-    --surface-light: var(--gray-1-hsl);
+    --surface-light: var(--gray-2-hsl) / 30%;
     /* other */
     --border-size-light: var(--border-size-2);
     --border-radius-light: var(--radius-3);
