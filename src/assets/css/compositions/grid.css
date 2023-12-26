@@ -6,13 +6,3 @@
     );
     gap: var(--grid-space, var(--space-l-xl));
 }
-
-.grid[data-rows='masonry'] {
-    grid-template-rows: masonry;
-    align-items: start;
-}
-
-.grid[data-layout='50-50'] {
-    --grid-placement: auto-fit;
-    --grid-min-item-size: clamp(16rem, 50vw, 20rem);
-}
