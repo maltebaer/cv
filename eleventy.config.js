@@ -25,6 +25,7 @@ const getLocaleDateString = (date) => {
 module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy("./src/assets/fonts");
     eleventyConfig.addPassthroughCopy("./src/assets/images");
+    eleventyConfig.addPassthroughCopy({ 'src/assets/images/favicon/*': '/' });
 
     eleventyConfig.addTemplateFormats('css');
     eleventyConfig.addExtension('css', {
