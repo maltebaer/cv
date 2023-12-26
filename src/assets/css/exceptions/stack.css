@@ -1,0 +1,11 @@
+.stack[data-stack-space='tiny'] {
+    --stack-space: var(--space-xs);
+}
+
+.stack[data-stack-space='loose'] {
+    --stack-space: var(--space-l-xl);
+}
+
+.stack[data-stack-space='biggy'] {
+    --stack-space: var(--space-3xl);
+}
