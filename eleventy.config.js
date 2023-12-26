@@ -16,7 +16,10 @@ const getLocaleDateString = (date) => {
     if (!date) {
         return 'ongoing';
     }
-    return new Date(date).toLocaleDateString();
+    return new Date(date).toLocaleDateString(undefined, {
+        month: "2-digit",
+        year: "numeric"
+    });
 };
 
 module.exports = function (eleventyConfig) {
