@@ -10,7 +10,7 @@ body {
     background: var(--background);
     font-size: var(--size-step-0);
     font-family: var(--font-body);
-    letter-spacing: var(--tracking);
+    letter-spacing: var(--tracking-m);
 }
 
 /* base typesetting */
