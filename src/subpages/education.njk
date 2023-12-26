@@ -10,23 +10,21 @@ title: education
         {% for step in education %}
             <li class="will-grow max-w-none">
                 <article class="timeline-view | with-sidebar">
-                    <aside>
-                        <footer>
-                            <p>
-                                <time datetime="{{ step.start }}">{{ step.start | getLocaleDateString }}</time>
-                                -
-                                <time datetime="{{ step.end }}">{{ step.end | getLocaleDateString }}</time>
-                            </p>
-                        </footer>
-                    </aside>
+                    <footer>
+                        <p>
+                            <time datetime="{{ step.start }}">{{ step.start | getLocaleDateString }}</time>
+                            -
+                            <time datetime="{{ step.end }}">{{ step.end | getLocaleDateString }}</time>
+                        </p>
+                    </footer>
 
                     <div class="flow">
                         <header
-                                class="cluster"
-                                style="
-                                    --cluster-gap: 0.5rem var(--space-s);
-                                    --cluster-vertical-alignment: baseline;
-                                ">
+                            class="cluster"
+                            style="
+                                --cluster-gap: 0.5rem var(--space-s);
+                                --cluster-vertical-alignment: baseline;
+                            ">
                             <h3>
                                 <span>{{ step.type }}</span>
                             </h3>

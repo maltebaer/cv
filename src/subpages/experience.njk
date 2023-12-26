@@ -10,15 +10,13 @@ title: experience
         {% for job in experience %}
             <li class="will-grow max-w-none">
                 <article class="timeline-view | with-sidebar">
-                    <aside>
-                        <footer>
-                            <p>
-                                <time datetime="{{ job.start }}">{{ job.start | getLocaleDateString }}</time>
-                                -
-                                <time datetime="{{ job.end }}">{{ job.end | getLocaleDateString }}</time>
-                            </p>
-                        </footer>
-                    </aside>
+                    <footer>
+                        <p>
+                            <time datetime="{{ job.start }}">{{ job.start | getLocaleDateString }}</time>
+                            -
+                            <time datetime="{{ job.end }}">{{ job.end | getLocaleDateString }}</time>
+                        </p>
+                    </footer>
 
                     <div class="flow">
                         <header
