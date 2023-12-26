@@ -15,7 +15,7 @@
 
 html {
     /* fonts */
-    --font-body-light: 'Inter', sans-serif;
+    --font-body-light: 'Karla', sans-serif;
     --font-display-light: 'Rubik', sans-serif;
     /* colors */
     --brand-light: var(--blue-9);
