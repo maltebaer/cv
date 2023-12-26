@@ -1,27 +1,55 @@
+/* light */
 @font-face {
-    font-family: "Inter";
+    font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
-    src: url("/assets/fonts/inter-v8-latin-regular.woff2") format("woff2");
+    src: url('/assets/fonts/inter-v8-latin-regular.woff2') format('woff2');
 }
-
 @font-face {
-    font-family: "Inter";
-    font-style: normal;
-    font-weight: 500;
-    src: url("/assets/fonts/inter-v8-latin-500.woff2") format("woff2");
-}
-
-@font-face {
-    font-family: "Inter";
+    font-family: 'Rubik';
     font-style: normal;
     font-weight: 700;
-    src: url("/assets/fonts/inter-v8-latin-700.woff2") format("woff2");
+    src: url('/assets/fonts/rubik-v28-latin-700.woff2') format('woff2');
 }
 
+/* dark */
 @font-face {
-    font-family: "Inter";
+    font-family: 'Nunito Sans';
     font-style: normal;
-    font-weight: 900;
-    src: url("/assets/fonts/inter-v8-latin-900.woff2") format("woff2");
+    font-weight: 400;
+    src: url('/assets/fonts/nunito-sans-v15-latin-regular.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
+    src: url('/assets/fonts/nunito-v26-latin-700.woff2') format('woff2');
+}
+
+/* vibrant */
+@font-face {
+    font-family: 'Nobile';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/assets/fonts/nobile-v17-latin-regular.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Baloo 2';
+    font-style: normal;
+    font-weight: 700;
+    src: url('/assets/fonts/baloo-2-v21-latin-700.woff2') format('woff2');
+}
+
+/* bauhaus */
+@font-face {
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/assets/fonts/outfit-v11-latin-regular.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 700;
+    src: url('/assets/fonts/outfit-v11-latin-700.woff2') format('woff2');
 }

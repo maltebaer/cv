@@ -15,8 +15,8 @@
 
 html {
     /* fonts */
-    --font-display-light: 'Montserrat', sans-serif;
-    --font-body-light: 'Montserrat', sans-serif;
+    --font-body-light: 'Inter', sans-serif;
+    --font-display-light: 'Rubik', sans-serif;
     /* colors */
     --brand-light: var(--blue-9);
     --accent-light: var(--indigo-8-hsl);
@@ -29,8 +29,8 @@ html {
     --shadow-light: var(--shadow-2);
 
     /* fonts */
-    --font-display-dark: 'Nunito', sans-serif;
     --font-body-dark: 'Nunito Sans', sans-serif;
+    --font-display-dark: 'Nunito', sans-serif;
     /* colors */
     --brand-dark: var(--pink-5);
     --accent-dark: var(--pink-3-hsl);
@@ -43,8 +43,8 @@ html {
     --shadow-dark: var(--shadow-2);
 
     /* fonts */
-    --font-display-vibrant: 'Inter', sans-serif;
-    --font-body-vibrant: 'Inter', sans-serif;
+    --font-body-vibrant: 'Nobile', sans-serif;
+    --font-display-vibrant: 'Baloo 2', sans-serif;
     /* colors */
     --brand-vibrant: var(--violet-7);
     --accent-vibrant: var(--purple-5-hsl);
@@ -57,8 +57,8 @@ html {
     --shadow-vibrant: var(--shadow-2);
 
     /* fonts */
-    --font-display-bauhaus: 'Outfit', sans-serif;
     --font-body-bauhaus: 'Outfit', sans-serif;
+    --font-display-bauhaus: 'Outfit', sans-serif;
     /* colors */
     --brand-bauhaus: var(--red-8);
     --accent-bauhaus: var(--yellow-4-hsl);
