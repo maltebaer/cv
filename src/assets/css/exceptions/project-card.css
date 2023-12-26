@@ -1,0 +1,3 @@
+:where([data-theme='vibrant']) .project-card img {
+    border-radius: var(--border-radius);
+}

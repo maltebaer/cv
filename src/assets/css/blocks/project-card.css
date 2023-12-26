@@ -1,6 +1,9 @@
 .project-card img {
     inline-size: 100%;
     object-fit: cover;
-    border-radius: var(--border-radius);
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
     box-shadow: var(--shadow);
+    padding-block-start: var(--space-xs);
+    padding-inline: var(--space-xs);
+    background: var(--brand);
 }
