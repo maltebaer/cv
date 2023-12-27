@@ -2,43 +2,43 @@
     {
         "title": "elan",
         "website": "https://elan.maltebaer.vercel.app/",
-        "description": "portfolio website of a berlin-based event agency. elan conceptualises and executes b2b and b2c events for clients in music, art, and culture. their mission is to challenge traditional power dynamics and knowledge flows by centering diversity and inclusion.",
+        "description": "portfolio website for a berlin-based event agency. this site was originally built using react. after learning about cube css, i took the chance to rebuild the site while drastically reducing the technology.",
         "imgUrl": "/assets/images/elan.jpeg",
         "sourceCodeUrl": "https://github.com/maltebaer/elan",
         "technologies": [
             "11ty",
             "cube css",
-            "alpine.js"
+            "alpinejs"
         ]
     },
     {
         "title": "martinslieder",
         "website": "https://martinslieder.vercel.app/",
-        "description": "little companion to help you sing along during martin's parade. if you are there &ndash; out in the dark &ndash; and do not remember the songs by heart, this website will get you going.",
+        "description": "a little companion to help you sing along during the martin's parade. i remember last year holding a piece of paper and using my phone as a torch. this year i decided to make a super simple website.",
         "imgUrl": "/assets/images/martinslieder.jpeg",
         "sourceCodeUrl": "https://github.com/maltebaer/martinslieder",
         "technologies": [
             "11ty",
             "cube css",
-            "alpine.js"
+            "alpinejs"
         ]
     },
     {
         "title": "zwei",
         "website": "http://zwei.vercel.app/",
-        "description": "say hello to number two.",
+        "description": "say hello to number two! of course i had to follow the tradition. it was also fun to see how i had evolved since the last welcome page. this one took much less time to build and i also started to simplify the technologies involved.",
         "imgUrl": "/assets/images/zwei.jpeg",
         "sourceCodeUrl": "https://github.com/maltebaer/zwei",
         "technologies": [
             "vite",
             "tailwind",
-            "alpine.js"
+            "alpinejs"
         ]
     },
     {
         "title": "momo",
         "website": "https://momo.maltebaer.now.sh/",
-        "description": "welcome page for my sons birthday.",
+        "description": "welcome page for my son's birthday. i wanted to be able to send a digital postcard to announce the birth of our first child. and also take advantage of being able to prepare as much as possible in advance.",
         "imgUrl": "/assets/images/momo.jpeg",
         "sourceCodeUrl": "https://github.com/maltebaer/momo",
         "technologies": [
@@ -50,7 +50,7 @@
     {
         "title": "game of life",
         "website": "https://maltebaer.github.io/game-of-life/",
-        "description": "arcade game using conway's 'game of life' in various places through out the experience. it was the first of three projects during my web dev bootcamp.",
+        "description": "arcade game using conway's 'game of life' in various places throughout the experience. it was the first of three projects during my web dev bootcamp and i was absolutely blown away by what could be created out of nothing using just a computer and some basic web technologies.",
         "imgUrl": "/assets/images/game-of-life.jpeg",
         "sourceCodeUrl": "https://github.com/maltebaer/game-of-life",
         "technologies": [

@@ -39,6 +39,13 @@ title: experience
                             </p>
                         </header>
                         <p>{{ job.description }}</p>
+                        {% if job.technologies %}
+                            <ul class="cluster">
+                                {% for technology in job.technologies %}
+                                    <li class="badge">{{ technology }}</li>
+                                {% endfor %}
+                            </ul>
+                        {% endif %}
                     </div>
                 </article>
             </li>

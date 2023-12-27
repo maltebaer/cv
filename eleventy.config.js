@@ -14,7 +14,7 @@ const sortByOrder = (values) => {
 };
 const getLocaleDateString = (date) => {
     if (!date) {
-        return 'ongoing';
+        return 'now';
     }
     return new Date(date).toLocaleDateString(undefined, {
         month: "2-digit",
