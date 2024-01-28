@@ -1,16 +1,18 @@
 .project-card figure {
+    --padding: calc(var(--space-xs) / 2);
+
     overflow: hidden;
     border-radius: var(--border-radius) var(--border-radius) 0 0;
 }
 
 .project-card figure div {
-    padding-block-start: var(--space-xs);
-    padding-inline: var(--space-xs);
+    padding-block-start: var(--padding);
+    padding-inline: var(--padding);
     background: var(--brand);
 }
 
 .project-card img {
-    --nested-border-radius: calc(var(--border-radius) - var(--space-xs));
+    --nested-border-radius: calc(var(--border-radius) - var(--padding));
 
     inline-size: 100%;
     object-fit: cover;
