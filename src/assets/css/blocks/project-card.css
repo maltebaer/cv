@@ -1,9 +1,19 @@
-.project-card img {
-    inline-size: 100%;
-    object-fit: cover;
+.project-card figure {
+    overflow: hidden;
     border-radius: var(--border-radius) var(--border-radius) 0 0;
-    box-shadow: var(--shadow);
+}
+
+.project-card figure div {
     padding-block-start: var(--space-xs);
     padding-inline: var(--space-xs);
     background: var(--brand);
+}
+
+.project-card img {
+    --nested-border-radius: calc(var(--border-radius) - var(--space-xs));
+
+    inline-size: 100%;
+    object-fit: cover;
+    border-radius: var(--nested-border-radius) var(--nested-border-radius) 0 0;
+    box-shadow: var(--shadow);
 }

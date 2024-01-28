@@ -1,3 +1,8 @@
+:where([data-theme='vibrant']) .project-card figure div {
+    padding: 0;
+    background: none;
+}
+
 :where([data-theme='vibrant']) .project-card img {
     border-radius: var(--border-radius);
 }
