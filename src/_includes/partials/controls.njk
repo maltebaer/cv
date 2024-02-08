@@ -98,6 +98,7 @@
                         {% endfor %}
                     </div>
                 </fieldset>
+
                 <fieldset x-on:change="toggleStylesheet($event.target.value)">
                     <legend>
                         css layers
@@ -167,6 +168,7 @@
                         >
                             {% for theme in themes %}
                             <button
+                                class="will-move"
                                 :class="{ 'active': isActiveProperty('--font-display', '{{
                                     theme
                                 }}') }"
@@ -196,6 +198,7 @@
                         >
                             {% for theme in themes %}
                             <button
+                                class="will-move"
                                 :class="{ 'active': isActiveProperty('--brand', '{{
                                     theme
                                 }}') }"
@@ -223,6 +226,7 @@
                         >
                             {% for theme in themes %}
                             <button
+                                class="will-move"
                                 :class="{ 'active': isActiveProperty('--accent', '{{
                                     theme
                                 }}') }"
@@ -250,6 +254,7 @@
                         >
                             {% for theme in themes %}
                             <button
+                                class="will-move"
                                 :class="{ 'active': isActiveProperty('--border-radius', '{{
                                     theme
                                 }}') }"
