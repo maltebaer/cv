@@ -8,7 +8,7 @@
         "technologies": [
             "11ty",
             "cube css",
-            "alpinejs"
+            "alpine js"
         ]
     },
     {
@@ -20,7 +20,7 @@
         "technologies": [
             "11ty",
             "cube css",
-            "alpinejs"
+            "alpine js"
         ]
     },
     {
@@ -32,7 +32,7 @@
         "technologies": [
             "vite",
             "tailwind css",
-            "alpinejs"
+            "alpine js"
         ]
     },
     {
