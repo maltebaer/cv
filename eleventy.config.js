@@ -7,6 +7,7 @@ const tailwindcss = require('tailwindcss');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 const esbuild = require('esbuild');
+const markdownIt = require("markdown-it");
 
 const sortByOrder = (values) => {
     let vals = [...values];     // this *seems* to prevent collection mutation...
@@ -21,9 +22,15 @@ const getLocaleDateString = (date) => {
         year: "numeric"
     });
 };
-const jsonToAlpine = value => {
+const jsonToAlpine = (value) => {
     let jsonString = JSON.stringify(value);
     return jsonString.replace(/"/g, "'");
+}
+const markdown = (value) => {
+    let md = markdownIt({
+        html: true
+    });
+    return md.render(value);
 }
 
 module.exports = function (eleventyConfig) {
@@ -77,6 +84,7 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addFilter("sortByOrder", sortByOrder);
     eleventyConfig.addFilter("getLocaleDateString", getLocaleDateString);
     eleventyConfig.addFilter("jsonToAlpine", jsonToAlpine);
+    eleventyConfig.addFilter("markdown", markdown);
 
     // Return your Object options:
     return {

@@ -1,15 +1,15 @@
 <button
     class="tooltip"
     x-tooltip="{
-    content: () => $refs.{{ ref }}.innerHTML,
-    interactive: true,
-    allowHTML: true,
-    appendTo: $root
-}"
+        content: () => $refs.{{ id }}.innerHTML,
+        interactive: true,
+        allowHTML: true,
+        appendTo: $root
+    }"
 >
     i
     <span class="sr-only">More info</span>
 </button>
-<template x-ref="{{ ref }}">
-    <div class="flow">{{ content | safe }}</div>
+<template x-ref="{{ id }}">
+    <div class="flow">{{ content | markdown | safe }}</div>
 </template>

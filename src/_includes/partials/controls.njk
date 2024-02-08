@@ -56,16 +56,11 @@
             >
                 <fieldset x-on:change="setTheme($event.target.value)">
                     <legend>
-                        theme {% set ref = 'themesTemplate' %} {% set content = '(almost)
-                        all style changes are based on a different set of design tokens
-                        that are applied via custom properties. design tokens are taken
-                        from
-                        <a
-                            href="https://open-props.style"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            >open props</a
-                        >.' %} {% include "components/tooltip.njk" %}
+                        theme {% set id = 'themes' %} {% set content = '(almost) all style
+                        changes are based on a different set of design tokens that are
+                        applied via custom properties. \n\n design tokens are taken from
+                        [open props](https://open-props.style).' %} {% include
+                        "components/tooltip.njk" %}
                     </legend>
 
                     <div class="stack">
@@ -81,16 +76,10 @@
 
                 <fieldset x-on:change="toggleStylesheet($event.target.value)">
                     <legend>
-                        css layers {% set ref = 'cssLayersTemplate' %} {% set content =
-                        'css is applied according to the
-                        <a
-                            href="https://cube.fyi"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            >cube css</a
-                        >
-                        methodology. toggle the checkboxes to see the impact of the
-                        different layers.' %} {% include "components/tooltip.njk" %}
+                        css layers {% set id = 'cssLayers' %} {% set content = 'css is
+                        applied according to the [cube css](https://cube.fyi) methodology.
+                        \n\n toggle the checkboxes to see the impact of the different
+                        layers.' %} {% include "components/tooltip.njk" %}
                     </legend>
                     <div class="stack">
                         {% for layer in cssLayers %}
