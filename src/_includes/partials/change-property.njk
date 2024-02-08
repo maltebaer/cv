@@ -1,0 +1,20 @@
+<details class="stack">
+    <summary
+        :class="getActivePropertyTheme('{{ name }}') !== 'auto' && 'active'"
+        x-text="getActivePropertyTheme('{{ name }}')"
+    ></summary>
+    <div
+        class="cluster"
+        style="--cluster-vertical-alignment: baseline"
+    >
+        {% for theme in themes %}
+        <button
+            class="will-move"
+            :class="{ 'active': isActiveProperty('{{ name }}', '{{ theme }}') }"
+            x-on:click="setThemeProperty('{{ name }}', '{{ theme }}')"
+        >
+            {{ theme }}
+        </button>
+        {% endfor %}
+    </div>
+</details>

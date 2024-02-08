@@ -88,6 +88,7 @@
                             </div>
                         </template>
                     </legend>
+
                     <div class="stack">
                         {% for theme in themes %}
                         <label>
@@ -154,119 +155,27 @@
             >
                 <fieldset>
                     <legend>display font</legend>
-                    <details
-                        class="stack"
-                        data-stack-space="tiny"
-                    >
-                        <summary
-                            :class="getActivePropertyTheme('--font-display') !== 'auto' && 'active'"
-                            x-text="getActivePropertyTheme('--font-display')"
-                        ></summary>
-                        <div
-                            class="cluster"
-                            style="--cluster-vertical-alignment: baseline"
-                        >
-                            {% for theme in themes %}
-                            <button
-                                class="will-move"
-                                :class="{ 'active': isActiveProperty('--font-display', '{{
-                                    theme
-                                }}') }"
-                                x-on:click="setThemeProperty('--font-display', '{{
-                                    theme
-                                }}')"
-                            >
-                                {{ theme }}
-                            </button>
-                            {% endfor %}
-                        </div>
-                    </details>
+
+                    {% set name = '--font-display' %} {% include
+                    "partials/change-property.njk" %}
                 </fieldset>
                 <fieldset>
                     <legend>brand color</legend>
-                    <details
-                        class="stack"
-                        data-stack-space="tiny"
-                    >
-                        <summary
-                            :class="getActivePropertyTheme('--brand') !== 'auto' && 'active'"
-                            x-text="getActivePropertyTheme('--brand')"
-                        ></summary>
-                        <div
-                            class="cluster"
-                            style="--cluster-vertical-alignment: baseline"
-                        >
-                            {% for theme in themes %}
-                            <button
-                                class="will-move"
-                                :class="{ 'active': isActiveProperty('--brand', '{{
-                                    theme
-                                }}') }"
-                                x-on:click="setThemeProperty('--brand', '{{ theme }}')"
-                            >
-                                {{ theme }}
-                            </button>
-                            {% endfor %}
-                        </div>
-                    </details>
+
+                    {% set name = '--brand' %} {% include "partials/change-property.njk"
+                    %}
                 </fieldset>
                 <fieldset>
                     <legend>accent color</legend>
-                    <details
-                        class="stack"
-                        data-stack-space="tiny"
-                    >
-                        <summary
-                            :class="getActivePropertyTheme('--accent') !== 'auto' && 'active'"
-                            x-text="getActivePropertyTheme('--accent')"
-                        ></summary>
-                        <div
-                            class="cluster"
-                            style="--cluster-vertical-alignment: baseline"
-                        >
-                            {% for theme in themes %}
-                            <button
-                                class="will-move"
-                                :class="{ 'active': isActiveProperty('--accent', '{{
-                                    theme
-                                }}') }"
-                                x-on:click="setThemeProperty('--accent', '{{ theme }}')"
-                            >
-                                {{ theme }}
-                            </button>
-                            {% endfor %}
-                        </div>
-                    </details>
+
+                    {% set name = '--accent' %} {% include "partials/change-property.njk"
+                    %}
                 </fieldset>
                 <fieldset>
                     <legend>border radius</legend>
-                    <details
-                        class="stack"
-                        data-stack-space="tiny"
-                    >
-                        <summary
-                            :class="getActivePropertyTheme('--border-radius') !== 'auto' && 'active'"
-                            x-text="getActivePropertyTheme('--border-radius')"
-                        ></summary>
-                        <div
-                            class="cluster"
-                            style="--cluster-vertical-alignment: baseline"
-                        >
-                            {% for theme in themes %}
-                            <button
-                                class="will-move"
-                                :class="{ 'active': isActiveProperty('--border-radius', '{{
-                                    theme
-                                }}') }"
-                                x-on:click="setThemeProperty('--border-radius', '{{
-                                    theme
-                                }}')"
-                            >
-                                {{ theme }}
-                            </button>
-                            {% endfor %}
-                        </div>
-                    </details>
+
+                    {% set name = '--border-radius' %} {% include
+                    "partials/change-property.njk" %}
                 </fieldset>
             </div>
         </div>
