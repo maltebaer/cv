@@ -1,55 +1,67 @@
 <!DOCTYPE html>
 <html lang="de">
     <head>
-        <meta charset="utf-8"/>
+        <meta charset="utf-8" />
 
         <title>cv | malte bär</title>
 
         <meta
             name="viewport"
-            content="width=device-width, initial-scale=1"/>
+            content="width=device-width, initial-scale=1"
+        />
         <meta
             name="theme-color"
-            content="#000"/>
+            content="#000"
+        />
 
         <link
             rel="stylesheet"
-            href="/assets/css/custom-properties.css"/>
+            href="/assets/css/custom-properties.css"
+        />
         <link
             id="reset-stylesheet"
             rel="stylesheet"
-            href="/assets/css/global/reset.css"/>
+            href="/assets/css/global/reset.css"
+        />
         <link
             id="global-stylesheet"
             rel="stylesheet"
-            href="/assets/css/global.css"/>
+            href="/assets/css/global.css"
+        />
         <link
             id="composition-stylesheet"
             rel="stylesheet"
-            href="/assets/css/compositions.css"/>
+            href="/assets/css/compositions.css"
+        />
         <link
             id="utility-stylesheet"
             rel="stylesheet"
-            href="/assets/css/utilities.css"/>
+            href="/assets/css/utilities.css"
+        />
         <link
             id="block-stylesheet"
             rel="stylesheet"
-            href="/assets/css/blocks.css"/>
+            href="/assets/css/blocks.css"
+        />
         <link
             id="exception-stylesheet"
             rel="stylesheet"
-            href="/assets/css/exceptions.css"/>
+            href="/assets/css/exceptions.css"
+        />
 
         <script
             type="module"
             src="/assets/scripts/app.js"
-            defer></script>
+            defer
+        ></script>
         <link
             rel="stylesheet"
-            href="https://unpkg.com/tippy.js@6/dist/tippy.css"/>
+            href="https://unpkg.com/tippy.js@6/dist/tippy.css"
+        />
         <link
             rel="stylesheet"
-            href="https://unpkg.com/tippy.js@6/themes/material.css"/>
+            href="https://unpkg.com/tippy.js@6/themes/material.css"
+        />
     </head>
 
     <body class="wrapper">
@@ -58,11 +70,14 @@
         <div class="with-sidebar | region">
             {% include "partials/controls.njk" %}
 
-            <main class="stack" data-stack-space="biggy">
+            <main
+                class="stack"
+                data-stack-space="biggy"
+            >
                 {% for subpage in collections.subpage | sortByOrder %}
-                    <article class="flow">
-                        {{ subpage.content | safe }}
-                    </article>
+                <article class="flow">
+                    {{ subpage.content | safe }}
+                </article>
                 {% endfor %}
             </main>
         </div>
