@@ -1,93 +1,269 @@
-<aside>
-    <div class="switcher sticky top-s-m">
-        <fieldset
-            x-data="{
-                setTheme(theme) {
-                    const html = document.firstElementChild
-                    html.setAttribute('data-theme', theme)
-                }
-            }"
-            x-on:change="setTheme($event.target.value)">
-            <legend>
-                theme
-                <button
-                    class="tooltip"
-                    x-tooltip="{
-                        content: () => $refs.themeTemplate.innerHTML,
-                        interactive: true,
-                        allowHTML: true,
-                        appendTo: $root
-                    }">
-                        i
-                        <span class="sr-only">More info</span>
-                </button>
-                <template x-ref="themeTemplate">
-                    <div class="flow">
-                        <p>
-                            (almost) all style changes are based on a different set of design tokens that are applied via custom properties.
-                        </p>
-                        <p>
-                            design tokens are taken from  <a href="https://open-props.style" target="_blank" rel="noopener noreferrer">open props</a>.
-                        </p>
+<aside
+    x-data="{
+        themes: {{ themes | jsonToAlpine }},
+        activeTheme: 'auto',
+        activeProperties: [],
+        setTheme(theme) {
+            this.activeTheme = theme
+
+            const html = document.firstElementChild
+            html.setAttribute('data-theme', theme)
+        },
+        setThemeProperty(property, theme) {
+            const html = document.firstElementChild
+
+            if (theme === 'auto') {
+                html.style.removeProperty(property)
+                this.activeProperties = this.activeProperties.filter(p => p.property !== property)
+            } else {
+                value = `var(${property}-${theme})`
+                html.style.setProperty(property, value)
+                this.updateOrAddActiveProperty(property, theme)
+            }
+        },
+        updateOrAddActiveProperty(property, theme) {
+            existingProperty = this.activeProperties.find(p => p.property === property);
+
+            existingProperty ?
+                existingProperty.theme = theme :
+                this.activeProperties.push({ property, theme });
+        },
+        getActivePropertyTheme(property) {
+            const foundProperty = this.activeProperties.find(p => p.property === property);
+
+            return foundProperty ? foundProperty.theme : 'auto';
+        },
+        isActiveProperty(property, theme) {
+            const foundProperty = this.activeProperties.find(p => p.property === property);
+
+            if (!foundProperty && theme === 'auto') {
+                return true;
+            }
+
+            return foundProperty && foundProperty.theme === theme;
+        },
+        toggleStylesheet(layer) {
+            const stylesheet = document.getElementById(layer + '-stylesheet')
+            stylesheet.toggleAttribute('disabled')
+        }
+     }"
+>
+    <div class="sticky top-s-m">
+        <div class="switcher">
+            <div
+                class="stack"
+                data-stack-space="tiny"
+            >
+                <fieldset x-on:change="setTheme($event.target.value)">
+                    <legend>
+                        theme
+                        <button
+                            class="tooltip"
+                            x-tooltip="{
+                                content: () => $refs.themeTemplate.innerHTML,
+                                interactive: true,
+                                allowHTML: true,
+                                appendTo: $root
+                            }"
+                        >
+                            i
+                            <span class="sr-only">More info</span>
+                        </button>
+                        <template x-ref="themeTemplate">
+                            <div class="flow">
+                                <p>
+                                    (almost) all style changes are based on a different
+                                    set of design tokens that are applied via custom
+                                    properties.
+                                </p>
+                                <p>
+                                    design tokens are taken from
+                                    <a
+                                        href="https://open-props.style"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        >open props</a
+                                    >.
+                                </p>
+                            </div>
+                        </template>
+                    </legend>
+                    <div class="stack">
+                        {% for theme in themes %}
+                        <label>
+                            <input type="radio" name="theme" value="{{ theme }}" {% if
+                            theme === 'auto' %}checked{% endif %}/>
+                            <span>{{ theme }}</span>
+                        </label>
+                        {% endfor %}
                     </div>
-                </template>
-            </legend>
-            <div class="stack" data-stack-space="tiny">
-                {% for theme in themes %}
-                    <label>
-                        <input
-                            type="radio"
-                            name="theme"
-                            value="{{ theme }}"
-                            {% if theme === 'auto' %}checked{% endif %}/>
-                        <span>{{ theme }}</span>
-                    </label>
-                {% endfor %}
-            </div>
-        </fieldset>
-        <fieldset
-            x-data="{
-                toggleStylesheet(layer) {
-                    const stylesheet = document.getElementById(layer + '-stylesheet')
-                    stylesheet.toggleAttribute('disabled')
-                }
-            }"
-            x-on:change="toggleStylesheet($event.target.value)">
-            <legend>
-                css layers
-                <button
-                    class="tooltip"
-                    x-tooltip="{
-                        content: () => $refs.cssLayersTemplate.innerHTML,
-                        interactive: true,
-                        allowHTML: true,
-                        appendTo: $root
-                    }">
-                        i
-                         <span class="sr-only">More info</span>
-                </button>
-                <template x-ref="cssLayersTemplate">
-                    <div class="flow">
-                        <p>
-                            css is applied according to the <a href="https://cube.fyi" target="_blank" rel="noopener noreferrer">cube css</a> methodology.
-                        </p>
-                        <p>
-                            toggle the checkboxes to see the impact of the different layers.
-                        </p>
+                </fieldset>
+                <fieldset x-on:change="toggleStylesheet($event.target.value)">
+                    <legend>
+                        css layers
+                        <button
+                            class="tooltip"
+                            x-tooltip="{
+                                content: () => $refs.cssLayersTemplate.innerHTML,
+                                interactive: true,
+                                allowHTML: true,
+                                appendTo: $root
+                            }"
+                        >
+                            i
+                            <span class="sr-only">More info</span>
+                        </button>
+                        <template x-ref="cssLayersTemplate">
+                            <div class="flow">
+                                <p>
+                                    css is applied according to the
+                                    <a
+                                        href="https://cube.fyi"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        >cube css</a
+                                    >
+                                    methodology.
+                                </p>
+                                <p>
+                                    toggle the checkboxes to see the impact of the
+                                    different layers.
+                                </p>
+                            </div>
+                        </template>
+                    </legend>
+                    <div class="stack">
+                        {% for layer in cssLayers %}
+                        <label>
+                            <input
+                                type="checkbox"
+                                value="{{ layer }}"
+                                checked
+                            />
+                            <span>{{ layer }}</span>
+                        </label>
+                        {% endfor %}
                     </div>
-                </template>
-            </legend>
-            <div class="stack" data-stack-space="tiny">
-                {% for layer in cssLayers %}
-                    <label>
-                        <input
-                            type="checkbox"
-                            value="{{ layer }}"
-                            checked/>
-                        <span>{{ layer }}</span>
-                    </label>
-                {% endfor %}
+                </fieldset>
             </div>
-        </fieldset>
+
+            <div
+                class="stack"
+                data-stack-space="tiny"
+            >
+                <fieldset>
+                    <legend>font</legend>
+                    <details
+                        class="stack"
+                        data-stack-space="tiny"
+                    >
+                        <summary
+                            :class="getActivePropertyTheme('--font-display') !== 'auto' && 'active'"
+                            x-text="getActivePropertyTheme('--font-display')"
+                        ></summary>
+                        <div
+                            class="cluster"
+                            style="--cluster-vertical-alignment: baseline"
+                        >
+                            {% for theme in themes %}
+                            <button
+                                :class="{ 'active': isActiveProperty('--font-display', '{{
+                                    theme
+                                }}') }"
+                                x-on:click="setThemeProperty('--font-display', '{{
+                                    theme
+                                }}')"
+                            >
+                                {{ theme }}
+                            </button>
+                            {% endfor %}
+                        </div>
+                    </details>
+                </fieldset>
+                <fieldset>
+                    <legend>brand color</legend>
+                    <details
+                        class="stack"
+                        data-stack-space="tiny"
+                    >
+                        <summary
+                            :class="getActivePropertyTheme('--brand') !== 'auto' && 'active'"
+                            x-text="getActivePropertyTheme('--brand')"
+                        ></summary>
+                        <div
+                            class="cluster"
+                            style="--cluster-vertical-alignment: baseline"
+                        >
+                            {% for theme in themes %}
+                            <button
+                                :class="{ 'active': isActiveProperty('--brand', '{{
+                                    theme
+                                }}') }"
+                                x-on:click="setThemeProperty('--brand', '{{ theme }}')"
+                            >
+                                {{ theme }}
+                            </button>
+                            {% endfor %}
+                        </div>
+                    </details>
+                </fieldset>
+                <fieldset>
+                    <legend>accent color</legend>
+                    <details
+                        class="stack"
+                        data-stack-space="tiny"
+                    >
+                        <summary
+                            :class="getActivePropertyTheme('--accent') !== 'auto' && 'active'"
+                            x-text="getActivePropertyTheme('--accent')"
+                        ></summary>
+                        <div
+                            class="cluster"
+                            style="--cluster-vertical-alignment: baseline"
+                        >
+                            {% for theme in themes %}
+                            <button
+                                :class="{ 'active': isActiveProperty('--accent', '{{
+                                    theme
+                                }}') }"
+                                x-on:click="setThemeProperty('--accent', '{{ theme }}')"
+                            >
+                                {{ theme }}
+                            </button>
+                            {% endfor %}
+                        </div>
+                    </details>
+                </fieldset>
+                <fieldset>
+                    <legend>border radius</legend>
+                    <details
+                        class="stack"
+                        data-stack-space="tiny"
+                    >
+                        <summary
+                            :class="getActivePropertyTheme('--border-radius') !== 'auto' && 'active'"
+                            x-text="getActivePropertyTheme('--border-radius')"
+                        ></summary>
+                        <div
+                            class="cluster"
+                            style="--cluster-vertical-alignment: baseline"
+                        >
+                            {% for theme in themes %}
+                            <button
+                                :class="{ 'active': isActiveProperty('--border-radius', '{{
+                                    theme
+                                }}') }"
+                                x-on:click="setThemeProperty('--border-radius', '{{
+                                    theme
+                                }}')"
+                            >
+                                {{ theme }}
+                            </button>
+                            {% endfor %}
+                        </div>
+                    </details>
+                </fieldset>
+            </div>
+        </div>
     </div>
 </aside>

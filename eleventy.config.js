@@ -21,6 +21,10 @@ const getLocaleDateString = (date) => {
         year: "numeric"
     });
 };
+const jsonToAlpine = value => {
+    let jsonString = JSON.stringify(value);
+    return jsonString.replace(/"/g, "'");
+}
 
 module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy("./src/assets/fonts");
@@ -72,6 +76,7 @@ module.exports = function (eleventyConfig) {
 
     eleventyConfig.addFilter("sortByOrder", sortByOrder);
     eleventyConfig.addFilter("getLocaleDateString", getLocaleDateString);
+    eleventyConfig.addFilter("jsonToAlpine", jsonToAlpine);
 
     // Return your Object options:
     return {
