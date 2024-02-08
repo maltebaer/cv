@@ -56,37 +56,16 @@
             >
                 <fieldset x-on:change="setTheme($event.target.value)">
                     <legend>
-                        theme
-                        <button
-                            class="tooltip"
-                            x-tooltip="{
-                                content: () => $refs.themeTemplate.innerHTML,
-                                interactive: true,
-                                allowHTML: true,
-                                appendTo: $root
-                            }"
-                        >
-                            i
-                            <span class="sr-only">More info</span>
-                        </button>
-                        <template x-ref="themeTemplate">
-                            <div class="flow">
-                                <p>
-                                    (almost) all style changes are based on a different
-                                    set of design tokens that are applied via custom
-                                    properties.
-                                </p>
-                                <p>
-                                    design tokens are taken from
-                                    <a
-                                        href="https://open-props.style"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        >open props</a
-                                    >.
-                                </p>
-                            </div>
-                        </template>
+                        theme {% set ref = 'themesTemplate' %} {% set content = '(almost)
+                        all style changes are based on a different set of design tokens
+                        that are applied via custom properties. design tokens are taken
+                        from
+                        <a
+                            href="https://open-props.style"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >open props</a
+                        >.' %} {% include "components/tooltip.njk" %}
                     </legend>
 
                     <div class="stack">
@@ -102,37 +81,16 @@
 
                 <fieldset x-on:change="toggleStylesheet($event.target.value)">
                     <legend>
-                        css layers
-                        <button
-                            class="tooltip"
-                            x-tooltip="{
-                                content: () => $refs.cssLayersTemplate.innerHTML,
-                                interactive: true,
-                                allowHTML: true,
-                                appendTo: $root
-                            }"
+                        css layers {% set ref = 'cssLayersTemplate' %} {% set content =
+                        'css is applied according to the
+                        <a
+                            href="https://cube.fyi"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >cube css</a
                         >
-                            i
-                            <span class="sr-only">More info</span>
-                        </button>
-                        <template x-ref="cssLayersTemplate">
-                            <div class="flow">
-                                <p>
-                                    css is applied according to the
-                                    <a
-                                        href="https://cube.fyi"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        >cube css</a
-                                    >
-                                    methodology.
-                                </p>
-                                <p>
-                                    toggle the checkboxes to see the impact of the
-                                    different layers.
-                                </p>
-                            </div>
-                        </template>
+                        methodology. toggle the checkboxes to see the impact of the
+                        different layers.' %} {% include "components/tooltip.njk" %}
                     </legend>
                     <div class="stack">
                         {% for layer in cssLayers %}
@@ -157,25 +115,25 @@
                     <legend>display font</legend>
 
                     {% set name = '--font-display' %} {% include
-                    "partials/change-property.njk" %}
+                    "components/change-property.njk" %}
                 </fieldset>
                 <fieldset>
                     <legend>brand color</legend>
 
-                    {% set name = '--brand' %} {% include "partials/change-property.njk"
+                    {% set name = '--brand' %} {% include "components/change-property.njk"
                     %}
                 </fieldset>
                 <fieldset>
                     <legend>accent color</legend>
 
-                    {% set name = '--accent' %} {% include "partials/change-property.njk"
-                    %}
+                    {% set name = '--accent' %} {% include
+                    "components/change-property.njk" %}
                 </fieldset>
                 <fieldset>
                     <legend>border radius</legend>
 
                     {% set name = '--border-radius' %} {% include
-                    "partials/change-property.njk" %}
+                    "components/change-property.njk" %}
                 </fieldset>
             </div>
         </div>
