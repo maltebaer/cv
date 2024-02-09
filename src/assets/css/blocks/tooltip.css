@@ -8,3 +8,8 @@
     display: inline-grid;
     place-content: center;
 }
+
+.tooltip:hover {
+    background: var(--text);
+    color: var(--background);
+}

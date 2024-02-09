@@ -1,7 +1,7 @@
 .card[data-variant='tooltip'] {
     background: var(--background);
     box-shadow: var(--shadow);
-    border: rgb(192, 192, 192) 2px groove;
+    border: 2px groove rgb(192, 192, 192);
 }
 
 :where(html[data-theme='vibrant']) .card[data-variant='tooltip'] {

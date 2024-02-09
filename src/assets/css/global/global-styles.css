@@ -71,6 +71,7 @@ a:hover {
 
 button {
     all: unset;
+    cursor: pointer;
 }
 
 summary {
