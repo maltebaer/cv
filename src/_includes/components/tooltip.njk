@@ -1,15 +1,39 @@
-<button
-    class="tooltip"
-    x-tooltip="{
-        content: () => $refs.{{ id }}.innerHTML,
-        interactive: true,
-        allowHTML: true,
-        appendTo: $root
-    }"
+<drab-popover
+    animation-keyframe-from-transform="scale(.95) translateY(3%)"
+    animation-keyframe-from-opacity="0"
+    animation-keyframe-to-transform="scale(1) translateY(0)"
+    animation-keyframe-to-opacity="1"
 >
-    i
-    <span class="sr-only">More info</span>
-</button>
-<template x-ref="{{ id }}">
-    <div class="flow">{{ content | markdown | safe }}</div>
-</template>
+    <button
+        data-trigger
+        popovertarget="{{ id }}Popover"
+        type="button"
+        x-ref="{{ id }}Button"
+        class="tooltip"
+    >
+        i
+        <span class="sr-only">more info</span>
+    </button>
+    <div
+        id="{{ id }}Popover"
+        data-content
+        x-anchor.bottom-start.offset.5="$refs.{{ id }}Button"
+        popover
+        class="absolute w-[max-content] top-0 left-0 card"
+        data-variant="tooltip"
+    >
+        <button
+            data-trigger
+            popovertarget="{{ id }}Popover"
+            type="button"
+            class="tooltip absolute top-[0.5rem] right-[0.5rem]"
+        >
+            x
+            <span class="sr-only">close popover</span>
+        </button>
+
+        <div class="flow">
+            {{ content | markdown | safe }}
+        </div>
+    </div>
+</drab-popover>

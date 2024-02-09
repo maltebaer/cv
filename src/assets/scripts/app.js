@@ -1,11 +1,10 @@
 import Alpine from 'alpinejs'
-import Tooltip from "@ryangjchandler/alpine-tooltip";
+import anchor from '@alpinejs/anchor'
 
-Alpine.plugin(
-    Tooltip.defaultProps({
-        theme: 'material',
-    })
-);
+import "drab/popover/define";
+
+Alpine.plugin(anchor)
 
 window.Alpine = Alpine
+
 Alpine.start()

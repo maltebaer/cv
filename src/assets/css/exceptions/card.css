@@ -1,3 +1,15 @@
+.card[data-variant='tooltip'] {
+    background: var(--background);
+    box-shadow: var(--shadow);
+    border: rgb(192, 192, 192) 2px groove;
+}
+
+:where(html[data-theme='vibrant']) .card[data-variant='tooltip'] {
+    backdrop-filter: blur(8px);
+    background: hsl(var(--surface));
+    padding: var(--space-2xl);
+}
+
 :where(html[data-theme='vibrant']) .card {
     padding: 0;
 }
