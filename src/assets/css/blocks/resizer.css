@@ -1,0 +1,4 @@
+.resizer {
+    resize: horizontal;
+    overflow: auto;
+}

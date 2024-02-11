@@ -2,8 +2,17 @@
 layout: base.njk
 ---
 
-{% for subpage in collections.subpage | sortByOrder %}
-<article class="flow">
-    {{ subpage.content | safe }}
-</article>
-{% endfor %}
+<div class="with-sidebar | region">
+    {% include "partials/controls.njk" %}
+
+    <main
+        class="stack"
+        data-stack-space="biggy"
+    >
+        {% for subpage in collections.subpage | sortByOrder %}
+        <article class="flow">
+            {{ subpage.content | safe }}
+        </article>
+        {% endfor %}
+    </main>
+</div>

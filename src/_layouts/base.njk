@@ -59,16 +59,7 @@
     <body class="wrapper">
         {% include "partials/header.njk" %}
 
-        <div class="with-sidebar | region">
-            {% include "partials/controls.njk" %}
-
-            <main
-                class="stack"
-                data-stack-space="biggy"
-            >
-                {{ content | safe }}
-            </main>
-        </div>
+        {{ content | safe }}
 
         {% include "partials/footer.njk" %}
     </body>

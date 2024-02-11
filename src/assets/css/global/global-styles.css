@@ -59,6 +59,11 @@ ol {
     list-style: none;
 }
 
+iframe {
+    width: 100%;
+    height: 80vh;
+}
+
 /* base interactive elements */
 a {
     color: currentcolor;

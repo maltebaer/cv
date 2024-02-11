@@ -1,0 +1,41 @@
+---
+layout: base.njk
+title: 'time machine'
+versions:
+    - year: 2022
+      url: 'https://cv-angular.maltebaer.vercel.app'
+      tools:
+          - name: 'angular'
+          - name: 'typescript'
+          - name: 'tailwind ui'
+    - year: 2021
+      url: 'https://cv-vue.maltebaer.vercel.app'
+      tools:
+          - name: 'vue'
+          - name: 'tailwind css'
+---
+
+<main class="region stack">
+    <h1>{{ title }}</h1>
+
+    {% for version in versions %}
+    <article class="flow">
+        <h2>{{ version.year }}</h2>
+        <div class="resizer">
+            <iframe
+                src="{{ version.url }}"
+                allow="fullscreen"
+            ></iframe>
+        </div>
+        <dl
+            class="cluster"
+            style="--cluster-gap: var(--space-xs)"
+        >
+            <dt>tools:</dt>
+            {% for tool in version.tools %}
+            <dd class="badge">{{ tool.name }}</dd>
+            {% endfor %}
+        </dl>
+    </article>
+    {% endfor %}
+</main>

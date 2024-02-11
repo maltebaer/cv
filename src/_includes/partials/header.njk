@@ -1,17 +1,28 @@
 <header class="header">
     <nav>
-        <ul class="cluster" style="--cluster-horizontal-alignment: end">
-            {% for subpage in collections.subpage | sortByOrder %}
-                {% if subpage.data.title !== 'intro' %}
-                    <li>
-                        <a
-                            class="will-move"
-                            href="#{{ subpage.data.title }}">
-                            {{ subpage.data.title }}
-                        </a>
-                    </li>
-                {% endif %}
-            {% endfor %}
+        <ul
+            class="cluster"
+            style="--cluster-horizontal-alignment: end"
+        >
+            {% for subpage in collections.subpage | sortByOrder %} {% if
+            subpage.data.title !== 'intro' %}
+            <li>
+                <a
+                    class="will-move"
+                    href="/#{{ subpage.data.title }}"
+                >
+                    {{ subpage.data.title }}
+                </a>
+            </li>
+            {% endif %} {% endfor %}
+            <li>
+                <a
+                    class="will-move"
+                    href="/time-machine"
+                >
+                    time machine
+                </a>
+            </li>
         </ul>
     </nav>
 </header>
