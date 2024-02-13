@@ -17,16 +17,35 @@ versions:
 
 <main class="region stack">
     <h1>{{ title }}</h1>
+    <p>
+        when i want to learn something new, try an unfamiliar concept, or just have fun
+        coding, this is my project. it's a simple resume. but because it's a simple
+        project, i can focus on implementing my ideas.
+    </p>
+
+    <p>
+        <a
+            href="https://hicks.design/journal/bill-oddie"
+            target="__blank"
+        >
+            jon hicks
+        </a>
+        inspired me to create a time machine. i don't mind going forward and starting over
+        with a blank canvas, but i thought it would be fun to see how my resume evolves
+        over time.
+    </p>
 
     {% for version in versions %}
     <article class="flow">
         <h2>{{ version.year }}</h2>
+
         <div class="resizer">
             <iframe
                 src="{{ version.url }}"
                 allow="fullscreen"
             ></iframe>
         </div>
+
         <dl
             class="cluster"
             style="--cluster-gap: var(--space-xs)"
