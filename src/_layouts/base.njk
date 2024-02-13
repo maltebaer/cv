@@ -56,7 +56,10 @@
         ></script>
     </head>
 
-    <body class="wrapper">
+    <body
+        class="wrapper"
+        x-data="controls($persist)"
+    >
         {% include "partials/header.njk" %}
 
         {{ content | safe }}
