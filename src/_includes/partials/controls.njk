@@ -1,8 +1,8 @@
 <aside
     x-data="{
         themes: {{ themes | jsonToAlpine }},
-        activeTheme: 'auto',
-        activeProperties: [],
+        activeTheme: $persist('auto'),
+        activeProperties: $persist([]),
         setTheme(theme) {
             this.activeTheme = theme
 
@@ -47,6 +47,12 @@
             stylesheet.toggleAttribute('disabled')
         }
      }"
+    x-init="() => {
+        setTheme(activeTheme)
+        for (const propery of activeProperties) {
+            setThemeProperty(propery.property, propery.theme)
+        }
+     }"
 >
     <div class="sticky top-s-m">
         <div class="switcher">
@@ -66,8 +72,12 @@
                     <div class="stack">
                         {% for theme in themes %}
                         <label>
-                            <input type="radio" name="theme" value="{{ theme }}" {% if
-                            theme === 'auto' %}checked{% endif %}/>
+                            <input
+                                type="radio"
+                                name="theme"
+                                value="{{ theme }}"
+                                x-model="activeTheme"
+                            />
                             <span>{{ theme }}</span>
                         </label>
                         {% endfor %}
