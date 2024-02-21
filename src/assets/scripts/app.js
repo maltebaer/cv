@@ -9,6 +9,7 @@ Alpine.plugin(persist)
 
 Alpine.data('controls', ($persist) => ({
     activeTheme: $persist('auto'),
+
     activeProperties: $persist([]),
 
     setTheme(theme) {
@@ -23,10 +24,13 @@ Alpine.data('controls', ($persist) => ({
 
         if (theme === 'auto') {
             html.style.removeProperty(property)
+
             this.activeProperties = this.activeProperties.filter(p => p.property !== property)
         } else {
             const value = `var(${property}-${theme})`
+
             html.style.setProperty(property, value)
+
             this.updateOrAddActiveProperty(property, theme)
         }
     },
