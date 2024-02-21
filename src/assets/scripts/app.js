@@ -25,14 +25,14 @@ Alpine.data('controls', ($persist) => ({
             html.style.removeProperty(property)
             this.activeProperties = this.activeProperties.filter(p => p.property !== property)
         } else {
-            value = `var(${property}-${theme})`
+            const value = `var(${property}-${theme})`
             html.style.setProperty(property, value)
             this.updateOrAddActiveProperty(property, theme)
         }
     },
 
     updateOrAddActiveProperty(property, theme) {
-        existingProperty = this.activeProperties.find(p => p.property === property);
+        const existingProperty = this.activeProperties.find(p => p.property === property);
 
         existingProperty ?
             existingProperty.theme = theme :
@@ -57,6 +57,7 @@ Alpine.data('controls', ($persist) => ({
 
     toggleStylesheet(layer) {
         const stylesheet = document.getElementById(layer + '-stylesheet')
+
         stylesheet.toggleAttribute('disabled')
     },
 
