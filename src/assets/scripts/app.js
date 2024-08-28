@@ -7,72 +7,74 @@ import "drab/popover/define"
 Alpine.plugin(anchor)
 Alpine.plugin(persist)
 
-Alpine.data('controls', ($persist) => ({
-    activeTheme: $persist('auto'),
+Alpine.data('controls', function () {
+    return {
+        activeTheme: this.$persist('auto'),
 
-    activeProperties: $persist([]),
+        activeProperties: this.$persist([]),
 
-    setTheme(theme) {
-        this.activeTheme = theme
+        setTheme(theme) {
+            this.activeTheme = theme
 
-        const html = document.firstElementChild
-        html.setAttribute('data-theme', theme)
-    },
+            const html = document.firstElementChild
+            html.setAttribute('data-theme', theme)
+        },
 
-    setThemeProperty(property, theme) {
-        const html = document.firstElementChild
+        setThemeProperty(property, theme) {
+            const html = document.firstElementChild
 
-        if (theme === 'auto') {
-            html.style.removeProperty(property)
+            if (theme === 'auto') {
+                html.style.removeProperty(property)
 
-            this.activeProperties = this.activeProperties.filter(p => p.property !== property)
-        } else {
-            const value = `var(${property}-${theme})`
+                this.activeProperties = this.activeProperties.filter(p => p.property !== property)
+            } else {
+                const value = `var(${property}-${theme})`
 
-            html.style.setProperty(property, value)
+                html.style.setProperty(property, value)
 
-            this.updateOrAddActiveProperty(property, theme)
-        }
-    },
+                this.updateOrAddActiveProperty(property, theme)
+            }
+        },
 
-    updateOrAddActiveProperty(property, theme) {
-        const existingProperty = this.activeProperties.find(p => p.property === property);
+        updateOrAddActiveProperty(property, theme) {
+            const existingProperty = this.activeProperties.find(p => p.property === property);
 
-        existingProperty ?
-            existingProperty.theme = theme :
-            this.activeProperties.push({ property, theme });
-    },
+            existingProperty ?
+                existingProperty.theme = theme :
+                this.activeProperties.push({ property, theme });
+        },
 
-    getActivePropertyTheme(property) {
-        const foundProperty = this.activeProperties.find(p => p.property === property);
+        getActivePropertyTheme(property) {
+            const foundProperty = this.activeProperties.find(p => p.property === property);
 
-        return foundProperty ? foundProperty.theme : 'auto';
-    },
+            return foundProperty ? foundProperty.theme : 'auto';
+        },
 
-    isActiveProperty(property, theme) {
-        const foundProperty = this.activeProperties.find(p => p.property === property);
+        isActiveProperty(property, theme) {
+            const foundProperty = this.activeProperties.find(p => p.property === property);
 
-        if (!foundProperty && theme === 'auto') {
-            return true;
-        }
+            if (!foundProperty && theme === 'auto') {
+                return true;
+            }
 
-        return foundProperty && foundProperty.theme === theme;
-    },
+            return foundProperty && foundProperty.theme === theme;
+        },
 
-    toggleStylesheet(layer) {
-        const stylesheet = document.getElementById(layer + '-stylesheet')
+        toggleStylesheet(layer) {
+            const stylesheet = document.getElementById(layer + '-stylesheet')
 
-        stylesheet.toggleAttribute('disabled')
-    },
+            stylesheet.toggleAttribute('disabled')
+        },
 
-    init() {
-        this.setTheme(this.activeTheme)
+        init() {
+            this.setTheme(this.activeTheme)
 
-        for (const propery of this.activeProperties) {
-            this.setThemeProperty(propery.property, propery.theme)
+            for (const propery of this.activeProperties) {
+                this.setThemeProperty(propery.property, propery.theme)
+            }
         }
     }
-}))
+})
 
 window.Alpine = Alpine
 
