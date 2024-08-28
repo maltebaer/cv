@@ -10,47 +10,54 @@ title: projects
     data-layout="50-50"
 >
     {% for project in projects %}
-        <li class="will-grow">
-            <article class="project-card | flow">
-                <a
-                    class="no-underline"
-                    href="{{ project.website }}"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    <figure class="flow">
-                        <div>
-                            <img src="{{ project.imgUrl }}" alt="screenshot of {{ project.title }} project"/>
-                        </div>
-                        <figcaption class="cluster" style="--cluster-vertical-alignment: baseline">
-                            <h3>
-                                <span>{{ project.title }}</span>
-                            </h3>
-                            <p>
-                                <a
+    <li class="will-grow">
+        <article class="project-card | flow">
+            <a
+                class="no-underline"
+                href="{{ project.website }}"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <figure class="flow">
+                    <div class="image-container">
+                        <div class="image-overlay"></div>
+                        <img
+                            src="{{ project.imgUrl }}"
+                            alt="screenshot of {{ project.title }} project"
+                        />
+                    </div>
+                    <figcaption
+                        class="cluster"
+                        style="--cluster-vertical-alignment: baseline"
+                    >
+                        <h3>
+                            <span>{{ project.title }}</span>
+                        </h3>
+                        <p>
+                            <a
                                 class="will-move"
                                 href="{{ project.sourceCodeUrl }}"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                >source code
+                            >source code
                             </a>
-                            </p>
-                        </figcaption>
-                    </figure>
-                </a>
+                        </p>
+                    </figcaption>
+                </figure>
+            </a>
 
-                <div class="flow">
-                    <p>{{ project.description | safe }}</p>
+            <div class="flow">
+                <p>{{ project.description | safe }}</p>
 
-                    <footer>
-                        <ul class="cluster">
-                            {% for technology in project.technologies %}
-                                <li class="badge">{{ technology }}</li>
-                            {% endfor %}
-                        </ul>
-                    </footer>
-                </div>
-            </article>
-        </li>
+                <footer>
+                    <ul class="cluster">
+                        {% for technology in project.technologies %}
+                        <li class="badge">{{ technology }}</li>
+                        {% endfor %}
+                    </ul>
+                </footer>
+            </div>
+        </article>
+    </li>
     {% endfor %}
 </ul>

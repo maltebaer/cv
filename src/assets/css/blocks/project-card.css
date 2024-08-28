@@ -11,11 +11,27 @@
     background: var(--brand);
 }
 
+
+.project-card .image-container {
+    position: relative;
+    isolation: isolate;
+}
+
+.project-card .image-overlay {
+    border-radius: var(--border-radius);
+    position: absolute;
+    inset: 0;
+    background-color: var(--brand);
+    mix-blend-mode: color;
+}
+
 .project-card img {
     --nested-border-radius: calc(var(--border-radius) - var(--padding));
 
+    mix-blend-mode: screen;
     inline-size: 100%;
     object-fit: cover;
     border-radius: var(--nested-border-radius) var(--nested-border-radius) 0 0;
     box-shadow: var(--shadow);
+    filter: grayscale(100) ;
 }
