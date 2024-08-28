@@ -1,6 +1,7 @@
 [
     {
         "title": "elan",
+        "year": "2023",
         "website": "https://elan.maltebaer.vercel.app/",
         "description": "portfolio website for a berlin-based event agency. this site was originally built using react. after learning about cube css, i took the chance to rebuild the site while drastically reducing the technology.",
         "imgUrl": "/assets/images/elan.jpg",
@@ -13,6 +14,7 @@
     },
     {
         "title": "martinslieder",
+        "year": "2023",
         "website": "https://martinslieder.vercel.app/",
         "description": "a little companion to help you sing along during the martin's parade. i remember last year holding a piece of paper and using my phone as a torch. this year i decided to make a super simple website.",
         "imgUrl": "/assets/images/martinslieder.jpg",
@@ -25,6 +27,7 @@
     },
     {
         "title": "zwei",
+        "year": "2022",
         "website": "http://zwei.vercel.app/",
         "description": "say hello to number two! of course i had to follow the tradition. it was also fun to see how i had evolved since the last welcome page. this one took much less time to build and i also started to simplify the technologies involved.",
         "imgUrl": "/assets/images/zwei.jpg",
@@ -37,6 +40,7 @@
     },
     {
         "title": "momo",
+        "year": "2020",
         "website": "https://momo.maltebaer.now.sh/",
         "description": "welcome page for my son's birthday. i wanted to be able to send a digital postcard to announce the birth of our first child. and also take advantage of being able to prepare as much as possible in advance.",
         "imgUrl": "/assets/images/momo.jpg",
@@ -49,6 +53,7 @@
     },
     {
         "title": "game of life",
+        "year": "2019",
         "website": "https://maltebaer.github.io/game-of-life/",
         "description": "arcade game using conway's 'game of life' in various places throughout the experience. it was the first of three projects during my web dev bootcamp and i was absolutely blown away by what could be created out of nothing using just a computer and some basic web technologies.",
         "imgUrl": "/assets/images/game-of-life.jpg",

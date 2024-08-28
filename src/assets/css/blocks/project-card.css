@@ -35,3 +35,7 @@
     box-shadow: var(--shadow);
     filter: grayscale(100) ;
 }
+
+.project-card h3 > sup {
+    font-size: calc(var(--size-step-0) * 0.75);
+}
