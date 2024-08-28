@@ -33,7 +33,7 @@
     object-fit: cover;
     border-radius: var(--nested-border-radius) var(--nested-border-radius) 0 0;
     box-shadow: var(--shadow);
-    filter: grayscale(100) ;
+    filter: grayscale(100) contrast(75%);
 }
 
 .project-card h3 > sup {
