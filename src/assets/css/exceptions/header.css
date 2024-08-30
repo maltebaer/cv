@@ -1,9 +1,5 @@
 :where([data-theme='bauhaus']) .header > nav > ul {
     writing-mode: vertical-lr;
-    display: block;
-    margin-block-start: auto;
-}
-
-:where([data-theme='bauhaus']) .header > nav > ul > li {
-    margin-block-start: var(--space-xs);
+    flex-direction: column;
+    align-items: start;
 }
