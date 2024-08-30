@@ -1,8 +1,4 @@
-<header
-    class="header | repel"
-    data-nowrap
-    style="--repel-vertical-alignment: start"
->
+<header class="header">
     <a
         href="/"
         class="logo | will-move"
@@ -12,10 +8,7 @@
         <span class="sr-only">home</span>
     </a>
     <nav>
-        <ul
-            class="cluster"
-            style="--cluster-horizontal-alignment: end"
-        >
+        <ul>
             {% for subpage in collections.subpage | sortByOrder %} {% if
             subpage.data.title !== 'intro' %}
             <li>

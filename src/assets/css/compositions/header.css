@@ -1,0 +1,28 @@
+.header {
+    width: 100%;
+    display: grid;
+    gap: var(--gutter);
+}
+
+:root:not(:where([data-theme='bauhaus'])) .header {
+    grid-template-columns: auto 1fr;
+}
+
+:root:not(:where([data-theme='bauhaus'])) .header > nav > ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-s);
+    justify-content: flex-end;
+}
+
+:where([data-theme='bauhaus']) .header {
+    writing-mode: vertical-lr;
+    align-content: space-between;
+    justify-items: start;
+
+}
+
+:where([data-theme='bauhaus']) .header > nav > ul {
+    display: grid;
+    gap: var(--space-s);
+}

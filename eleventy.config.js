@@ -86,7 +86,12 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addFilter("jsonToAlpine", jsonToAlpine);
     eleventyConfig.addFilter("markdown", markdown);
 
-    // Return your Object options:
+    eleventyConfig.setServerOptions({
+		// show local network IP addresses for device testing
+		showAllHosts: true,
+	});
+
+    // return your object options:
     return {
         dir: {
             input: "src",

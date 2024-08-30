@@ -1,5 +1,0 @@
-:where([data-theme='bauhaus']) .header > nav > ul {
-    writing-mode: vertical-lr;
-    flex-direction: column;
-    align-items: start;
-}
