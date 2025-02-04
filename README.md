@@ -2,10 +2,10 @@
 
 ## technology
 
-- 11ty
-- native html
-- css with tailwind
-- js with alpine
+-   11ty
+-   html with nunjucks
+-   css with tailwind
+-   js with alpine
 
 ## methodology
 
