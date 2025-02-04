@@ -2,17 +2,28 @@
 layout: base.njk
 ---
 
-<div class="with-sidebar | region">
-    {% include "partials/controls.njk" %}
+<article>
+    <header>
+        <p>web developer</p>
+        <h1>malte bär</h1>
+    </header>
 
-    <main
-        class="stack"
-        data-stack-space="biggy"
-    >
-        {% for subpage in collections.subpage | sortByOrder %}
-        <article class="flow">
-            {{ subpage.content | safe }}
-        </article>
-        {% endfor %}
-    </main>
-</div>
+    <p>
+        i love building simple and accessible websites by choosing native web technologies
+        over the next hyped javascript framework. my goal is to use semantic html and
+        native css to do the heavy lifting, and only use javascript when really needed.
+    </p>
+
+    <ul>
+        <li>potsdam, germany</li>
+        <li>
+            <a href="mailto:maltebaer@posteo.de"> maltebaer@posteo.de </a>
+        </li>
+        <li>
+            <a href="https://github.com/maltebaer/" target="_blank"> github </a>
+        </li>
+        <li>
+            <a href="https://linkedin.com/in/maltebaer/" target="_blank"> linkedin </a>
+        </li>
+    </ul>
+</article>

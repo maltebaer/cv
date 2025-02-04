@@ -1,0 +1,47 @@
+---
+layout: base.njk
+title: 'projects'
+---
+
+<header>
+    <p>malte bär</p>
+    <h1>{{ title }}</h1>
+</header>
+
+<ul>
+    {% for project in projects %}
+    <li>
+        <article>
+            <a href="{{ project.website }}" target="_blank">
+                <figure>
+                    <img
+                        src="{{ project.imgUrl }}"
+                        alt="screenshot of {{ project.title }} project"
+                    />
+                    <figcaption>
+                        <h3>
+                            <span>{{ project.title }}</span>
+                            <span>{{ project.year }}</span>
+                        </h3>
+                        <p>
+                            <a href="{{ project.sourceCodeUrl }}" target="_blank">
+                                source code
+                            </a>
+                        </p>
+                    </figcaption>
+                </figure>
+            </a>
+
+            <p>{{ project.description | safe }}</p>
+
+            <footer>
+                <ul>
+                    {% for technology in project.technologies %}
+                    <li>{{ technology }}</li>
+                    {% endfor %}
+                </ul>
+            </footer>
+        </article>
+    </li>
+    {% endfor %}
+</ul>

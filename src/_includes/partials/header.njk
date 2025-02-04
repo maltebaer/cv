@@ -1,33 +1,16 @@
-<header class="header">
-    <a
-        href="/"
-        class="logo | will-move"
-    >
+<header>
+    <a href="/">
         {% include 'svg/code.svg' %}
 
         <span class="sr-only">home</span>
     </a>
     <nav>
         <ul>
-            {% for subpage in collections.subpage | sortByOrder %} {% if
-            subpage.data.title !== 'intro' %}
-            <li>
-                <a
-                    class="will-move"
-                    href="/#{{ subpage.data.title }}"
-                >
-                    {{ subpage.data.title }}
-                </a>
-            </li>
-            {% endif %} {% endfor %}
-            <li>
-                <a
-                    class="will-move"
-                    href="/time-machine"
-                >
-                    time machine
-                </a>
-            </li>
+            {% for item in navigation %}
+                <li>
+                    <a href="{{ item.href }}" {% if item.href == page.url %}aria-current="page"{% endif %}>{{ item.label }}</a>
+                </li>
+            {% endfor %}
         </ul>
     </nav>
 </header>

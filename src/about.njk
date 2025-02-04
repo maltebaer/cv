@@ -1,0 +1,100 @@
+---
+layout: base.njk
+title: 'about'
+---
+
+<header>
+    <p>malte bär</p>
+    <h1>{{ title }}</h1>
+</header>
+
+<article>
+    <h2>interest</h2>
+
+    <ul>
+        {% for item in interests %}
+        <li>{{ item }}</li>
+        {% endfor %}
+    </ul>
+</article>
+
+<article>
+    <h2>experience</h2>
+
+    <ul>
+        {% for job in experience %}
+        <li>
+            <article>
+                <footer>
+                    <p>
+                        <time datetime="{{ job.start }}">
+                            {{ job.start | getLocaleDateString }}
+                        </time>
+                        -
+                        <time datetime="{{ job.end }}">
+                            {{ job.end | getLocaleDateString }}
+                        </time>
+                    </p>
+                </footer>
+
+                <header>
+                    <h3>
+                        <span>{{ job.role }}</span>
+                    </h3>
+                    <p>
+                        at
+                        <a href="{{ job.website }}" target="_blank">
+                            {{ job.location }}
+                        </a>
+                    </p>
+                </header>
+                <p>{{ job.description }}</p>
+                {% if job.technologies %}
+                <ul>
+                    {% for technology in job.technologies %}
+                    <li>{{ technology }}</li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+            </article>
+        </li>
+        {% endfor %}
+    </ul>
+</article>
+
+<article>
+    <h2>education</h2>
+
+    <ul>
+        {% for step in education %}
+        <li>
+            <article>
+                <footer>
+                    <p>
+                        <time datetime="{{ step.start }}">
+                            {{ step.start | getLocaleDateString }}
+                        </time>
+                        -
+                        <time datetime="{{ step.end }}">
+                            {{ step.end | getLocaleDateString }}
+                        </time>
+                    </p>
+                </footer>
+
+                <header>
+                    <h3>
+                        <span>{{ step.type }}</span>
+                    </h3>
+                    <p>
+                        at
+                        <a href="{{ step.website }}" target="_blank">
+                            {{ step.location }}
+                        </a>
+                    </p>
+                </header>
+                <p>{{ step.description }}</p>
+            </article>
+        </li>
+        {% endfor %}
+    </ul>
+</article>

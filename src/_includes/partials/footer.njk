@@ -1,32 +1,19 @@
-<footer
-    class="cluster"
-    style="
-        --cluster-gap: var(--space-xs) var(--space-s);
-        --cluster-horizontal-alignment: space-between
-    ">
+<footer>
     <p>
         heavily inspired by
-        <a
-            class="will-move"
-            href="https://buildexcellentwebsit.es"
-            target="_blank"
-            rel="noopener noreferrer"
-            >buildexcellentwebsit.es
+        <a href="https://buildexcellentwebsit.es" target="_blank">
+            buildexcellentwebsit.es
         </a>
     </p>
 
-    <dl class="cluster" style="--cluster-gap: var(--space-xs)">
+    <dl>
         <dt>build with</dt>
-        {% for tool in tools %}
-            <dd>
-                <a
-                    class="will-move"
-                    href="{{ tool.href }}"
-                    target="_blank"
-                    rel="noopener noreferrer">
-                    {{ tool.title }}
-                </a>
-            </dd>
+        {% for item in tools %}
+        <dd>
+            <a href="{{ item.href }}" target="_blank">
+                {{ item.title }}
+            </a>
+        </dd>
         {% endfor %}
     </dl>
 </footer>

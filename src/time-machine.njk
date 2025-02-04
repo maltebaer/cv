@@ -2,6 +2,11 @@
 layout: base.njk
 title: 'time machine'
 versions:
+    - year: 2023
+      url: 'https://cv-cube-css.vercel.app'
+      tools:
+          - name: 'eleventy'
+          - name: 'cube css'
     - year: 2022
       url: 'https://cv-angular.maltebaer.vercel.app'
       tools:
@@ -15,49 +20,38 @@ versions:
           - name: 'tailwind css'
 ---
 
-<main class="region stack">
+<header>
+    <p>malte bär</p>
     <h1>{{ title }}</h1>
-    <p>
-        when i want to learn something new, try an unfamiliar concept, or just have fun
-        coding, this is my project. it's a simple resume. but because it's a simple
-        project, i can focus on implementing my ideas.
-    </p>
+</header>
 
-    <p>
-        <a
-            href="https://hicks.design/journal/bill-oddie"
-            target="__blank"
-        >
-            jon hicks
-        </a>
-        inspired me to create a time machine. i like the idea of hosting your own little
-        internet archive.
-    </p>
+<p>
+    when i want to learn something new, try an unfamiliar concept, or just have fun
+    coding, this is my project. it's a simple resume. but because it's a simple project, i
+    can focus on implementing my ideas.
+</p>
 
-    <blockquote>
-        It’s a lot like an embarrassing family photo, but I’m owning it!
-    </blockquote>
+<p>
+    <a href="https://hicks.design/journal/bill-oddie" target="__blank"> jon hicks </a>
+    inspired me to create a time machine. i like the idea of hosting your own little
+    internet archive.
+</p>
 
-    {% for version in versions %}
-    <article class="flow">
-        <h2>{{ version.year }}</h2>
+<blockquote>It’s a lot like an embarrassing family photo, but I’m owning it!</blockquote>
 
-        <div class="resizer">
-            <iframe
-                src="{{ version.url }}"
-                allow="fullscreen"
-            ></iframe>
-        </div>
+{% for version in versions %}
+<article>
+    <h2>{{ version.year }}</h2>
 
-        <dl
-            class="cluster"
-            style="--cluster-gap: var(--space-xs)"
-        >
-            <dt>tools:</dt>
-            {% for tool in version.tools %}
-            <dd class="badge">{{ tool.name }}</dd>
-            {% endfor %}
-        </dl>
-    </article>
-    {% endfor %}
-</main>
+    <div>
+        <iframe src="{{ version.url }}" allow="fullscreen"></iframe>
+    </div>
+
+    <dl>
+        <dt>tools</dt>
+        {% for tool in version.tools %}
+        <dd>{{ tool.name }}</dd>
+        {% endfor %}
+    </dl>
+</article>
+{% endfor %}
