@@ -1,65 +1,16 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
     <head>
         <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#000" />
 
         <title>cv | malte bär</title>
 
-        <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1"
-        />
-        <meta
-            name="theme-color"
-            content="#000"
-        />
-
-        <link
-            rel="stylesheet"
-            href="/assets/css/custom-properties.css"
-        />
-        <link
-            id="reset-stylesheet"
-            rel="stylesheet"
-            href="/assets/css/global/reset.css"
-        />
-        <link
-            id="global-stylesheet"
-            rel="stylesheet"
-            href="/assets/css/global.css"
-        />
-        <link
-            id="composition-stylesheet"
-            rel="stylesheet"
-            href="/assets/css/compositions.css"
-        />
-        <link
-            id="utility-stylesheet"
-            rel="stylesheet"
-            href="/assets/css/utilities.css"
-        />
-        <link
-            id="block-stylesheet"
-            rel="stylesheet"
-            href="/assets/css/blocks.css"
-        />
-        <link
-            id="exception-stylesheet"
-            rel="stylesheet"
-            href="/assets/css/exceptions.css"
-        />
-
-        <script
-            type="module"
-            src="/assets/scripts/app.js"
-            defer
-        ></script>
+        <link rel="stylesheet" href="assets/css/global.css" />
     </head>
 
-    <body
-        class="wrapper"
-        x-data="controls($persist)"
-    >
+    <body>
         {% include "partials/header.njk" %}
 
         {{ content | safe }}

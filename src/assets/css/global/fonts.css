@@ -1,63 +1,55 @@
-/* light */
 @font-face {
-    font-family: 'Karla';
-    font-style: normal;
-    font-weight: 400;
-    src: url('/assets/fonts/karla-v31-latin-regular.woff2') format('woff2');
-    font-display: swap;
-}
-@font-face {
-    font-family: 'Rubik';
-    font-style: normal;
-    font-weight: 700;
-    src: url('/assets/fonts/rubik-v28-latin-700.woff2') format('woff2');
-    font-display: swap;
+  font-family: 'Satoshi';
+  src: url('/fonts/Satoshi-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
 }
 
-/* dark */
 @font-face {
-    font-family: 'Nunito Sans';
-    font-style: normal;
-    font-weight: 400;
-    src: url('/assets/fonts/nunito-sans-v15-latin-regular.woff2') format('woff2');
-    font-display: swap;
-}
-@font-face {
-    font-family: 'Nunito';
-    font-style: normal;
-    font-weight: 700;
-    src: url('/assets/fonts/nunito-v26-latin-700.woff2') format('woff2');
-    font-display: swap;
+  font-family: 'Satoshi';
+  src: url('/fonts/Satoshi-Italic.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+  font-style: italic;
 }
 
-/* vibrant */
 @font-face {
-    font-family: 'Nobile';
-    font-style: normal;
-    font-weight: 400;
-    src: url('/assets/fonts/nobile-v17-latin-regular.woff2') format('woff2');
-    font-display: swap;
-}
-@font-face {
-    font-family: 'Baloo 2';
-    font-style: normal;
-    font-weight: 700;
-    src: url('/assets/fonts/baloo-2-v21-latin-700.woff2') format('woff2');
-    font-display: swap;
+  font-family: 'Satoshi';
+  src: url('/fonts/Satoshi-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
 }
 
-/* bauhaus */
 @font-face {
-    font-family: 'Outfit';
-    font-style: normal;
-    font-weight: 400;
-    src: url('/assets/fonts/outfit-v11-latin-regular.woff2') format('woff2');
-    font-display: swap;
+  font-family: 'Satoshi';
+  src: url('/fonts/Satoshi-MediumItalic.woff2') format('woff2');
+  font-weight: 500;
+  font-display: swap;
+  font-style: italic;
 }
+
 @font-face {
-    font-family: 'Outfit';
-    font-style: normal;
-    font-weight: 700;
-    src: url('/assets/fonts/outfit-v11-latin-700.woff2') format('woff2');
-    font-display: swap;
+  font-family: 'Satoshi';
+  src: url('/fonts/Satoshi-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('/fonts/Satoshi-Black.woff2') format('woff2');
+  font-weight: 900;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'DM Mono';
+  font-style: normal;
+  font-weight: 500;
+  src: url('/fonts/dm-mono-v14-latin-500.woff2') format('woff2');
 }
