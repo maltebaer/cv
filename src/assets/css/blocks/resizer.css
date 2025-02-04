@@ -1,9 +1,0 @@
-.resizer {
-    resize: horizontal;
-    overflow: auto;
-}
-
-.resizer iframe {
-    width: 100%;
-    height: 80vh;
-}
