@@ -1,0 +1,12 @@
+.footer {
+    padding-block: var(--space-m);
+}
+
+.footer .cluster {
+    --gutter: var(--space-xs);
+    --cluster-vertical-alignment: baseline;
+}
+
+.footer dl > * {
+    margin: 0;
+}

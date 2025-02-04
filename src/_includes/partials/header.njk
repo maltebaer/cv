@@ -1,16 +1,18 @@
-<header>
-    <a href="/">
-        {% include 'svg/code.svg' %}
+<header class="header">
+    <div class="wrapper repel">
+        <a href="/">
+            {% include 'svg/code.svg' %}
+            <span class="sr-only">home</span>
+        </a>
 
-        <span class="sr-only">home</span>
-    </a>
-    <nav>
-        <ul>
-            {% for item in navigation %}
-                <li>
-                    <a href="{{ item.href }}" {% if item.href == page.url %}aria-current="page"{% endif %}>{{ item.label }}</a>
-                </li>
-            {% endfor %}
-        </ul>
-    </nav>
+        <nav>
+            <ul class="cluster" role="list">
+                {% for item in navigation %}
+                    <li>
+                        <a href="{{ item.href }}" {% if item.href == page.url %}aria-current="page"{% endif %}>{{ item.label }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </nav>
+    </div>
 </header>

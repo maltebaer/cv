@@ -1,19 +1,20 @@
-<footer>
-    <p>
-        heavily inspired by
-        <a href="https://buildexcellentwebsit.es" target="_blank">
-            buildexcellentwebsit.es
-        </a>
-    </p>
-
-    <dl>
-        <dt>build with</dt>
-        {% for item in tools %}
-        <dd>
-            <a href="{{ item.href }}" target="_blank">
-                {{ item.title }}
+<footer class="footer">
+    <div class="wrapper repel">
+        <p>
+            heavily inspired by
+            <a href="https://buildexcellentwebsit.es" target="_blank">
+                buildexcellentwebsit.es
             </a>
-        </dd>
-        {% endfor %}
-    </dl>
+        </p>
+        <dl class="cluster">
+            <dt>build with</dt>
+            {% for item in tools %}
+            <dd>
+                <a href="{{ item.href }}" target="_blank">
+                    {{ item.title }}
+                </a>
+            </dd>
+            {% endfor %}
+        </dl>
+    </div>
 </footer>
