@@ -1,0 +1,7 @@
+.projects article.sidebar {
+    --sidebar-align: center;
+}
+
+.projects article:not(:has(+ article)) img {
+    border-block-end: 0;
+}

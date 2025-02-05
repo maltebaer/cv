@@ -3,45 +3,66 @@ layout: base.njk
 title: 'projects'
 ---
 
-<header>
-    <p>malte bär</p>
-    <h1>{{ title }}</h1>
-</header>
+<div class="projects">
+    <header class="page-header">
+        <p>malte bär</p>
+        <h1>{{ title }}</h1>
+    </header>
 
-<ul>
     {% for project in projects %}
-    <li>
-        <article>
-            <a href="{{ project.website }}" target="_blank">
-                <figure>
-                    <img
-                        src="{{ project.imgUrl }}"
-                        alt="screenshot of {{ project.title }} project"
-                    />
-                    <figcaption>
-                        <h3>
-                            <span>{{ project.title }}</span>
-                            <span>{{ project.year }}</span>
-                        </h3>
-                        <p>
-                            <a href="{{ project.sourceCodeUrl }}" target="_blank">
-                                source code
-                            </a>
-                        </p>
-                    </figcaption>
-                </figure>
-            </a>
+    <article
+        class="sidebar"
+        {%
+        if
+        loop.index
+        is
+        even
+        %}data-reversed
+        {%
+        endif
+        %}
+        data-direction="rtl"
+    >
+        <div>
+            <img
+                class="{% if loop.index is even %}border-left{% else %}border-right{% endif %}"
+                src="{{ project.imgUrl }}"
+                alt="screenshot of {{ project.title }} project"
+            />
+        </div>
+
+        <div class="flow">
+            <h2>
+                <a href="{{ project.website }}" target="_blank">
+                    <span>{{ project.title }}</span>
+                </a>
+                <span>{{ project.year }}</span>
+            </h2>
+
+            <p>
+                <a href="{{ project.sourceCodeUrl }}" target="_blank">source code</a>
+            </p>
 
             <p>{{ project.description | safe }}</p>
 
             <footer>
-                <ul>
+                <ul class="cluster" role="list">
                     {% for technology in project.technologies %}
                     <li>{{ technology }}</li>
                     {% endfor %}
                 </ul>
             </footer>
-        </article>
-    </li>
+        </div>
+
+        <!-- {% if loop.index is even %}
+        <div>
+            <img
+                class="border-left"
+                src="{{ project.imgUrl }}"
+                alt="screenshot of {{ project.title }} project"
+            />
+        </div>
+        {% endif %} -->
+    </article>
     {% endfor %}
-</ul>
+</div>

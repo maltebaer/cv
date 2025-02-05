@@ -1,0 +1,23 @@
+.reveal-list {
+    font-size: var(--size-step-2);
+}
+
+.reveal-list li {
+    --sidebar-target-width: content;
+    --gutter: var(--space-xs);
+    border-block-end: var(--stroke-solid);
+}
+
+.reveal-list a {
+    text-decoration: none;
+    color: currentColor;
+}
+
+.reveal-list__revealable {
+    display: none;
+    font-size: var(--size-step-1);
+}
+
+.reveal-list li:hover .reveal-list__revealable {
+    display: revert;
+}

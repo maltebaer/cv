@@ -21,7 +21,8 @@ body {
 }
 
 h1 {
-    font-size: var(--size-step-6);
+    font-size: var(--size-step-8);
+    font-weight: var(--font-black);
     max-width: 20ch;
 }
 

@@ -1,0 +1,8 @@
+.page-header {
+    border-block-end: var(--stroke-primary);
+}
+
+.page-header p {
+    margin-inline-start: 0.2ch;
+    margin-block-end: -1lh;
+}

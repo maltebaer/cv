@@ -3,8 +3,8 @@ layout: base.njk
 ---
 
 <article class="flow">
-    <header>
-        <p>web developer</p>
+    <header class="page-header">
+        <p>web dev</p>
         <h1>malte bär</h1>
     </header>
 
@@ -14,16 +14,42 @@ layout: base.njk
         native css to do the heavy lifting, and only use javascript when really needed.
     </p>
 
-    <ul>
-        <li>potsdam, germany</li>
-        <li>
-            <a href="mailto:maltebaer@posteo.de"> maltebaer@posteo.de </a>
-        </li>
-        <li>
-            <a href="https://github.com/maltebaer/" target="_blank"> github </a>
-        </li>
-        <li>
-            <a href="https://linkedin.com/in/maltebaer/" target="_blank"> linkedin </a>
-        </li>
-    </ul>
+    <div class="switcher">
+        <img src="https://picsum.photos/seed/picsum/600/400" class="border-right" />
+
+        <ul class="reveal-list flow" role="list">
+            <li class="sidebar items-baseline">
+                <span>location</span>
+                <span class="reveal-list__revealable">potsdam, germany</span>
+            </li>
+            <li>
+                <a class="sidebar items-baseline" href="mailto:maltebaer@posteo.de">
+                    <span>mail</span>
+                    <span class="reveal-list__revealable">maltebaer@posteo.de</span>
+                </a>
+            </li>
+            <li>
+                <a
+                    class="sidebar items-baseline"
+                    href="https://github.com/maltebaer/"
+                    target="_blank"
+                >
+                    <span>github</span>
+                    <span class="reveal-list__revealable">github.com/maltebaer/</span>
+                </a>
+            </li>
+            <li>
+                <a
+                    class="sidebar items-baseline"
+                    href="https://linkedin.com/in/maltebaer/"
+                    target="_blank"
+                >
+                    <span>linkedin</span>
+                    <span class="reveal-list__revealable"
+                        >linkedin.com/in/maltebaer/</span
+                    >
+                </a>
+            </li>
+        </ul>
+    </div>
 </article>
