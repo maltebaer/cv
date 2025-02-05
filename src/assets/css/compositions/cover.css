@@ -2,11 +2,6 @@
     display: flex;
     flex-direction: column;
     min-block-size: 100vh;
-    padding: 1rem;
-}
-
-.cover > * {
-    margin-block: 1rem;
 }
 
 .cover > :first-child:not(main) {
