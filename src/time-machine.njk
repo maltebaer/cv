@@ -20,38 +20,45 @@ versions:
           - name: 'tailwind css'
 ---
 
-<header class="page-header" data-page="time-machine">
-    <p>malte bär</p>
-    <h1>time machine</h1>
-</header>
+<div class="time-machine flow">
+    <header class="page-header" data-page="time-machine">
+        <p>malte bär</p>
+        <h1>{{ title }}</h1>
+    </header>
 
-<p>
-    when i want to learn something new, try an unfamiliar concept, or just have fun
-    coding, this is my project. it's a simple resume. but because it's a simple project, i
-    can focus on implementing my ideas.
-</p>
+    <p>
+        when i want to learn something new, try an unfamiliar concept, or just have fun
+        coding, this is my project. it's a simple resume. but because it's a simple
+        project, i can focus on implementing my ideas.
+    </p>
 
-<p>
-    <a href="https://hicks.design/journal/bill-oddie" target="__blank"> jon hicks </a>
-    inspired me to create a time machine. i like the idea of hosting your own little
-    internet archive.
-</p>
+    <p>
+        <a href="https://hicks.design/journal/bill-oddie" target="__blank">jon hicks</a>
+        inspired me to create a time machine. i like the idea of hosting your own little
+        internet archive.
+    </p>
 
-<blockquote>It’s a lot like an embarrassing family photo, but I’m owning it!</blockquote>
+    <blockquote cite="https://hicks.design/journal/bill-oddie">
+        <p>It’s a lot like an embarrassing family photo, but I’m owning it!</p>
+        <footer>
+            <p>—Jon Hicks, <cite>Bill Oddie taught me how to make web sites</cite></p>
+        </footer>
+    </blockquote>
 
-{% for version in versions %}
-<article>
-    <h2>{{ version.year }}</h2>
+    {% for version in versions %}
+    <article>
+        <h2>{{ version.year }}</h2>
 
-    <div>
-        <iframe src="{{ version.url }}" allow="fullscreen"></iframe>
-    </div>
+        <div class="resizer">
+            <iframe src="{{ version.url }}" allow="fullscreen"></iframe>
+        </div>
 
-    <dl>
-        <dt>tools</dt>
-        {% for tool in version.tools %}
-        <dd>{{ tool.name }}</dd>
-        {% endfor %}
-    </dl>
-</article>
-{% endfor %}
+        <dl class="cluster">
+            <dt>tools</dt>
+            {% for tool in version.tools %}
+            <dd>{{ tool.name }}</dd>
+            {% endfor %}
+        </dl>
+    </article>
+    {% endfor %}
+</div>

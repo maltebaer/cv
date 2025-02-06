@@ -124,13 +124,6 @@ ol ::marker {
     font-weight: var(--font-bold);
 }
 
-/* Lists with classes and roles will be out of standard flow, so remove the default spacing */
-[role='list'][class],
-[role='tablist'][class] {
-    margin-block: 0;
-    padding: 0;
-}
-
 dt {
     font-weight: var(--font-medium);
 }
@@ -149,7 +142,20 @@ dd {
 
 blockquote {
     margin-inline: 0;
-    color: var(--color-light);
+    color: var(--color-primary);
+    position: relative;
+    font-size: var(--size-step-2);
+    padding: var(--gutter);
+}
+
+blockquote:before {
+    content: '“';
+    font-size: var(--size-step-7);
+    left: var(--space-xs);
+    top: var(--space-m);
+    line-height: 0.8;
+    opacity: 0.2;
+    position: absolute;
 }
 
 blockquote footer {
