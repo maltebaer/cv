@@ -25,7 +25,7 @@ title: 'projects'
     >
         <div>
             <img
-                class="{% if loop.index is even %}border-left{% else %}border-right{% endif %}"
+                class="{% if loop.index is even %}border-left{% else %}border-right{% endif %} border-bottom"
                 src="{{ project.imgUrl }}"
                 alt="screenshot of {{ project.title }} project"
             />
@@ -53,16 +53,6 @@ title: 'projects'
                 </ul>
             </footer>
         </div>
-
-        <!-- {% if loop.index is even %}
-        <div>
-            <img
-                class="border-left"
-                src="{{ project.imgUrl }}"
-                alt="screenshot of {{ project.title }} project"
-            />
-        </div>
-        {% endif %} -->
     </article>
     {% endfor %}
 </div>

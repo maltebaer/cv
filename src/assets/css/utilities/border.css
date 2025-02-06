@@ -1,11 +1,9 @@
 .border-right {
     border-inline-end: var(--stroke-primary);
-    border-block-end: var(--stroke-primary);
 }
 
 .border-left {
     border-inline-start: var(--stroke-primary);
-    border-block-end: var(--stroke-primary);
 }
 
 .border-bottom {
