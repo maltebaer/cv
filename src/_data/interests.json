@@ -1,14 +1,34 @@
 [
-    "semantic html",
-    "css",
-    "web components",
-    "fluid design",
-    "design tokens",
-    "cube css",
-    "tailwind css",
-    "laravel",
-    "alpine js",
-    "tall",
-    "testing",
-    "accessibility"
+    {
+        "label": "semantic html",
+        "url": "https://web.dev/learn/html/semantic-html/"
+    },
+    {
+        "label": "css",
+        "url": "https://every-layout.dev/"
+    },
+    {
+        "label": "fluid design",
+        "url": "https://utopia.fyi/"
+    },
+    {
+        "label": "cube css",
+        "url": "https://cube.fyi/"
+    },
+    {
+        "label": "design tokens",
+        "url": "https://piccalil.li/blog/what-are-design-tokens/"
+    },
+    {
+        "label": "accessibility",
+        "url": "https://accessibility-developer-guide.com/"
+    },
+    {
+        "label": "laravel",
+        "url": "https://laravel.com/"
+    },
+    {
+        "label": "filament",
+        "url": "https://filamentphp.com/"
+    }
 ]

@@ -3,98 +3,118 @@ layout: base.njk
 title: 'about'
 ---
 
-<header class="page-header" data-page="about">
-    <p>malte bär</p>
-    <h1>{{ title }}</h1>
-</header>
+<div class="about flow">
+    <header class="page-header" data-page="about">
+        <p>malte bär</p>
+        <h1>{{ title }}</h1>
+    </header>
 
-<article>
-    <h2>interest</h2>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit quae eius veritatis
+        adipisci illo alias quis consectetur similique, voluptatem, vero quisquam dolorum
+        iure ipsum, earum magnam eos doloribus explicabo ex!
+    </p>
 
-    <ul>
-        {% for item in interests %}
-        <li>{{ item }}</li>
-        {% endfor %}
-    </ul>
-</article>
+    <article class="flow">
+        <h2>interest</h2>
 
-<article>
-    <h2>experience</h2>
+        <p>
+            find below a list of my current go to references for the things i'm most
+            interested in.
+        </p>
 
-    <ul>
-        {% for job in experience %}
-        <li>
-            <article>
-                <footer>
-                    <p>
-                        <time datetime="{{ job.start }}">
-                            {{ job.start | getLocaleDateString }}
-                        </time>
-                        -
-                        <time datetime="{{ job.end }}">
-                            {{ job.end | getLocaleDateString }}
-                        </time>
-                    </p>
-                </footer>
+        <ul class="reveal-list grid" role="list" data-layout="50-50">
+            {% for item in interests %}
+            <li>
+                <a class="sidebar items-baseline" href="{{ item.url }}" target="_blank">
+                    <span>{{ item.label }}</span>
+                    <span class="reveal-list__revealable">
+                        {{ item.url | replace('https://', '') }}
+                    </span>
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </article>
 
-                <header>
-                    <h3>
-                        <span>{{ job.role }}</span>
-                    </h3>
-                    <p>
-                        at
-                        <a href="{{ job.website }}" target="_blank">
-                            {{ job.location }}
-                        </a>
-                    </p>
-                </header>
-                <p>{{ job.description }}</p>
-                {% if job.technologies %}
-                <ul>
-                    {% for technology in job.technologies %}
-                    <li>{{ technology }}</li>
-                    {% endfor %}
-                </ul>
-                {% endif %}
-            </article>
-        </li>
-        {% endfor %}
-    </ul>
-</article>
+    <!-- <article>
+        <h2>experience</h2>
 
-<article>
-    <h2>education</h2>
+        <ul>
+            {% for job in experience %}
+            <li>
+                <article>
+                    <footer>
+                        <p>
+                            <time datetime="{{ job.start }}">
+                                {{ job.start | getLocaleDateString }}
+                            </time>
+                            -
+                            <time datetime="{{ job.end }}">
+                                {{ job.end | getLocaleDateString }}
+                            </time>
+                        </p>
+                    </footer>
 
-    <ul>
-        {% for step in education %}
-        <li>
-            <article>
-                <footer>
-                    <p>
-                        <time datetime="{{ step.start }}">
-                            {{ step.start | getLocaleDateString }}
-                        </time>
-                        -
-                        <time datetime="{{ step.end }}">
-                            {{ step.end | getLocaleDateString }}
-                        </time>
-                    </p>
-                </footer>
+                    <header>
+                        <h3>
+                            <span>{{ job.role }}</span>
+                        </h3>
+                        <p>
+                            at
+                            <a href="{{ job.website }}" target="_blank">
+                                {{ job.location }}
+                            </a>
+                        </p>
+                    </header>
+                    <p>{{ job.description }}</p>
+                    {% if job.technologies %}
+                    <ul>
+                        {% for technology in job.technologies %}
+                        <li>{{ technology }}</li>
+                        {% endfor %}
+                    </ul>
+                    {% endif %}
+                </article>
+            </li>
+            {% endfor %}
+        </ul>
+    </article>
 
-                <header>
-                    <h3>
-                        <span>{{ step.type }}</span>
-                    </h3>
-                    <p>
-                        at
-                        <a href="{{ step.website }}" target="_blank">
-                            {{ step.location }}
-                        </a>
-                    </p>
-                </header>
-                <p>{{ step.description }}</p>
-            </article>
-        </li>
-        {% endfor %}
-    </ul>
-</article>
+    <article>
+        <h2>education</h2>
+
+        <ul>
+            {% for step in education %}
+            <li>
+                <article>
+                    <footer>
+                        <p>
+                            <time datetime="{{ step.start }}">
+                                {{ step.start | getLocaleDateString }}
+                            </time>
+                            -
+                            <time datetime="{{ step.end }}">
+                                {{ step.end | getLocaleDateString }}
+                            </time>
+                        </p>
+                    </footer>
+
+                    <header>
+                        <h3>
+                            <span>{{ step.type }}</span>
+                        </h3>
+                        <p>
+                            at
+                            <a href="{{ step.website }}" target="_blank">
+                                {{ step.location }}
+                            </a>
+                        </p>
+                    </header>
+                    <p>{{ step.description }}</p>
+                </article>
+            </li>
+            {% endfor %}
+        </ul>
+    </article> -->
+</div>

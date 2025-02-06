@@ -1,5 +1,7 @@
 .reveal-list {
     font-size: var(--size-step-2);
+    margin-block: 0;
+    padding: 0;
 }
 
 .reveal-list li {
