@@ -7,7 +7,7 @@
 .reveal-list li {
     --sidebar-target-width: content;
     --gutter: var(--space-xs);
-    border-block-end: var(--stroke-solid);
+    border-block-end: var(--stroke);
 }
 
 .reveal-list a {
@@ -18,6 +18,8 @@
 .reveal-list__revealable {
     display: none;
     font-size: var(--size-step-1);
+    color: var(--color-primary);
+    text-decoration: underline;
 }
 
 .reveal-list li:hover .reveal-list__revealable {

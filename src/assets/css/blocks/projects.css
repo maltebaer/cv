@@ -5,3 +5,9 @@
 .projects article:not(:has(+ article)) img {
     border-block-end: 0;
 }
+
+.projects article ul {
+    list-style: none;
+    margin-block: 0;
+    padding: 0;
+}

@@ -3,19 +3,21 @@ layout: base.njk
 title: 'about'
 ---
 
-<div class="about flow">
-    <header class="page-header" data-page="about">
-        <p>malte bär</p>
-        <h1>{{ title }}</h1>
-    </header>
+<div class="about">
+    <div class="flow">
+        <header class="page-header" data-page="about">
+            <p>malte bär</p>
+            <h1>{{ title }}</h1>
+        </header>
 
-    <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit quae eius veritatis
-        adipisci illo alias quis consectetur similique, voluptatem, vero quisquam dolorum
-        iure ipsum, earum magnam eos doloribus explicabo ex!
-    </p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit quae eius
+            veritatis adipisci illo alias quis consectetur similique, voluptatem, vero
+            quisquam dolorum iure ipsum, earum magnam eos doloribus explicabo ex!
+        </p>
+    </div>
 
-    <article class="flow">
+    <article class="flow region">
         <h2>interest</h2>
 
         <p>
@@ -37,13 +39,13 @@ title: 'about'
         </ul>
     </article>
 
-    <!-- <article>
+    <article class="experience flow region">
         <h2>experience</h2>
 
-        <ul>
+        <ul class="grid" data-layout="50-50">
             {% for job in experience %}
             <li>
-                <article>
+                <article class="card flow">
                     <footer>
                         <p>
                             <time datetime="{{ job.start }}">
@@ -56,6 +58,8 @@ title: 'about'
                         </p>
                     </footer>
 
+                    {% include 'svg/' + job.framework + '.svg' %}
+
                     <header>
                         <h3>
                             <span>{{ job.role }}</span>
@@ -67,21 +71,15 @@ title: 'about'
                             </a>
                         </p>
                     </header>
+
                     <p>{{ job.description }}</p>
-                    {% if job.technologies %}
-                    <ul>
-                        {% for technology in job.technologies %}
-                        <li>{{ technology }}</li>
-                        {% endfor %}
-                    </ul>
-                    {% endif %}
                 </article>
             </li>
             {% endfor %}
         </ul>
     </article>
 
-    <article>
+    <!-- <article>
         <h2>education</h2>
 
         <ul>

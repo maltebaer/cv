@@ -1,0 +1,24 @@
+.card {
+    padding: var(--space-s);
+    border: var(--stroke);
+    box-shadow: 3px 3px 0 var(--color-primary);
+    height: 100%;
+    position: relative;
+    margin-block-start: 1lh;
+}
+
+.card footer {
+    position: absolute;
+    top: calc(-1lh - var(--space-xs));
+}
+
+.card svg {
+    fill: var(--color-primary);
+    height: 2lh;
+    display: block;
+    margin-inline: auto;
+}
+
+.card header {
+    text-align: center;
+}
