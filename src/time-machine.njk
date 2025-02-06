@@ -21,10 +21,8 @@ versions:
 ---
 
 <div class="time-machine flow">
-    <header class="page-header" data-page="time-machine">
-        <p class="badge">malte bär</p>
-        <h1>{{ title }}</h1>
-    </header>
+    {%- from 'macros/page-header.njk' import pageHeader %}
+    {{ pageHeader({tag: 'malte bär', title: title}) }}
 
     <p>
         when i want to learn something new, try an unfamiliar concept, or just have fun

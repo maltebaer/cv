@@ -3,10 +3,8 @@ layout: base.njk
 ---
 
 <article class="flow">
-    <header class="page-header">
-        <p class="badge">web dev</p>
-        <h1>malte bär</h1>
-    </header>
+    {%- from 'macros/page-header.njk' import pageHeader %}
+    {{ pageHeader({tag: 'web dev', title: 'malte bär'}) }}
 
     <p>
         i love building simple and accessible websites by choosing native web technologies

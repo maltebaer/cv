@@ -4,10 +4,8 @@ title: 'projects'
 ---
 
 <div class="projects">
-    <header class="page-header">
-        <p class="badge">malte bär</p>
-        <h1>{{ title }}</h1>
-    </header>
+    {%- from 'macros/page-header.njk' import pageHeader %}
+    {{ pageHeader({tag: 'malte bär', title: title}) }}
 
     <div class="region">
         {% for project in projects %}
