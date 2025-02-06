@@ -45,20 +45,20 @@ versions:
         </footer>
     </blockquote>
 
-    {% for version in versions %}
-    <article>
-        <h2>{{ version.year }}</h2>
-
-        <div class="resizer">
-            <iframe src="{{ version.url }}" allow="fullscreen"></iframe>
-        </div>
-
-        <dl class="cluster">
-            <dt>tools</dt>
-            {% for tool in version.tools %}
-            <dd class="badge">{{ tool.name }}</dd>
-            {% endfor %}
-        </dl>
-    </article>
-    {% endfor %}
+    <div class="region flow">
+        {% for version in versions %}
+        <article>
+            <h2>{{ version.year }}</h2>
+            <div class="resizer">
+                <iframe src="{{ version.url }}" allow="fullscreen"></iframe>
+            </div>
+            <dl class="cluster">
+                <dt>tools</dt>
+                {% for tool in version.tools %}
+                <dd class="badge">{{ tool.name }}</dd>
+                {% endfor %}
+            </dl>
+        </article>
+        {% endfor %}
+    </div>
 </div>
