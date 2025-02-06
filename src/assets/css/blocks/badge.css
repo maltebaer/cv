@@ -1,8 +1,13 @@
 .badge {
     display: inline-block;
-    padding-inline-end: var(--space-xs);
+    padding-inline-end: calc(var(--space-xs) / 2);
     border-block-end: var(--stroke);
     border-inline-end: var(--stroke);
     border-color: var(--color-mid);
-    font-size: var(--size-step-0);
+    font-size: var(--size-step-00);
+    font-family: var(--font-mono);
+}
+
+.cluster:has(.badge) {
+    --gutter: var(--space-m);
 }

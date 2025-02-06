@@ -1,5 +1,4 @@
 .time-machine .cluster {
-    --gutter: 0 var(--space-xs);
     --cluster-vertical-alignment: baseline;
 }
 

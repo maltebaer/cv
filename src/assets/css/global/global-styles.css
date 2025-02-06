@@ -264,8 +264,8 @@ a:not([class]):hover {
 }
 
 ::selection {
-    color: var(--color-dark);
-    background: var(--color-light);
+    color: var(--color-light);
+    background: var(--color-mid);
 }
 
 hr {
