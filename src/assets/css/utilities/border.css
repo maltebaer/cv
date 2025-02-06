@@ -9,3 +9,15 @@
 .border-bottom {
     border-block-end: var(--stroke-primary);
 }
+
+.box-border-right {
+    box-shadow: 3px 0 0 var(--color-primary);
+}
+
+.box-border-left {
+    box-shadow: -3px 0 0 var(--color-primary);
+}
+
+.box-border-bottom {
+    box-shadow: 0 3px 0 var(--color-primary);
+}

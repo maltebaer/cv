@@ -9,50 +9,49 @@ title: 'projects'
         <h1>{{ title }}</h1>
     </header>
 
-    {% for project in projects %}
-    <article
-        class="sidebar"
-        {%
-        if
-        loop.index
-        is
-        even
-        %}data-reversed
-        {%
-        endif
-        %}
-        data-direction="rtl"
-    >
-        <div>
-            <img
-                class="{% if loop.index is even %}border-left{% else %}border-right{% endif %} border-bottom"
-                src="{{ project.imgUrl }}"
-                alt="screenshot of {{ project.title }} project"
-            />
-        </div>
+    <div class="region">
+        {% for project in projects %}
+        <article
+            class="sidebar"
+            {%
+            if
+            loop.index
+            is
+            even
+            %}data-reversed
+            {%
+            endif
+            %}
+            data-direction="rtl"
+        >
+            <div>
+                <img
+                    data-border-side="{% if loop.index is even %}left{% else %}right{% endif %}"
+                    src="{{ project.imgUrl }}"
+                    alt="screenshot of {{ project.title }} project"
+                />
+            </div>
 
-        <div class="flow">
-            <h2>
-                <a href="{{ project.website }}" target="_blank">
-                    <span>{{ project.title }}</span>
-                </a>
-                <span>{{ project.year }}</span>
-            </h2>
-
-            <p>
-                <a href="{{ project.sourceCodeUrl }}" target="_blank">source code</a>
-            </p>
-
-            <p>{{ project.description | safe }}</p>
-
-            <footer>
-                <ul class="cluster">
-                    {% for technology in project.technologies %}
-                    <li class="badge">{{ technology }}</li>
-                    {% endfor %}
-                </ul>
-            </footer>
-        </div>
-    </article>
-    {% endfor %}
+            <div class="flow">
+                <h2>
+                    <a href="{{ project.website }}" target="_blank">
+                        <span>{{ project.title }}</span>
+                    </a>
+                    <span>{{ project.year }}</span>
+                </h2>
+                <p>
+                    <a href="{{ project.sourceCodeUrl }}" target="_blank">source code</a>
+                </p>
+                <p>{{ project.description | safe }}</p>
+                <footer>
+                    <ul class="cluster">
+                        {% for technology in project.technologies %}
+                        <li class="badge">{{ technology }}</li>
+                        {% endfor %}
+                    </ul>
+                </footer>
+            </div>
+        </article>
+        {% endfor %}
+    </div>
 </div>

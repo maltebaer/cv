@@ -79,14 +79,14 @@ title: 'about'
         </ul>
     </article>
 
-    <!-- <article>
+    <article class="flow region">
         <h2>education</h2>
 
-        <ul>
-            {% for step in education %}
-            <li>
-                <article>
-                    <footer>
+        <table>
+            <tbody>
+                {% for step in education %}
+                <tr>
+                    <td>
                         <p>
                             <time datetime="{{ step.start }}">
                                 {{ step.start | getLocaleDateString }}
@@ -96,23 +96,24 @@ title: 'about'
                                 {{ step.end | getLocaleDateString }}
                             </time>
                         </p>
-                    </footer>
-
-                    <header>
-                        <h3>
-                            <span>{{ step.type }}</span>
-                        </h3>
+                    </td>
+                    <td>
+                        <h3>{{ step.type }}</h3>
+                    </td>
+                    <td>
                         <p>
                             at
                             <a href="{{ step.website }}" target="_blank">
                                 {{ step.location }}
                             </a>
                         </p>
-                    </header>
-                    <p>{{ step.description }}</p>
-                </article>
-            </li>
-            {% endfor %}
-        </ul>
-    </article> -->
+                    </td>
+                    <td>
+                        <p>{{ step.description }}</p>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </article>
 </div>

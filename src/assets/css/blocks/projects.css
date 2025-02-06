@@ -2,8 +2,16 @@
     --sidebar-align: center;
 }
 
-.projects article:not(:has(+ article)) img {
-    border-block-end: 0;
+.projects img {
+    border: var(--stroke);
+}
+
+.projects img[data-border-side='right'] {
+    box-shadow: 3px 3px 0 var(--color-primary);
+}
+
+.projects img[data-border-side='left'] {
+    box-shadow: -3px 3px 0 var(--color-primary);
 }
 
 .projects article ul {

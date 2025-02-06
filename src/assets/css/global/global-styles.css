@@ -188,7 +188,6 @@ figcaption {
 }
 
 table {
-    border: var(--stroke);
     border-collapse: collapse;
     width: 100%;
 }
@@ -208,16 +207,9 @@ th {
     padding: var(--space-xs) var(--space-s);
 }
 
-th:not(:only-of-type) {
-    border-block-end: var(--stroke);
-}
-
-th:only-of-type {
+td:not(:last-child) {
     border-inline-end: var(--stroke);
-}
-
-:is(th, td) ~ :is(th, td) {
-    border-inline-start: var(--stroke);
+    box-shadow: 3px 0 0 var(--color-primary);
 }
 
 tr + tr :is(th, td) {
