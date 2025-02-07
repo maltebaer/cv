@@ -14,4 +14,5 @@
 
 .cover > main {
     margin-block: auto;
+    inline-size: 100%;
 }
