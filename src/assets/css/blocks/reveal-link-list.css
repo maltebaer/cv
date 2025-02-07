@@ -1,4 +1,4 @@
-ul.reveal-link-list {
+.reveal-link-list {
     margin-block: 0;
     padding: 0;
     list-style: none;
@@ -19,7 +19,6 @@ ul.reveal-link-list {
 .reveal-link-list__revealable {
     display: none;
     font-size: var(--size-step-1);
-    color: var(--color-primary);
     text-decoration: underline;
 }
 
