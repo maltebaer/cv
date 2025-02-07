@@ -1,3 +1,4 @@
 .page-header {
-    border-block-end: var(--stroke-primary);
+    border-block-end: var(--stroke);
+    box-shadow: 0 3px 0 var(--color-primary);
 }
