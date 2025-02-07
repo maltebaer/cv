@@ -1,23 +1,6 @@
 ---
 layout: base.njk
 title: 'time machine'
-versions:
-    - year: 2023
-      url: 'https://cv-cube-css.vercel.app'
-      tools:
-          - name: 'eleventy'
-          - name: 'cube css'
-    - year: 2022
-      url: 'https://cv-angular.maltebaer.vercel.app'
-      tools:
-          - name: 'angular'
-          - name: 'typescript'
-          - name: 'tailwind ui'
-    - year: 2021
-      url: 'https://cv-vue.maltebaer.vercel.app'
-      tools:
-          - name: 'vue'
-          - name: 'tailwind css'
 ---
 
 <div class="flow region">
@@ -51,7 +34,7 @@ versions:
         <dl class="cluster">
             <dt>tools</dt>
             {% for tool in version.tools %}
-            <dd class="badge">{{ tool.name }}</dd>
+            <dd class="badge">{{ tool }}</dd>
             {% endfor %}
         </dl>
     </article>

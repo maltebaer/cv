@@ -1,0 +1,17 @@
+[
+    {
+        "year": 2023,
+        "url": "https://cv-cube-css.vercel.app",
+        "tools": ["eleventy", "cube css"]
+    },
+    {
+        "year": 2022,
+        "url": "https://cv-angular.maltebaer.vercel.app",
+        "tools": ["angular", "typescript", "tailwind ui"]
+    },
+    {
+        "year": 2021,
+        "url": "https://cv-vue.maltebaer.vercel.app",
+        "tools": ["vue", "tailwind css"]
+    }
+]
