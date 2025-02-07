@@ -3,7 +3,7 @@
     padding-inline-end: calc(var(--space-xs) / 2);
     border-block-end: var(--stroke);
     border-inline-end: var(--stroke);
-    border-color: var(--color-mid);
+    box-shadow: 3px 3px 0 var(--color-mid);
     font-size: var(--size-step-00);
     font-family: var(--font-mono);
 }
