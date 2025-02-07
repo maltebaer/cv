@@ -1,3 +1,8 @@
 .experience {
     --gutter: var(--space-2xl) var(--space-m);
 }
+
+.experience ul {
+    list-style-type: none;
+    padding: 0;
+}

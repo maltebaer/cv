@@ -20,43 +20,40 @@ versions:
           - name: 'tailwind css'
 ---
 
-<div class="time-machine flow">
+<div class="flow region">
     {% from 'macros/page-header.njk' import pageHeader %}
     {{ pageHeader({tag: 'malte bär', title: title}) }}
-
     <p>
         when i want to learn something new, try an unfamiliar concept, or just have fun
         coding, this is my project. it's a simple resume. but because it's a simple
         project, i can focus on implementing my ideas.
     </p>
-
     <p>
         <a href="https://hicks.design/journal/bill-oddie" target="__blank">jon hicks</a>
         inspired me to create a time machine. i like the idea of hosting your own little
         internet archive.
     </p>
-
     <blockquote cite="https://hicks.design/journal/bill-oddie">
         <p>It’s a lot like an embarrassing family photo, but I’m owning it!</p>
         <footer>
             <p>—Jon Hicks, <cite>Bill Oddie taught me how to make web sites</cite></p>
         </footer>
     </blockquote>
+</div>
 
-    <div class="region flow">
-        {% for version in versions %}
-        <article>
-            <h2>{{ version.year }}</h2>
-            <div class="resizer">
-                <iframe src="{{ version.url }}" allow="fullscreen"></iframe>
-            </div>
-            <dl class="cluster">
-                <dt>tools</dt>
-                {% for tool in version.tools %}
-                <dd class="badge">{{ tool.name }}</dd>
-                {% endfor %}
-            </dl>
-        </article>
-        {% endfor %}
-    </div>
+<div class="time-machine flow region">
+    {% for version in versions %}
+    <article>
+        <h2>{{ version.year }}</h2>
+        <div class="resizer">
+            <iframe src="{{ version.url }}" allow="fullscreen"></iframe>
+        </div>
+        <dl class="cluster">
+            <dt>tools</dt>
+            {% for tool in version.tools %}
+            <dd class="badge">{{ tool.name }}</dd>
+            {% endfor %}
+        </dl>
+    </article>
+    {% endfor %}
 </div>

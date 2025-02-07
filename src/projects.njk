@@ -3,53 +3,59 @@ layout: base.njk
 title: 'projects'
 ---
 
-<div class="projects">
+<div class="flow region">
     {% from 'macros/page-header.njk' import pageHeader %}
     {{ pageHeader({tag: 'malte bär', title: title}) }}
 
-    <div class="region">
-        {% for project in projects %}
-        <article
-            class="sidebar"
-            {%
-            if
-            loop.index
-            is
-            even
-            %}data-reversed
-            {%
-            endif
-            %}
-            data-direction="rtl"
-        >
-            <div>
-                <img
-                    data-border-side="{% if loop.index is even %}left{% else %}right{% endif %}"
-                    src="{{ project.imgUrl }}"
-                    alt="screenshot of {{ project.title }} project"
-                />
-            </div>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit quae eius veritatis
+        adipisci illo alias quis consectetur similique, voluptatem, vero quisquam dolorum
+        iure ipsum, earum magnam eos doloribus explicabo ex!
+    </p>
+</div>
 
-            <div class="flow">
-                <h2>
-                    <a href="{{ project.website }}" target="_blank">
-                        <span>{{ project.title }}</span>
-                    </a>
-                    <span>{{ project.year }}</span>
-                </h2>
-                <p>
-                    <a href="{{ project.sourceCodeUrl }}" target="_blank">source code</a>
-                </p>
-                <p>{{ project.description | safe }}</p>
-                <footer>
-                    <ul class="cluster">
-                        {% for technology in project.technologies %}
-                        <li class="badge">{{ technology }}</li>
-                        {% endfor %}
-                    </ul>
-                </footer>
-            </div>
-        </article>
-        {% endfor %}
-    </div>
+<div class="projects flow region">
+    {% for project in projects %}
+    <article
+        class="sidebar"
+        {%
+        if
+        loop.index
+        is
+        even
+        %}data-reversed
+        {%
+        endif
+        %}
+        data-direction="rtl"
+    >
+        <div>
+            <img
+                data-border-side="{% if loop.index is even %}left{% else %}right{% endif %}"
+                src="{{ project.imgUrl }}"
+                alt="screenshot of {{ project.title }} project"
+            />
+        </div>
+
+        <div class="flow">
+            <h2>
+                <a href="{{ project.website }}" target="_blank">
+                    <span>{{ project.title }}</span>
+                </a>
+                <span>{{ project.year }}</span>
+            </h2>
+            <p>
+                <a href="{{ project.sourceCodeUrl }}" target="_blank">source code</a>
+            </p>
+            <p>{{ project.description | safe }}</p>
+            <footer>
+                <ul class="cluster">
+                    {% for technology in project.technologies %}
+                    <li class="badge">{{ technology }}</li>
+                    {% endfor %}
+                </ul>
+            </footer>
+        </div>
+    </article>
+    {% endfor %}
 </div>

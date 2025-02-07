@@ -3,107 +3,105 @@ layout: base.njk
 title: 'about'
 ---
 
-<div class="about">
-    <div class="flow">
-        {% from 'macros/page-header.njk' import pageHeader %}
-        {{ pageHeader({tag: 'malte bär', title: title}) }}
+<div class="flow region">
+    {% from 'macros/page-header.njk' import pageHeader %}
+    {{ pageHeader({tag: 'malte bär', title: title}) }}
 
-        <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit quae eius
-            veritatis adipisci illo alias quis consectetur similique, voluptatem, vero
-            quisquam dolorum iure ipsum, earum magnam eos doloribus explicabo ex!
-        </p>
-    </div>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit quae eius veritatis
+        adipisci illo alias quis consectetur similique, voluptatem, vero quisquam dolorum
+        iure ipsum, earum magnam eos doloribus explicabo ex!
+    </p>
+</div>
 
-    <article class="flow region">
-        <h2>interest</h2>
+<article class="flow region">
+    <h2>interest</h2>
 
-        <p>
-            find below a list of my current go to references for the things i'm most
-            interested in.
-        </p>
+    <p>
+        find below a list of my current go to references for the things i'm most
+        interested in.
+    </p>
 
-        {% from 'macros/reveal-link-list.njk' import revealLinkList %}
-        {{ revealLinkList({items: interests, grid: 'true'}) }}
-    </article>
+    {% from 'macros/reveal-link-list.njk' import revealLinkList %}
+    {{ revealLinkList({items: interests, grid: 'true'}) }}
+</article>
 
-    <article class="experience flow region">
-        <h2>experience</h2>
+<article class="experience flow region">
+    <h2>experience</h2>
 
-        <ul class="grid" data-layout="50-50">
-            {% for job in experience %}
-            <li>
-                <article class="card flow">
-                    <footer>
+    <ul class="grid" data-layout="50-50">
+        {% for job in experience %}
+        <li>
+            <article class="card flow">
+                <footer>
+                    <p>
+                        <time datetime="{{ job.start }}">
+                            {{ job.start | getLocaleDateString }}
+                        </time>
+                        -
+                        <time datetime="{{ job.end }}">
+                            {{ job.end | getLocaleDateString }}
+                        </time>
+                    </p>
+                </footer>
+
+                {% include 'svg/' + job.framework + '.svg' %}
+
+                <header>
+                    <h3>
+                        <span>{{ job.role }}</span>
+                    </h3>
+                    <p>
+                        at
+                        <a href="{{ job.website }}" target="_blank">
+                            {{ job.location }}
+                        </a>
+                    </p>
+                </header>
+
+                <p>{{ job.description }}</p>
+            </article>
+        </li>
+        {% endfor %}
+    </ul>
+</article>
+
+<article class="education flow region">
+    <h2>education</h2>
+
+    <div class="education__table-container">
+        <table>
+            <tbody>
+                {% for step in education %}
+                <tr>
+                    <td>
                         <p>
-                            <time datetime="{{ job.start }}">
-                                {{ job.start | getLocaleDateString }}
+                            <time datetime="{{ step.start }}">
+                                {{ step.start | getLocaleDateString }}
                             </time>
                             -
-                            <time datetime="{{ job.end }}">
-                                {{ job.end | getLocaleDateString }}
+                            <time datetime="{{ step.end }}">
+                                {{ step.end | getLocaleDateString }}
                             </time>
                         </p>
-                    </footer>
-
-                    {% include 'svg/' + job.framework + '.svg' %}
-
-                    <header>
-                        <h3>
-                            <span>{{ job.role }}</span>
-                        </h3>
+                    </td>
+                    <td>
+                        <h3>{{ step.type }}</h3>
+                    </td>
+                    <td>
                         <p>
                             at
-                            <a href="{{ job.website }}" target="_blank">
-                                {{ job.location }}
+                            <a href="{{ step.website }}" target="_blank">
+                                {{ step.location }}
                             </a>
                         </p>
-                    </header>
-
-                    <p>{{ job.description }}</p>
-                </article>
-            </li>
-            {% endfor %}
-        </ul>
-    </article>
-
-    <article class="flow region">
-        <h2>education</h2>
-
-        <div class="table-container">
-            <table>
-                <tbody>
-                    {% for step in education %}
-                    <tr>
-                        <td>
-                            <p>
-                                <time datetime="{{ step.start }}">
-                                    {{ step.start | getLocaleDateString }}
-                                </time>
-                                -
-                                <time datetime="{{ step.end }}">
-                                    {{ step.end | getLocaleDateString }}
-                                </time>
-                            </p>
-                        </td>
-                        <td>
-                            <h3>{{ step.type }}</h3>
-                        </td>
-                        <td>
-                            <p>
-                                at
-                                <a href="{{ step.website }}" target="_blank">
-                                    {{ step.location }}
-                                </a>
-                            </p>
-                        </td>
-                        <td>
-                            <p>{{ step.description }}</p>
-                        </td>
-                    </tr>
-                    {% endfor %}
-                </tbody>
-            </table>
-        </div>
-    </article>
-</div>
+                    </td>
+                    <td>
+                        <p>{{ step.description }}</p>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</article>
