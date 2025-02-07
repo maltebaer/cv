@@ -1,27 +1,28 @@
-.reveal-list {
-    font-size: var(--size-step-2);
+ul.reveal-link-list {
     margin-block: 0;
     padding: 0;
+    list-style: none;
+    font-size: var(--size-step-2);
 }
 
-.reveal-list li {
+.reveal-link-list li {
     --sidebar-target-width: content;
     --gutter: var(--space-xs);
     border-block-end: var(--stroke);
 }
 
-.reveal-list a {
+.reveal-link-list a {
     text-decoration: none;
     color: currentColor;
 }
 
-.reveal-list__revealable {
+.reveal-link-list__revealable {
     display: none;
     font-size: var(--size-step-1);
     color: var(--color-primary);
     text-decoration: underline;
 }
 
-.reveal-list li:hover .reveal-list__revealable {
+.reveal-link-list li:hover .reveal-link-list__revealable {
     display: revert;
 }

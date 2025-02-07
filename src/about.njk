@@ -5,7 +5,7 @@ title: 'about'
 
 <div class="about">
     <div class="flow">
-        {%- from 'macros/page-header.njk' import pageHeader %}
+        {% from 'macros/page-header.njk' import pageHeader %}
         {{ pageHeader({tag: 'malte bär', title: title}) }}
 
         <p>
@@ -23,18 +23,8 @@ title: 'about'
             interested in.
         </p>
 
-        <ul class="reveal-list grid" role="list" data-layout="50-50">
-            {% for item in interests %}
-            <li>
-                <a class="sidebar items-baseline" href="{{ item.url }}" target="_blank">
-                    <span>{{ item.label }}</span>
-                    <span class="reveal-list__revealable">
-                        {{ item.url | replace('https://', '') }}
-                    </span>
-                </a>
-            </li>
-            {% endfor %}
-        </ul>
+        {% from 'macros/reveal-link-list.njk' import revealLinkList %}
+        {{ revealLinkList({items: interests, grid: 'true'}) }}
     </article>
 
     <article class="experience flow region">
@@ -80,38 +70,40 @@ title: 'about'
     <article class="flow region">
         <h2>education</h2>
 
-        <table>
-            <tbody>
-                {% for step in education %}
-                <tr>
-                    <td>
-                        <p>
-                            <time datetime="{{ step.start }}">
-                                {{ step.start | getLocaleDateString }}
-                            </time>
-                            -
-                            <time datetime="{{ step.end }}">
-                                {{ step.end | getLocaleDateString }}
-                            </time>
-                        </p>
-                    </td>
-                    <td>
-                        <h3>{{ step.type }}</h3>
-                    </td>
-                    <td>
-                        <p>
-                            at
-                            <a href="{{ step.website }}" target="_blank">
-                                {{ step.location }}
-                            </a>
-                        </p>
-                    </td>
-                    <td>
-                        <p>{{ step.description }}</p>
-                    </td>
-                </tr>
-                {% endfor %}
-            </tbody>
-        </table>
+        <div class="table-container">
+            <table>
+                <tbody>
+                    {% for step in education %}
+                    <tr>
+                        <td>
+                            <p>
+                                <time datetime="{{ step.start }}">
+                                    {{ step.start | getLocaleDateString }}
+                                </time>
+                                -
+                                <time datetime="{{ step.end }}">
+                                    {{ step.end | getLocaleDateString }}
+                                </time>
+                            </p>
+                        </td>
+                        <td>
+                            <h3>{{ step.type }}</h3>
+                        </td>
+                        <td>
+                            <p>
+                                at
+                                <a href="{{ step.website }}" target="_blank">
+                                    {{ step.location }}
+                                </a>
+                            </p>
+                        </td>
+                        <td>
+                            <p>{{ step.description }}</p>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
     </article>
 </div>

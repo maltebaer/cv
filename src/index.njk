@@ -3,7 +3,7 @@ layout: base.njk
 ---
 
 <article class="flow">
-    {%- from 'macros/page-header.njk' import pageHeader %}
+    {% from 'macros/page-header.njk' import pageHeader %}
     {{ pageHeader({tag: 'web dev', title: 'malte bär'}) }}
 
     <p>
@@ -18,39 +18,28 @@ layout: base.njk
             class="border-right border-bottom"
         />
 
-        <ul class="reveal-list flow" role="list">
-            <li class="sidebar items-baseline">
-                <span>location</span>
-                <span class="reveal-list__revealable">potsdam, germany</span>
-            </li>
-            <li>
-                <a class="sidebar items-baseline" href="mailto:maltebaer@posteo.de">
-                    <span>mail</span>
-                    <span class="reveal-list__revealable">maltebaer@posteo.de</span>
-                </a>
-            </li>
-            <li>
-                <a
-                    class="sidebar items-baseline"
-                    href="https://github.com/maltebaer/"
-                    target="_blank"
-                >
-                    <span>github</span>
-                    <span class="reveal-list__revealable">github.com/maltebaer/</span>
-                </a>
-            </li>
-            <li>
-                <a
-                    class="sidebar items-baseline"
-                    href="https://linkedin.com/in/maltebaer/"
-                    target="_blank"
-                >
-                    <span>linkedin</span>
-                    <span class="reveal-list__revealable"
-                        >linkedin.com/in/maltebaer/</span
-                    >
-                </a>
-            </li>
-        </ul>
+        {% from 'macros/reveal-link-list.njk' import revealLinkList %}
+        {{
+            revealLinkList({
+                items: [
+                    {
+                        label: 'location',
+                        url: 'https://potsdam.com'
+                    },
+                    {
+                        label: 'mail',
+                        url: 'mailto:maltebaer@posteo.de'
+                    },
+                    {
+                        label: 'github',
+                        url: 'https://github.com/maltebaer/'
+                    },
+                    {
+                        label: 'linkedin',
+                        url: 'https://linkedin.com/in/maltebaer/'
+                    }
+                ]
+            })
+        }}
     </div>
 </article>

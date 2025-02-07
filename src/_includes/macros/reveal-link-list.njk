@@ -1,0 +1,24 @@
+{%- macro revealLinkList(params) -%}
+<ul
+    class="reveal-link-list {% if params.grid %}grid{% else %}flow{% endif %}"
+    {%
+    if
+    params.grid
+    %}data-layout="50-50"
+    {%
+    endif
+    %}
+>
+    {% for item in params.items %}
+    <li>
+        <a class="sidebar items-baseline" href="{{ item.url }}" target="_blank">
+            <span>{{ item.label }}</span>
+            <span
+                class="reveal-link-list__revealable"
+                >{{ item.url | replace('https://', '') | replace('mailto:', '') }}</span
+            >
+        </a>
+    </li>
+    {% endfor %}
+</ul>
+{%- endmacro -%}
