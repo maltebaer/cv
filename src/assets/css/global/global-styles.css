@@ -181,6 +181,11 @@ img {
     height: auto;
 }
 
+iframe {
+    border: var(--stroke);
+    box-shadow: 3px 3px 0 var(--color-primary);
+}
+
 figcaption {
     padding-block-start: 0.5em;
     font-size: var(--size-step-0);

@@ -6,11 +6,11 @@ a.header__home {
     display: flex;
     color: currentColor;
     text-decoration-skip-ink: auto;
+    display: flex;
 }
 
 a.header__home:hover {
-    background-color: var(--color-mid);
-    display: flex;
+    box-shadow: 0 3px 0 var(--color-mid);
 }
 
 .header ul {
