@@ -8,9 +8,9 @@ title: 'about'
     {{ pageHeader({tag: 'malte bär', title: title}) }}
 
     <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit quae eius veritatis
-        adipisci illo alias quis consectetur similique, voluptatem, vero quisquam dolorum
-        iure ipsum, earum magnam eos doloribus explicabo ex!
+        on this page i've listed the most important facts related to my professional life.
+        the things i'm most interested in in web development, the different steps of my
+        work experience and the path that led me to become a web developer.
     </p>
 </div>
 
@@ -23,7 +23,7 @@ title: 'about'
     </p>
 
     {% from 'macros/reveal-link-list.njk' import revealLinkList %}
-    {{ revealLinkList({items: interests, grid: 'true'}) }}
+    {{ revealLinkList({items: interests, name: 'interests', grid: 'true'}) }}
 </article>
 
 <article class="experience flow region">

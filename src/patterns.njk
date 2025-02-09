@@ -2,14 +2,17 @@
 layout: 'base.njk'
 ---
 
-<div>
+<div class="sidebar">
+    <div class="">hello</div>
     {% from 'macros/reveal-link-list.njk' import revealLinkList %}
     {{
         revealLinkList({
+            name: 'patterns',
+            grid: 'true',
             items: [
                 {
-                    label: 'hello',
-                    url: 'https://world.com'
+                    label: 'hello how are you',
+                    url: 'https://doing-in-this-world.com'
                 },
                 {
                     label: 'foo',

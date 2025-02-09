@@ -49,6 +49,12 @@ h3 {
     font-weight: var(--font-black);
 }
 
+p,
+li,
+blockquote:not([class]) {
+    max-width: 70ch;
+}
+
 small {
     font-size: var(--size-step-0);
 }

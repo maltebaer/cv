@@ -6,15 +6,24 @@ title: 'projects'
 <div class="flow region">
     {% from 'macros/page-header.njk' import pageHeader %}
     {{ pageHeader({tag: 'malte bär', title: title}) }}
-
     <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit quae eius veritatis
-        adipisci illo alias quis consectetur similique, voluptatem, vero quisquam dolorum
-        iure ipsum, earum magnam eos doloribus explicabo ex!
+        text, or words, are not the medium i feel most comfortable with. that's why i want
+        to take the opportunity to show some of my side projects. check out the source
+        code if you want to get an idea of how i like to code.
+    </p>
+    <p>
+        over the years the setup has become simpler and the result, in my opinion, much
+        more interesting.
+    </p>
+    <p>
+        however, my main side project is not listed here &mdash; it's the website that
+        you're currently visiting. take a look at the
+        <a href="/time-machine/">time machine</a> to see a collection of the different
+        versions that this site has gone through.
     </p>
 </div>
 
-<div class="projects flow region">
+<div class="projects flow region flow-space-2xl">
     {% for project in projects %}
     <article
         class="sidebar"
@@ -37,7 +46,7 @@ title: 'projects'
             />
         </div>
 
-        <div class="flow">
+        <div class="flow flow-space-1em">
             <h2>
                 <a href="{{ project.website }}" target="_blank">
                     <span>{{ project.title }}</span>

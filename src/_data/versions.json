@@ -2,16 +2,19 @@
     {
         "year": 2023,
         "url": "https://cv-cube-css.vercel.app",
+        "source-code": "https://github.com/maltebaer/cv/tree/cube-css",
         "tools": ["eleventy", "cube css"]
     },
     {
         "year": 2022,
         "url": "https://cv-angular.maltebaer.vercel.app",
+        "source-code": "https://github.com/maltebaer/cv_angular",
         "tools": ["angular", "typescript", "tailwind ui"]
     },
     {
         "year": 2021,
         "url": "https://cv-vue.maltebaer.vercel.app",
+        "source-code": "https://github.com/maltebaer/cv_vue",
         "tools": ["vue", "tailwind css"]
     }
 ]

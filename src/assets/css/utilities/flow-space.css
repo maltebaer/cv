@@ -1,0 +1,5 @@
+/* since flow-space-* utility classes are custom genereted
+tailwinds arbitrary value syntax is not available  */
+.flow-space-1em {
+    --flow-space: 1em;
+}

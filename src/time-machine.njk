@@ -24,19 +24,24 @@ title: 'time machine'
     </blockquote>
 </div>
 
-<div class="time-machine flow region">
+<div class="time-machine flow region flow-space-2xl">
     {% for version in versions %}
     <article>
-        <h2>{{ version.year }}</h2>
-        <div class="resizer">
-            <iframe src="{{ version.url }}" allow="fullscreen"></iframe>
+        <div class="flow flow-space-1em">
+            <h2>{{ version.year }}</h2>
+            <div class="resizer">
+                <iframe src="{{ version.url }}" allow="fullscreen"></iframe>
+            </div>
+            <footer class="repel">
+                <dl class="cluster">
+                    <dt>tools</dt>
+                    {% for tool in version.tools %}
+                    <dd class="badge">{{ tool }}</dd>
+                    {% endfor %}
+                </dl>
+                <a href="{{ version.sourceCode }}" target="__blank">source code</a>
+            </footer>
         </div>
-        <dl class="cluster">
-            <dt>tools</dt>
-            {% for tool in version.tools %}
-            <dd class="badge">{{ tool }}</dd>
-            {% endfor %}
-        </dl>
     </article>
     {% endfor %}
 </div>

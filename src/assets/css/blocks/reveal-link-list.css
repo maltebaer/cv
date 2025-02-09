@@ -6,22 +6,20 @@
 }
 
 .reveal-link-list li {
-    --sidebar-target-width: content;
-    --gutter: var(--space-xs);
     border-block-end: var(--stroke);
 }
 
-.reveal-link-list a {
-    text-decoration: none;
-    color: currentColor;
+.reveal-link-list details {
+    position: relative;
 }
 
-.reveal-link-list__revealable {
-    display: none;
-    font-size: var(--size-step-1);
-    text-decoration: underline;
+.reveal-link-list details summary {
+    margin-block-end: 0;
 }
 
-.reveal-link-list li:hover .reveal-link-list__revealable {
-    display: revert;
+.reveal-link-list details a {
+    font-size: var(--size-step-0);
+    position: absolute;
+    bottom: 0.4ch;
+    right: 0;
 }

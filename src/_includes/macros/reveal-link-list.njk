@@ -11,13 +11,12 @@
 >
     {% for item in params.items %}
     <li>
-        <a class="sidebar items-baseline" href="{{ item.url }}" target="_blank">
-            <span>{{ item.label }}</span>
-            <span
-                class="reveal-link-list__revealable"
-                >{{ item.url | replace('https://', '') | replace('mailto:', '') }}</span
-            >
-        </a>
+        <details name="{{ params.name }}">
+            <summary>{{ item.label }}</summary>
+            <a href="{{ item.url }}" target="_blank">
+                {{ item.url | replace('https://', '') | replace('mailto:', '') }}
+            </a>
+        </details>
     </li>
     {% endfor %}
 </ul>
