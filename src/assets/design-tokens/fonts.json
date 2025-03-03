@@ -18,7 +18,7 @@
         {
             "name": "Display",
             "description": "Serif font for headings and other large text.",
-            "value": ["DM Serif Display", "serif"]
+            "value": ["DM Serif Display", "fallback for DM Serif Display", "serif"]
         },
         {
             "name": "Mono",
