@@ -8,14 +8,22 @@ title: 'about'
     {{ pageHeader({tag: 'malte bär', title: title}) }}
 
     <p>
-        on this page i've listed the most important facts related to my professional life.
-        the things i'm most interested in in web development, the different steps of my
-        work experience and the path that led me to become a web developer.
+        curious about the person behind the code? here's where you'll find my
+        <a href="#experience">professional journey </a>,
+        <a href="#education">educational background</a>, and the
+        <a href="#interest">things that keep me excited about web development</a>.
+    </p>
+
+    <p>
+        i believe that understanding a developer goes beyond just technical skills. my
+        experiences and interests have shaped my approach to creating web solutions that
+        are both effective and accessible. browse through the
+        <a href="/projects">projects</a> to see what makes me tick.
     </p>
 </div>
 
 <article class="flow region">
-    <h2>interest</h2>
+    <h2 id="interest">interest</h2>
 
     <p>
         find below a list of my current go to references for the things i'm most
@@ -27,7 +35,7 @@ title: 'about'
 </article>
 
 <article class="experience flow region">
-    <h2>experience</h2>
+    <h2 id="experience">experience</h2>
 
     <ul class="grid" data-layout="50-50">
         {% for job in experience %}
@@ -67,7 +75,7 @@ title: 'about'
 </article>
 
 <article class="education flow region">
-    <h2>education</h2>
+    <h2 id="education">education</h2>
 
     <div class="education__table-container">
         <table>
