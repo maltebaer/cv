@@ -16,6 +16,11 @@
             ]
         },
         {
+            "name": "Display",
+            "description": "Serif font for headings and other large text.",
+            "value": ["DM Serif Display", "Georgia", "Times New Roman", "serif"]
+        },
+        {
             "name": "Mono",
             "description": "Monospace font for code samples etc",
             "value": ["DM Mono", "monospace"]

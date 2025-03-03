@@ -22,3 +22,7 @@
 .card header {
     text-align: center;
 }
+
+.card header h3 {
+    margin-inline: auto;
+}
