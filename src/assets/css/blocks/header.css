@@ -2,14 +2,17 @@
     padding-block: var(--space-m);
 }
 
-a.header__home {
+.header a.header__home {
     display: flex;
     color: currentColor;
     text-decoration-skip-ink: auto;
-    display: flex;
 }
 
-a.header__home:hover {
+.header a.header__home:hover {
+    box-shadow: 0 3px 0 var(--color-mid);
+}
+
+.header a[aria-current='page'] {
     box-shadow: 0 3px 0 var(--color-mid);
 }
 

@@ -20,35 +20,28 @@ title: 'malte bär'
         <a href="/about">background</a>.
     </p>
 
-    <div class="switcher">
-        <img
-            src="https://picsum.photos/seed/picsum/600/400"
-            class="border-right border-bottom"
-        />
-
-        {% from 'macros/reveal-link-list.njk' import revealLinkList %}
-        {{
-            revealLinkList({
-                name: 'contact',
-                items: [
-                    {
-                        label: 'location',
-                        url: 'https://potsdam.com'
-                    },
-                    {
-                        label: 'mail',
-                        url: 'mailto:maltebaer@posteo.de'
-                    },
-                    {
-                        label: 'github',
-                        url: 'https://github.com/maltebaer/'
-                    },
-                    {
-                        label: 'linkedin',
-                        url: 'https://linkedin.com/in/maltebaer/'
-                    }
-                ]
-            })
-        }}
-    </div>
+    {% from 'macros/reveal-link-list.njk' import revealLinkList %}
+    {{
+        revealLinkList({
+            name: 'contact',
+            items: [
+                {
+                    label: 'location',
+                    url: 'https://potsdam.com'
+                },
+                {
+                    label: 'mail',
+                    url: 'mailto:maltebaer@posteo.de'
+                },
+                {
+                    label: 'github',
+                    url: 'https://github.com/maltebaer/'
+                },
+                {
+                    label: 'linkedin',
+                    url: 'https://linkedin.com/in/maltebaer/'
+                }
+            ]
+        })
+    }}
 </article>
