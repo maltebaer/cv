@@ -5,7 +5,6 @@
     border-inline-end: var(--stroke);
     box-shadow: 3px 3px 0 var(--color-mid);
     font-size: var(--size-step-00);
-    font-family: var(--font-mono);
 }
 
 .cluster:has(.badge) {
