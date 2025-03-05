@@ -121,10 +121,6 @@ ol ::marker {
     font-weight: var(--font-bold);
 }
 
-dt {
-    font-weight: var(--font-medium);
-}
-
 dt + dd {
     margin-block-start: var(--space-xs);
 }
