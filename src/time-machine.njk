@@ -3,7 +3,7 @@ layout: base.njk
 title: 'time machine'
 ---
 
-<div class="flow region">
+<article class="flow region">
     {% from 'macros/page-header.njk' import pageHeader %}
     {{ pageHeader({tag: 'malte bär', title: title}) }}
 
@@ -25,7 +25,7 @@ title: 'time machine'
             <p>—Jon Hicks, <cite>Bill Oddie taught me how to make web sites</cite></p>
         </footer>
     </blockquote>
-</div>
+</article>
 
 <div class="time-machine flow region flow-space-2xl">
     {% for version in versions %}

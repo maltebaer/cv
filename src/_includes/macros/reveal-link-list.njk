@@ -13,9 +13,11 @@
     <li>
         <details name="{{ params.name }}">
             <summary>{{ item.label }}</summary>
-            <a href="{{ item.url }}" target="_blank">
-                {{ item.url | replace('https://', '') | replace('mailto:', '') }}
-            </a>
+            <div class="repel">
+                <a href="{{ item.url }}" target="_blank">
+                    {{ item.url | replace('https://', '') | replace('mailto:', '') }}
+                </a>
+            </div>
         </details>
     </li>
     {% endfor %}

@@ -3,7 +3,7 @@ layout: base.njk
 title: 'malte bär'
 ---
 
-<article class="flow region">
+<article class="home flow region">
     {% from 'macros/page-header.njk' import pageHeader %}
     {{ pageHeader({tag: 'web dev', title: title}) }}
 
@@ -22,28 +22,30 @@ title: 'malte bär'
         <a href="/about">background</a>.
     </p>
 
-    {% from 'macros/reveal-link-list.njk' import revealLinkList %}
-    {{
-        revealLinkList({
-            name: 'contact',
-            items: [
-                {
-                    label: 'location',
-                    url: 'https://potsdam.com'
-                },
-                {
-                    label: 'mail',
-                    url: 'mailto:maltebaer@posteo.de'
-                },
-                {
-                    label: 'github',
-                    url: 'https://github.com/maltebaer/'
-                },
-                {
-                    label: 'linkedin',
-                    url: 'https://linkedin.com/in/maltebaer/'
-                }
-            ]
-        })
-    }}
+    <div class="repel">
+        {% from 'macros/reveal-link-list.njk' import revealLinkList %}
+        {{
+            revealLinkList({
+                name: 'contact',
+                items: [
+                    {
+                        label: 'location',
+                        url: 'https://potsdam.com'
+                    },
+                    {
+                        label: 'mail',
+                        url: 'mailto:maltebaer@posteo.de'
+                    },
+                    {
+                        label: 'github',
+                        url: 'https://github.com/maltebaer/'
+                    },
+                    {
+                        label: 'linkedin',
+                        url: 'https://linkedin.com/in/maltebaer/'
+                    }
+                ]
+            })
+        }}
+    </div>
 </article>

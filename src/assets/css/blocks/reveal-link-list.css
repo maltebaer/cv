@@ -1,16 +1,18 @@
 .reveal-link-list {
-    margin-block: 0;
+    --stroke-width: 0.5px;
+
     padding: 0;
     list-style: none;
-    font-size: var(--size-step-2);
 }
 
 .reveal-link-list li {
+    --flow-space: 1lh;
+
     border-block-end: var(--stroke);
 }
 
 .reveal-link-list details {
-    position: relative;
+    min-height: 2lh;
 }
 
 .reveal-link-list details summary {
@@ -19,7 +21,4 @@
 
 .reveal-link-list details a {
     font-size: var(--size-step-0);
-    position: absolute;
-    bottom: 0.4ch;
-    right: 0;
 }

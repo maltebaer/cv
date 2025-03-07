@@ -3,7 +3,7 @@ layout: base.njk
 title: 'projects'
 ---
 
-<div class="flow region">
+<article class="flow region">
     {% from 'macros/page-header.njk' import pageHeader %}
     {{ pageHeader({tag: 'malte bär', title: title}) }}
 
@@ -25,7 +25,7 @@ title: 'projects'
         <a href="/time-machine">time machine</a> section to see how my approach to web
         development has matured.
     </p>
-</div>
+</article>
 
 <div class="projects flow region flow-space-2xl">
     {% for project in projects %}

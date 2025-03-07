@@ -18,6 +18,10 @@ Can be any acceptable flexbox alignment value.
     gap: var(--gutter, var(--space-m));
 }
 
+.repel > :last-child {
+    margin-inline-start: auto;
+}
+
 .repel[data-nowrap] {
     flex-wrap: nowrap;
 }
