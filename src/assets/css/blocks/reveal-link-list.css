@@ -19,6 +19,7 @@
     margin-block-end: 0;
 }
 
-.reveal-link-list details a {
+.reveal-link-list details a,
+.reveal-link-list details p {
     font-size: var(--size-step-0);
 }

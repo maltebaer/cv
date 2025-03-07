@@ -14,9 +14,15 @@
         <details name="{{ params.name }}">
             <summary>{{ item.label }}</summary>
             <div class="repel">
+                {% if item.url %}
                 <a href="{{ item.url }}" target="_blank">
                     {{ item.url | replace('https://', '') | replace('mailto:', '') }}
                 </a>
+                {% endif %} {% if item.content %}
+                <p>
+                    {{ item.content }}
+                </p>
+                {% endif %}
             </div>
         </details>
     </li>
