@@ -1,15 +1,31 @@
-# cv/portfolio site
+# portfolio website
 
-## todos
+this is the codebase for my personal portfolio [malte.baer.website](https://malte.baer.website/). the site showcases my work, skills, and projects in web development.
 
--   [ ] improve page header
--   [ ] github source code link
--   [ ] adjust table height on mobile
--   [ ] add download cv button
--   [ ] update location contact info
--   [ ] dark mode
--   [ ] add css patterns
--   [ ] add interactivity
--   [ ] add animations
--   [ ] cleanup eleventy config
--   [ ] improve reveal list hover effect
+## overview
+
+this portfolio highlights my approach to creating accessible and performant websites using native web technologies. the site is structured into several sections:
+
+-   **home**: introduces my philosophy on web development and preferred technologies.
+
+-   **about**: covers my professional journey and areas of expertise.
+
+-   **projects**: features side projects that demonstrate my coding style and problem-solving approach.
+
+## features
+
+-   **responsive design**: built to be fully responsive without relying on media queries.
+
+-   **accessibility**: focuses on semantic html and usability best practices.
+
+-   **performance**: optimized for fast load times with minimal javascript.
+
+## technologies used
+
+-   **11ty**: static site generator.
+
+-   **cube css**: methodology for consistent, simple css.
+
+-   **utopia**: tools for fluid, responsive designs.
+
+-   **every layout**: utility-based layout system.
