@@ -68,6 +68,11 @@ title: 'about'
                 </header>
 
                 <p>{{ job.description }}</p>
+                <ul class="cluster">
+                    {% for technology in job.technologies %}
+                    <li class="badge">{{ technology }}</li>
+                    {% endfor %}
+                </ul>
             </article>
         </li>
         {% endfor %}

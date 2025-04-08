@@ -6,7 +6,14 @@
         "description": "developing a dashboard for our customers to view their analysis results, gain insight into their gut health and receive analysis-based recommendations. building our in-house laboratory software that manages and controls the entire workflow from test kit building to logistics handling and analysis completion.",
         "start": "2021-09-01",
         "end": "",
-        "framework": "laravel"
+        "framework": "laravel",
+        "technologies": [
+            "laravel",
+            "blade",
+            "livewire",
+            "alpine js",
+            "filament"
+        ]
     },
     {
         "role": "frontend developer",
@@ -15,7 +22,12 @@
         "description": "implemented software for recording, managing and analysing measurements, with a focus on displaying complex visualisations and creating a scientific user experience. the software is used in laboratories all over the world and is therefore subject to strict regulations.",
         "start": "2019-08-01",
         "end": "2021-05-31",
-        "framework": "react"
+        "framework": "react",
+        "technologies": [
+            "react",
+            "typescript",
+            "d3 js"
+        ]
     },
     {
         "role": "frontend developer",
@@ -24,7 +36,12 @@
         "description": "prototyped an internal reporting application to display social media performance data, connecting various apis to get an overall performance view.",
         "start": "2019-03-01",
         "end": "2019-07-31",
-        "framework": "react"
+        "framework": "react",
+        "technologies": [
+            "react",
+            "bootstrap",
+            "chart js"
+        ]
     },
     {
         "role": "it & administration",
@@ -33,6 +50,11 @@
         "description": "established the it infrastructure as a working student. supporting the agency growing from 15 employees to 50+ employees. created the onnboarding and offboarding process, helping new employees collaborating with the team.",
         "start": "2017-04-01",
         "end": "2019-02-28",
-        "framework": "computer"
+        "framework": "computer",
+        "technologies": [
+            "computer",
+            "mdm",
+            "it administration"
+        ]
     }
 ]
