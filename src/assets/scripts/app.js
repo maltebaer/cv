@@ -1,6 +1,6 @@
 import posthog from 'posthog-js'
 
-posthog.init('phc_rJxtcvyDmwPVnBQkRrffPTwnrsjgL19ndOR7Mqow29Q', {
+posthog.init('phc_HCbiPSBjZuBqAPDDHM9vEK3jcV5veXlB4iCczmVmhJK', {
     api_host: 'https://malte.baer.website/canyon-w29Q',
     ui_host: 'https://eu.i.posthog.com',
     defaults: '2025-05-24',
