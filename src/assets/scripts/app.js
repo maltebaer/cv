@@ -1,7 +1,8 @@
 import posthog from 'posthog-js'
 
 posthog.init('phc_rJxtcvyDmwPVnBQkRrffPTwnrsjgL19ndOR7Mqow29Q', {
-    api_host: 'https://eu.i.posthog.com',
+    api_host: 'https://malte.baer.website/canyon-w29Q',
+    ui_host: 'https://eu.i.posthog.com',
     defaults: '2025-05-24',
     before_send: (event) => {
         if (!event) {
