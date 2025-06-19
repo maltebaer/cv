@@ -1,81 +1,22 @@
-import Alpine from 'alpinejs'
-import anchor from '@alpinejs/anchor'
-import persist from '@alpinejs/persist'
+import posthog from 'posthog-js'
 
-import "drab/popover/define"
-
-Alpine.plugin(anchor)
-Alpine.plugin(persist)
-
-Alpine.data('controls', function () {
-    return {
-        activeTheme: this.$persist('auto'),
-
-        activeProperties: this.$persist([]),
-
-        setTheme(theme) {
-            this.activeTheme = theme
-
-            const html = document.firstElementChild
-            html.setAttribute('data-theme', theme)
-        },
-
-        setThemeProperty(property, theme) {
-            const html = document.firstElementChild
-
-            if (theme === 'auto') {
-                html.style.removeProperty(property)
-
-                this.activeProperties = this.activeProperties.filter(p => p.property !== property)
-            } else {
-                const value = `var(${property}-${theme})`
-
-                html.style.setProperty(property, value)
-
-                this.updateOrAddActiveProperty(property, theme)
-            }
-        },
-
-        updateOrAddActiveProperty(property, theme) {
-            const existingProperty = this.activeProperties.find(p => p.property === property);
-
-            existingProperty ?
-                existingProperty.theme = theme :
-                this.activeProperties.push({ property, theme });
-        },
-
-        getActivePropertyTheme(property) {
-            const foundProperty = this.activeProperties.find(p => p.property === property);
-
-            return foundProperty ? foundProperty.theme : 'auto';
-        },
-
-        isActiveProperty(property, theme) {
-            const foundProperty = this.activeProperties.find(p => p.property === property);
-
-            if (!foundProperty && theme === 'auto') {
-                return true;
-            }
-
-            return foundProperty && foundProperty.theme === theme;
-        },
-
-        toggleStylesheet(layer) {
-            const stylesheet = document.getElementById(layer + '-stylesheet')
-
-            stylesheet.toggleAttribute('disabled')
-        },
-
-        init() {
-            this.setTheme(this.activeTheme)
-
-            for (const propery of this.activeProperties) {
-                this.setThemeProperty(propery.property, propery.theme)
-            }
+posthog.init('phc_rJxtcvyDmwPVnBQkRrffPTwnrsjgL19ndOR7Mqow29Q', {
+    api_host: 'https://eu.i.posthog.com',
+    defaults: '2025-05-24',
+    before_send: (event) => {
+        if (!event) {
+            return null
         }
+
+        let environment = 'development'
+        if (!window.location.host.includes('127.0.0.1') && !window.location.host.includes('localhost')) {
+            environment = 'production'
+        }
+        event.properties = {
+            ...event.properties,
+            environment
+        }
+
+        return event
     }
 })
-
-window.Alpine = Alpine
-
-Alpine.start()
