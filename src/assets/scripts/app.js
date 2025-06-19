@@ -6,6 +6,7 @@ posthog.init('phc_rJxtcvyDmwPVnBQkRrffPTwnrsjgL19ndOR7Mqow29Q', {
     defaults: '2025-05-24',
     persistence: 'memory',
     disable_session_recording: true,
+    enable_heatmaps: false,
     autocapture: false,
     before_send: (event) => {
         if (!event) {
