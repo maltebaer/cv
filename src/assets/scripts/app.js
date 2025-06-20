@@ -1,6 +1,6 @@
 import posthog from 'posthog-js'
 
-posthog.init('phc_HCbiPSBjZuBqAPDDHM9vEK3jcV5veXlB4iCczmVmhJK', {
+posthog.init('phc_lnhVrIWayl8pi23l4mFqIRITu03Rp23YbvboOEQOzim', {
     api_host: 'https://malte.baer.website/canyon-w29Q',
     ui_host: 'https://eu.i.posthog.com',
     defaults: '2025-05-24',
@@ -13,13 +13,16 @@ posthog.init('phc_HCbiPSBjZuBqAPDDHM9vEK3jcV5veXlB4iCczmVmhJK', {
             return null
         }
 
-        let environment = 'development'
-        if (!window.location.host.includes('127.0.0.1') && !window.location.host.includes('localhost')) {
-            environment = 'production'
+        const { host } = window.location
+        const isValidHost = host.includes('malte.baer.website') || host.includes('localhost')
+
+        if (!isValidHost) {
+            return null // skip vercel preview deployments
         }
+
         event.properties = {
             ...event.properties,
-            environment
+            environment: host.includes('localhost') ? 'development' : 'production'
         }
 
         return event
