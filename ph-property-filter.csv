@@ -1,1 +1,1 @@
-$ip,$device_id,$geoip_city_name,$geoip_country_code,$geoip_continent_name,$geoip_continent_code,$geoip_postal_code,$geoip_latitude,$geoip_longitude,$geoip_accuracy_radius,$geoip_time_zone,$geoip_subdivision_1_code,$geoip_subdivision_1_name
+$ip,$device_id,$geoip_city_name,$geoip_continent_name,$geoip_continent_code,$geoip_postal_code,$geoip_latitude,$geoip_longitude,$geoip_accuracy_radius,$geoip_time_zone,$geoip_subdivision_1_code,$geoip_subdivision_1_name
